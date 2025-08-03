@@ -1,0 +1,2477 @@
+{
+	"clientRequestData": {
+		"id": "FB97975F791A4AF3A5DAC9C3223AA01D",
+		"version": 1,
+		"clientOrganizationId": 42,
+		"ventureId": null,
+		"toleranceToRisk": null,
+		"externalId": "6c5d691e-5aac-4cfb-a1dc-9a53f4f6ea36",
+		"createdByType": "api",
+		"createdById": "0oa55zavrrXH5V5Vw357",
+		"consumerId": null,
+		"requestId": "FB97975F791A4AF3A5DAC9C3223AA01D",
+		"createdAt": "2025-06-29T15:05:21.080Z",
+		"lastUpdatedAt": "2025-06-29T15:17:00.290Z",
+		"callbackUrl": "https://callbackapi.payoneer.com/api/Callbacks/v1/Notify/?apiKey=145756a9-2697-4135-b029-7bb6585e92ec&handlerName=au10tix-Secureme_webhook_kafka&eventType=Callback&eventSubType=-1",
+		"callbackHeaders": {},
+		"sessionId": null,
+		"comparisonData": {
+			"countryIso3": "USA",
+			"dateOfBirth": "2000-07-19T12:00:00Z",
+			"documentNumber": "302491538",
+			"firstName": "Feest",
+			"lastName": "Berniece",
+			"personalNumber": "302491538"
+		},
+		"comparisonItems": [
+			"identityData"
+		],
+		"processingFlow": "idv",
+		"doubleCheckDirective": "None",
+		"uploadBy": "SecureMe",
+		"capturedBy": "WebSDK",
+		"platform": "Android",
+		"date": "2025-06-29T15:17:11.110Z",
+		"numberEncoding": false,
+		"voiceConsentText": "",
+		"abTestId": null,
+		"abTestVariantId": null,
+		"lastPage": null,
+		"selectedDocType": "Driving License",
+		"selectedCountry": "USA",
+		"workflowId": null,
+		"identityType": null,
+		"isDataExtractionOnly": false,
+		"documentType": "Driving License",
+		"country": "USA",
+		"fullName": "BERNIECE FEEST",
+		"result": "Conditional",
+		"tests": [
+			"idv"
+		],
+		"documentCountryState": "NM",
+		"requestTypes": {
+			"faceCompare": [
+				"camera"
+			],
+			"idFront": [
+				"camera"
+			]
+		},
+		"processRequestTypes": [
+			"faceCompare",
+			"idBack",
+			"idFront",
+			"poa"
+		],
+		"consumer": {
+			"id": null,
+			"externalConsumerId": null,
+			"firstName": null,
+			"lastName": null,
+			"phoneNumber": null,
+			"email": null,
+			"additionalInfo": null,
+			"createdAt": null,
+			"createdById": null,
+			"lastUpdatedBy": null,
+			"lastUpdatedAt": null
+		},
+		"link": {
+			"token": "pr0fPyh9wiebWNvdLzBi",
+			"imageFromURLFailure": null,
+			"expiredAt": "2025-07-20T15:05:21.147Z",
+			"redeemedAt": "2025-06-29T15:17:00.283Z",
+			"showOpeningScreen": null,
+			"showConsentScreen": null,
+			"successRedirectUrl": "https://example.com/success",
+			"errorRedirectUrl": "https://example.com/error",
+			"locale": "en-us",
+			"themeName": null,
+			"country": "USA",
+			"mobileRedirectBehavior": null,
+			"mobileSuccessRedirectUrl": null,
+			"mobileErrorRedirectUrl": "https://register.payoneer.com/en/visual-identity-verification/",
+			"desktopToMobileFlow": false
+		},
+		"consoleUrl": "https://console.au10tixservices.com/results/identity-verification/FB97975F791A4AF3A5DAC9C3223AA01D"
+	},
+	"resultData": {
+		"AgeVerificationReport": {
+			"AgeCalculation": 24,
+			"AgeEstimation": 18,
+			"AgeEstimationCompletionStatus": 0,
+			"ProcessedSupplementaryImageIndex": 0
+		},
+		"CompletionStatus": "Ok",
+		"CompletionTime": "2025-06-29T15:17:11.11",
+		"DataAnalyticsReport": {
+			"All": {
+				"SeenThatAddress": {
+					"RepetitionDocInfo": [],
+					"CountAll": 0,
+					"CountHour": 0,
+					"CountDay": 0
+				},
+				"SeenThatBackside": null,
+				"SeenThatDocumentNumber": {
+					"ConflictDocInfo": [],
+					"RepetitionDocInfo": [],
+					"IndConflict": false,
+					"CountAll": 0,
+					"CountHour": 0,
+					"CountDay": 0
+				},
+				"SeenThatEmail": null,
+				"SeenThatFacePicture": {
+					"ConflictDocInfo": [],
+					"RepetitionDocInfo": [],
+					"IndConflict": false,
+					"CountAll": 0,
+					"CountHour": 0,
+					"CountDay": 0
+				},
+				"SeenThatGeolocation": null,
+				"SeenThatImageTemplate": null,
+				"SeenThatIp": null,
+				"SeenThatPerson": {
+					"ConflictDocInfo": [],
+					"RepetitionDocInfo": [],
+					"IndConflict": false,
+					"CountAll": 0,
+					"CountHour": 0,
+					"CountDay": 0
+				},
+				"SeenThatPhone": null,
+				"SeenThatProfile": null,
+				"SeenThatSelfie": {
+					"ConflictDocInfo": [],
+					"RepetitionDocInfo": [],
+					"IndConflict": false,
+					"CountAll": 0,
+					"CountHour": 0,
+					"CountDay": 0
+				},
+				"SeenThatSelfieBackground": {
+					"ConflictDocInfo": [],
+					"RepetitionDocInfo": [],
+					"IndConflict": false,
+					"CountAll": 0,
+					"CountHour": 0,
+					"CountDay": 0
+				},
+				"SeenThatSignature": null,
+				"SeenThatUserName": null
+			},
+			"AttackInfo": {
+				"SeenThatBackside": null,
+				"SeenThatDocumentNumber": null,
+				"SeenThatEmail": null,
+				"SeenThatFacePicture": null,
+				"SeenThatImageTemplate": null,
+				"SeenThatIp": null,
+				"SeenThatPerson": null,
+				"SeenThatPhone": null,
+				"SeenThatProfile": null,
+				"SeenThatSelfie": null,
+				"SeenThatSelfieBackground": null,
+				"SeenThatSignature": null,
+				"SeenThatUserName": null
+			},
+			"ExecutionStatus": 0,
+			"MyOrganization": {
+				"SeenThatAddress": {
+					"RepetitionDocInfo": [],
+					"CountAll": 0,
+					"CountHour": 0,
+					"CountDay": 0
+				},
+				"SeenThatBackside": null,
+				"SeenThatDocumentNumber": {
+					"ConflictDocInfo": [],
+					"RepetitionDocInfo": [],
+					"IndConflict": false,
+					"CountAll": 0,
+					"CountHour": 0,
+					"CountDay": 0
+				},
+				"SeenThatEmail": null,
+				"SeenThatFacePicture": {
+					"ConflictDocInfo": [],
+					"RepetitionDocInfo": [],
+					"IndConflict": false,
+					"CountAll": 0,
+					"CountHour": 0,
+					"CountDay": 0
+				},
+				"SeenThatGeolocation": null,
+				"SeenThatImageTemplate": null,
+				"SeenThatIp": null,
+				"SeenThatPerson": {
+					"ConflictDocInfo": [],
+					"RepetitionDocInfo": [],
+					"IndConflict": false,
+					"CountAll": 0,
+					"CountHour": 0,
+					"CountDay": 0
+				},
+				"SeenThatPhone": null,
+				"SeenThatProfile": null,
+				"SeenThatSelfie": {
+					"ConflictDocInfo": [],
+					"RepetitionDocInfo": [],
+					"IndConflict": false,
+					"CountAll": 0,
+					"CountHour": 0,
+					"CountDay": 0
+				},
+				"SeenThatSelfieBackground": {
+					"ConflictDocInfo": [],
+					"RepetitionDocInfo": [],
+					"IndConflict": false,
+					"CountAll": 0,
+					"CountHour": 0,
+					"CountDay": 0
+				},
+				"SeenThatSignature": null,
+				"SeenThatUserName": null
+			},
+			"PED": [],
+			"RiskFlag": null
+		},
+		"DocumentAuthenticity": "Authentic",
+		"DocumentId": "FB97975F791A4AF3A5DAC9C3223AA01D",
+		"DocumentScope": "IdentityDocuments",
+		"DocumentSidesCode": 1,
+		"DocumentStatusReport2": {
+			"PrimaryProcessingResult": 20,
+			"ProcessingResultRemarks": [
+				0,
+				280,
+				500,
+				1440
+			]
+		},
+		"FaceAnalysisReport": {
+			"DeepFakeReport": {
+				"Details": {
+					"IsDeepFakeDetected": false,
+					"Message": null,
+					"ProbabilityOfDeepFake": 0.08661205000000005,
+					"ProcessingRemark": null
+				},
+				"Result": 0
+			}
+		},
+		"FaceComparisonReport": {
+			"CompletionStatus": 0,
+			"FaceComparisonModelId": "2",
+			"FaceSimilarityRatio": 67.7,
+			"ProcessedSupplementaryImageIndex": -1,
+			"ImageMetadata": null,
+			"ImageQuality": null,
+			"LivenessDetectionReport": null,
+			"ReverseGeocodingReport": null,
+			"SelfieGenderValidation": true
+		},
+		"IdentityDataInputStatus": 1,
+		"InternalData": {
+			"Data12": "H4sIAAAAAAAEALWWTW+bQBCG/8qKUyMlUs+52bFpkZLKCg5VW/UwhgE2XnbR7lCZVv3vHexEdYTVCu/6BBLaZ96ddz749iuKja3Q9mm3ob7F6DbKQMkCSBotbsQjgrpJFuILghWmFIlzHUbXr6fWhyMLIBCJJqyspJ4/r9HRI7pOUXT7/vf1/6JkyVfBDBwizKWlOnCEjyirmgJDlz26wMjPl9D5Nr2XN3C5a6XtQ4S4RyK04g4cvsS4B0fiEzTjG6Rku5w6i2eSY2nDoNe4IzFTstIN6rGX02Cr2pDhJmwV5DjwWG1ag23FsqhO2CgrSaDORg9QsbKmlMoPnvaaaiSZi0OYOeTbyppOF35YzioMyRN/qy94Le8Vh6Cuuo3iDMzalocn6Hyc0kw6uVET6urILj/zwZIEJWLIh8e/sFM0XsqfmeJuxUJs+oM7rjat1/0zXjIdX/yO+90Oap4x39v/7gEJBoVXXvy9WQvEtoStXyexQ5gUYVinWn6uUBec2qQBz4Fy1PMwTNcTzk+gPWnctWwKS4uNJidS+dN3NB8xWWI+/ss4Z9Jr04Aar7tpqFjqathH5gdafvWlsb3Malqw0p3oQC8a18yT5u7eoth/eQiQyRRVKVHMePtknIBS5sFGx/7IG/UvwT4MdW89BtX3P+tibdk9CwAA",
+			"Data8": "H4sIAAAAAAAEAM2QsQrCMBRFfyVkruDcTVoKhSLFFgfFIabXGkyTkryARfx3Fa0ILk7qejhcDnd94pl1LdxQWClIWcNjE7SORlyFLQ09eMyrwdAepCQrBRGc4U+pvhupahUJfeU1PC3ggyYeTyOeWOsaZQTBj/MvKDelsxLeo0mtDB0MPbRz9HlejSOxFOh34oD/Sitw+4slwoNN2DJfsUw5T2wuuvfSilyQFBx+eOPM2E7o4Sttmwt2xBBKgwIAAA==",
+			"Data9": "H4sIAAAAAAAEADMxAACk0SrcAgAAAA==",
+			"Data4": "MTExMQ==",
+			"Data1": "eyJXYWl0VGltZUluTWlsbGlzZWNvbmRzIjo0NzB9"
+		},
+		"ManualInspectionTriggeredRules": [],
+		"OptionalData": {
+			"DocumentInBlockList": "False"
+		},
+		"PageAsSeparateDocumentProcessingReports": [
+			{
+				"IsPageIgnored": false,
+				"PageIndex": 0,
+				"AgeVerificationReport": {
+					"AgeCalculation": 24,
+					"AgeEstimation": 18,
+					"AgeEstimationCompletionStatus": 0,
+					"ProcessedSupplementaryImageIndex": 0
+				},
+				"CompletionStatus": "Ok",
+				"CompletionTime": "2025-06-29T15:17:11.11",
+				"DataAnalyticsReport": {
+					"All": {
+						"SeenThatAddress": {
+							"RepetitionDocInfo": [],
+							"CountAll": 0,
+							"CountHour": 0,
+							"CountDay": 0
+						},
+						"SeenThatBackside": null,
+						"SeenThatDocumentNumber": {
+							"ConflictDocInfo": [],
+							"RepetitionDocInfo": [],
+							"IndConflict": false,
+							"CountAll": 0,
+							"CountHour": 0,
+							"CountDay": 0
+						},
+						"SeenThatEmail": null,
+						"SeenThatFacePicture": {
+							"ConflictDocInfo": [],
+							"RepetitionDocInfo": [],
+							"IndConflict": false,
+							"CountAll": 0,
+							"CountHour": 0,
+							"CountDay": 0
+						},
+						"SeenThatGeolocation": null,
+						"SeenThatImageTemplate": null,
+						"SeenThatIp": null,
+						"SeenThatPerson": {
+							"ConflictDocInfo": [],
+							"RepetitionDocInfo": [],
+							"IndConflict": false,
+							"CountAll": 0,
+							"CountHour": 0,
+							"CountDay": 0
+						},
+						"SeenThatPhone": null,
+						"SeenThatProfile": null,
+						"SeenThatSelfie": {
+							"ConflictDocInfo": [],
+							"RepetitionDocInfo": [],
+							"IndConflict": false,
+							"CountAll": 0,
+							"CountHour": 0,
+							"CountDay": 0
+						},
+						"SeenThatSelfieBackground": {
+							"ConflictDocInfo": [],
+							"RepetitionDocInfo": [],
+							"IndConflict": false,
+							"CountAll": 0,
+							"CountHour": 0,
+							"CountDay": 0
+						},
+						"SeenThatSignature": null,
+						"SeenThatUserName": null
+					},
+					"AttackInfo": {
+						"SeenThatBackside": null,
+						"SeenThatDocumentNumber": null,
+						"SeenThatEmail": null,
+						"SeenThatFacePicture": null,
+						"SeenThatImageTemplate": null,
+						"SeenThatIp": null,
+						"SeenThatPerson": null,
+						"SeenThatPhone": null,
+						"SeenThatProfile": null,
+						"SeenThatSelfie": null,
+						"SeenThatSelfieBackground": null,
+						"SeenThatSignature": null,
+						"SeenThatUserName": null
+					},
+					"ExecutionStatus": 0,
+					"MyOrganization": {
+						"SeenThatAddress": {
+							"RepetitionDocInfo": [],
+							"CountAll": 0,
+							"CountHour": 0,
+							"CountDay": 0
+						},
+						"SeenThatBackside": null,
+						"SeenThatDocumentNumber": {
+							"ConflictDocInfo": [],
+							"RepetitionDocInfo": [],
+							"IndConflict": false,
+							"CountAll": 0,
+							"CountHour": 0,
+							"CountDay": 0
+						},
+						"SeenThatEmail": null,
+						"SeenThatFacePicture": {
+							"ConflictDocInfo": [],
+							"RepetitionDocInfo": [],
+							"IndConflict": false,
+							"CountAll": 0,
+							"CountHour": 0,
+							"CountDay": 0
+						},
+						"SeenThatGeolocation": null,
+						"SeenThatImageTemplate": null,
+						"SeenThatIp": null,
+						"SeenThatPerson": {
+							"ConflictDocInfo": [],
+							"RepetitionDocInfo": [],
+							"IndConflict": false,
+							"CountAll": 0,
+							"CountHour": 0,
+							"CountDay": 0
+						},
+						"SeenThatPhone": null,
+						"SeenThatProfile": null,
+						"SeenThatSelfie": {
+							"ConflictDocInfo": [],
+							"RepetitionDocInfo": [],
+							"IndConflict": false,
+							"CountAll": 0,
+							"CountHour": 0,
+							"CountDay": 0
+						},
+						"SeenThatSelfieBackground": {
+							"ConflictDocInfo": [],
+							"RepetitionDocInfo": [],
+							"IndConflict": false,
+							"CountAll": 0,
+							"CountHour": 0,
+							"CountDay": 0
+						},
+						"SeenThatSignature": null,
+						"SeenThatUserName": null
+					},
+					"PED": [],
+					"RiskFlag": null
+				},
+				"DocumentAuthenticity": "Authentic",
+				"DocumentId": "FB97975F791A4AF3A5DAC9C3223AA01D",
+				"DocumentScope": "IdentityDocuments",
+				"DocumentSidesCode": 1,
+				"DocumentStatusReport2": {
+					"PrimaryProcessingResult": 0,
+					"ProcessingResultRemarks": [
+						0,
+						500,
+						1440
+					]
+				},
+				"FaceAnalysisReport": null,
+				"FaceComparisonReport": {
+					"CompletionStatus": 0,
+					"FaceComparisonModelId": "2",
+					"FaceSimilarityRatio": 67.7,
+					"ProcessedSupplementaryImageIndex": -1,
+					"ImageMetadata": null,
+					"ImageQuality": null,
+					"LivenessDetectionReport": null,
+					"ReverseGeocodingReport": null,
+					"SelfieGenderValidation": true
+				},
+				"IdentityDataInputStatus": 1,
+				"InternalData": {
+					"Data12": "H4sIAAAAAAAEALWWTW+bQBCG/8qKUyMlUs+52bFpkZLKCg5VW/UwhgE2XnbR7lCZVv3vHexEdYTVCu/6BBLaZ96ddz749iuKja3Q9mm3ob7F6DbKQMkCSBotbsQjgrpJFuILghWmFIlzHUbXr6fWhyMLIBCJJqyspJ4/r9HRI7pOUXT7/vf1/6JkyVfBDBwizKWlOnCEjyirmgJDlz26wMjPl9D5Nr2XN3C5a6XtQ4S4RyK04g4cvsS4B0fiEzTjG6Rku5w6i2eSY2nDoNe4IzFTstIN6rGX02Cr2pDhJmwV5DjwWG1ag23FsqhO2CgrSaDORg9QsbKmlMoPnvaaaiSZi0OYOeTbyppOF35YzioMyRN/qy94Le8Vh6Cuuo3iDMzalocn6Hyc0kw6uVET6urILj/zwZIEJWLIh8e/sFM0XsqfmeJuxUJs+oM7rjat1/0zXjIdX/yO+90Oap4x39v/7gEJBoVXXvy9WQvEtoStXyexQ5gUYVinWn6uUBec2qQBz4Fy1PMwTNcTzk+gPWnctWwKS4uNJidS+dN3NB8xWWI+/ss4Z9Jr04Aar7tpqFjqathH5gdafvWlsb3Malqw0p3oQC8a18yT5u7eoth/eQiQyRRVKVHMePtknIBS5sFGx/7IG/UvwT4MdW89BtX3P+tibdk9CwAA",
+					"Data8": "H4sIAAAAAAAEAM2QsQrCMBRFfyVkruDcTVoKhSLFFgfFIabXGkyTkryARfx3Fa0ILk7qejhcDnd94pl1LdxQWClIWcNjE7SORlyFLQ09eMyrwdAepCQrBRGc4U+pvhupahUJfeU1PC3ggyYeTyOeWOsaZQTBj/MvKDelsxLeo0mtDB0MPbRz9HlejSOxFOh34oD/Sitw+4slwoNN2DJfsUw5T2wuuvfSilyQFBx+eOPM2E7o4Sttmwt2xBBKgwIAAA==",
+					"Data9": "H4sIAAAAAAAEADMxAACk0SrcAgAAAA==",
+					"Data4": "MTExMQ=="
+				},
+				"ManualInspectionTriggeredRules": [],
+				"OptionalData": {
+					"DocumentInBlockList": "False"
+				},
+				"PageAsSeparateDocumentProcessingReports": [],
+				"PassiveFaceLivenessDetectionReport": {
+					"CompletionStatus": 0,
+					"DetectionAttempts": [
+						{
+							"AttemptNumber": 1,
+							"Liveness": true,
+							"Message": null,
+							"Probability": 0.983663559,
+							"ProcessingRemark": null,
+							"Score": 10
+						}
+					],
+					"LivenessDetected": true
+				},
+				"PersonalInfoValidationReport": {
+					"IsPersonalInfoValid": true,
+					"PersonalInfoValidationTests": {
+						"IsEyesInfoValid": true,
+						"IsHairInfoValid": null,
+						"IsHeightInfoValid": true,
+						"IsWeightInfoValid": true
+					}
+				},
+				"PhotoProcessingReports": [
+					{
+						"EstimatedAge": null,
+						"EstimatedGender": "",
+						"ImageTypeCode": 6
+					},
+					{
+						"EstimatedAge": 18,
+						"EstimatedGender": "Female",
+						"ImageTypeCode": 5
+					}
+				],
+				"ProcessedSupplementaryImages": [],
+				"ProcessingDetails": {
+					"ApiResponseProfile": 0,
+					"ServiceLevelAgeVerification": 0,
+					"ServiceLevelIdentityDocument": 0,
+					"ToleranceToRisk": 0
+				},
+				"ProcessingRequest": {
+					"ChipProcessingRequest": null,
+					"ClientIpAddress": "38.107.226.172",
+					"CreationTime": "2025-06-29T15:17:00",
+					"DataVerificationRequest": null,
+					"DocumentId": "FB97975F791A4AF3A5DAC9C3223AA01D",
+					"DocumentProcessingParameters": {
+						"IdentityDataInput": {
+							"AlternateName": null,
+							"BirthPlace": null,
+							"CountryIso3": "USA",
+							"DateOfBirth": "2000-07-19T12:00:00Z",
+							"DateOfExpiry": null,
+							"DateOfIssue": null,
+							"DocumentNumber": "302491538",
+							"Email": null,
+							"FirstName": "Feest",
+							"FirstName2": null,
+							"FullName": null,
+							"FullName2": null,
+							"Gender": null,
+							"IpAddress": null,
+							"LastName": "Berniece",
+							"LastName2": null,
+							"MiddleNames": null,
+							"MotherName": null,
+							"NationalityIso3": null,
+							"PersonalNumber": "302491538",
+							"PhoneNumber": null,
+							"Profile": null,
+							"RegistryCode": null,
+							"ResidentialAddress": null,
+							"UserName": null
+						},
+						"ImageSource": "Au10tixMobileWebSdkCamera",
+						"IsFromCertifiedScanner": false,
+						"IsToCheckAuthenticity": true,
+						"Tag": "{\"uploadBy\":\"SecureMe\",\"capturedBy\":\"WebSDK\",\"platform\":\"Android\"}",
+						"VentureId": null
+					},
+					"FaceComparisonRequest": {
+						"ImageFileProcessingRequest": {
+							"ImageIllumination": "Visible",
+							"DataUnitSize": 344810
+						},
+						"RequestState": 0
+					},
+					"PageProcessingRequests": [
+						{
+							"DataUnitProcessingRequests": [
+								{
+									"ImageIllumination": "Visible",
+									"DataUnitSize": 107620
+								}
+							]
+						}
+					],
+					"PersonaInfoComparisonRequest": {
+						"CreationTime": "2025-06-29T15:17:00",
+						"IdentityDataInput": {
+							"AlternateName": null,
+							"BirthPlace": null,
+							"CountryIso3": "USA",
+							"DateOfBirth": "2000-07-19T12:00:00Z",
+							"DateOfExpiry": null,
+							"DateOfIssue": null,
+							"DocumentNumber": "302491538",
+							"Email": null,
+							"FirstName": "Feest",
+							"FirstName2": null,
+							"FullName": null,
+							"FullName2": null,
+							"Gender": null,
+							"IpAddress": null,
+							"LastName": "Berniece",
+							"LastName2": null,
+							"MiddleNames": null,
+							"MotherName": null,
+							"NationalityIso3": null,
+							"PersonalNumber": "302491538",
+							"PhoneNumber": null,
+							"Profile": null,
+							"RegistryCode": null,
+							"ResidentialAddress": null,
+							"UserName": null
+						}
+					},
+					"ProcessingHints": {
+						"DataAnalyticsForcingDirective": null,
+						"DeclaredIdentityDocumentSpecification": {
+							"CountryIso3": "USA",
+							"DocumentType": "Driving License"
+						},
+						"DoubleCheckForcingDirective": "None",
+						"DoubleCheckConfigurationId": null,
+						"IsBiometricsEnabledForDataAnalytics": null,
+						"IsToSkipDoubleCheck": false,
+						"PersonalInfoRedactions": [],
+						"PersonalInfoRedactionConfiguration": null,
+						"ToleranceToRisk": null,
+						"WebhookInfo": null,
+						"FaceLiveness": null
+					},
+					"ProofOfAddressRequest": null,
+					"WorkerId": null,
+					"IsSessionIdFromRequest": true,
+					"IsToForceUsingInternalStorage": false
+				},
+				"ProcessingResult": {
+					"DocumentData2": {
+						"Address": {
+							"DataSource": 0,
+							"LanguageCode": "eng",
+							"Value": "707 REDWOOD ST SW|RIO RANCHO, NM 87124"
+						},
+						"AlternateName": null,
+						"Birthplace": null,
+						"DateOfBirth": {
+							"BadValueDescriptor": null,
+							"BadValueDescriptor2": null,
+							"DataSource": 0,
+							"Value": "2000-07-19T00:00:00"
+						},
+						"DateOfBirthLocal": null,
+						"DateOfExpiry": {
+							"BadValueDescriptor": null,
+							"BadValueDescriptor2": null,
+							"DataSource": 0,
+							"Value": "2027-10-20T00:00:00"
+						},
+						"DateOfExpiryLocal": null,
+						"DateOfIssue": {
+							"BadValueDescriptor": null,
+							"BadValueDescriptor2": null,
+							"DataSource": 0,
+							"Value": "2021-09-10T00:00:00"
+						},
+						"DateOfIssueLocal": null,
+						"DocumentNumber": {
+							"DataSource": 0,
+							"LanguageCode": "eng",
+							"Value": "407319610"
+						},
+						"ExtendedData": {
+							"Authority": null,
+							"AuthorityLocal": null,
+							"Barcodes": [],
+							"BirthplaceLocal": null,
+							"BloodType": null,
+							"CivilStatus": null,
+							"CalculatedAge": 24,
+							"CitizenshipStatus": null,
+							"District": null,
+							"DocumentDiscriminator": null,
+							"Employer": null,
+							"Eyes": {
+								"DataSource": 0,
+								"LanguageCode": "eng",
+								"Value": "HAZ"
+							},
+							"FamilyName": null,
+							"FatherName": null,
+							"FirstNameLocal": null,
+							"FirstNameToLatin": null,
+							"FullNameToLatin": null,
+							"Hair": null,
+							"Height": {
+								"RawData": {
+									"DataSource": 0,
+									"LanguageCode": "eng",
+									"Value": "5'04\""
+								}
+							},
+							"HusbandName": null,
+							"IssuePlace": null,
+							"LastNameLocal": null,
+							"LastNameToLatin": null,
+							"LicenseType": {
+								"DataSource": 0,
+								"LanguageCode": "eng",
+								"Value": "Open"
+							},
+							"MiddleNameLocal": null,
+							"MiddleNameToLatin": null,
+							"MotherName": null,
+							"MotherNameLocal": null,
+							"NationalityLocal": null,
+							"Observations": null,
+							"Occupation": null,
+							"PermitType": null,
+							"PersonalNumber": null,
+							"PersonalNumberLocal": null,
+							"PersonalNumberToLatin": null,
+							"Province": null,
+							"RegistryCode": null,
+							"ReligiousAffiliation": null,
+							"SubDistrict": null,
+							"VerificationNumber": null,
+							"VisaType": null,
+							"VoterNumber": null,
+							"Weight": {
+								"RawData": {
+									"DataSource": 0,
+									"LanguageCode": "eng",
+									"Value": "127"
+								}
+							}
+						},
+						"FirstName": {
+							"DataSource": 0,
+							"LanguageCode": "eng",
+							"Value": "BERNIECE"
+						},
+						"FullName": null,
+						"FullNameLocal": null,
+						"Gender": {
+							"DataSource": 0,
+							"LanguageCode": "eng",
+							"Value": "F"
+						},
+						"LastName": {
+							"DataSource": 0,
+							"LanguageCode": "eng",
+							"Value": "FEEST"
+						},
+						"LocalDateOfIssue": null,
+						"MiddleName": null,
+						"Mrz": null,
+						"Nationality": null,
+						"OptionalData": null,
+						"Race": null,
+						"SocialSecurityNumber": null,
+						"TaxIdNumber": null,
+						"VerifiedAddress": null,
+						"Declared CountryIso3": {
+							"Value": "USA"
+						},
+						"Declared DocumentType": {
+							"Value": "Driving License"
+						}
+					},
+					"DocumentData3": null,
+					"DocumentPartImages": [
+						{
+							"ImageTypeCode": 7,
+							"ImageQuality": null,
+							"ImageData": null,
+							"SasToken": null
+						}
+					],
+					"IsDocumentExpired": false,
+					"ProcessedDocumentFeatures": "ImageUnderVisibleIllumination",
+					"DocumentTypeDescriptor": {
+						"Alias": null,
+						"CountryIso3": "USA",
+						"CountryIso3166Alpha3": "USA",
+						"DigitalDocumentDescriptor": null,
+						"DocumentType": "Driving License",
+						"DocumentVersion": "V3",
+						"HasQrCode": false,
+						"IsRealID": true,
+						"IssuanceFormat": null,
+						"State": "NM",
+						"YearOfIssue": null
+					},
+					"ForgeryTests": [
+						{
+							"ForgeryLocation": null,
+							"ForgerySubtype": "Selfie Age Verification",
+							"ForgeryType": "Data Integrity",
+							"TestResult": "Authentic",
+							"Coordinates": [],
+							"CoordinatesInProcessedDocuments": []
+						},
+						{
+							"ForgeryLocation": null,
+							"ForgerySubtype": "Signature Validation",
+							"ForgeryType": "Data Integrity",
+							"TestResult": "Authentic",
+							"Coordinates": [],
+							"CoordinatesInProcessedDocuments": []
+						},
+						{
+							"ForgeryLocation": null,
+							"ForgerySubtype": "Validation - Photo",
+							"ForgeryType": "Data Integrity",
+							"TestResult": "Authentic",
+							"Coordinates": [],
+							"CoordinatesInProcessedDocuments": []
+						},
+						{
+							"ForgeryLocation": null,
+							"ForgerySubtype": "Validation - Real-ID Year of Issue",
+							"ForgeryType": "Data Integrity",
+							"TestResult": "Authentic",
+							"Coordinates": [],
+							"CoordinatesInProcessedDocuments": []
+						},
+						{
+							"ForgeryLocation": null,
+							"ForgerySubtype": "Validation - VIZ Date of Birth",
+							"ForgeryType": "Data Integrity",
+							"TestResult": "Authentic",
+							"Coordinates": [],
+							"CoordinatesInProcessedDocuments": []
+						},
+						{
+							"ForgeryLocation": null,
+							"ForgerySubtype": "Validation - VIZ Date of Expiry",
+							"ForgeryType": "Data Integrity",
+							"TestResult": "Authentic",
+							"Coordinates": [],
+							"CoordinatesInProcessedDocuments": []
+						},
+						{
+							"ForgeryLocation": null,
+							"ForgerySubtype": "Validation - VIZ Date of Issue",
+							"ForgeryType": "Data Integrity",
+							"TestResult": "Authentic",
+							"Coordinates": [],
+							"CoordinatesInProcessedDocuments": []
+						},
+						{
+							"ForgeryLocation": null,
+							"ForgerySubtype": "Altered by Photoshop",
+							"ForgeryType": "Digital",
+							"TestResult": "Authentic",
+							"Coordinates": [],
+							"CoordinatesInProcessedDocuments": []
+						},
+						{
+							"ForgeryLocation": null,
+							"ForgerySubtype": "FaceId Deepfake",
+							"ForgeryType": "Digital",
+							"TestResult": "Authentic",
+							"Coordinates": [],
+							"CoordinatesInProcessedDocuments": []
+						},
+						{
+							"ForgeryLocation": null,
+							"ForgerySubtype": "Photo Replacement - Blended Image",
+							"ForgeryType": "Digital",
+							"TestResult": "Authentic",
+							"Coordinates": [],
+							"CoordinatesInProcessedDocuments": []
+						},
+						{
+							"ForgeryLocation": null,
+							"ForgerySubtype": "Photo Replacement - Edge Profile",
+							"ForgeryType": "Digital",
+							"TestResult": "Authentic",
+							"Coordinates": [],
+							"CoordinatesInProcessedDocuments": []
+						},
+						{
+							"ForgeryLocation": null,
+							"ForgerySubtype": "Photo Replacement - Sharp Edge",
+							"ForgeryType": "Digital",
+							"TestResult": "Authentic",
+							"Coordinates": [],
+							"CoordinatesInProcessedDocuments": []
+						},
+						{
+							"ForgeryLocation": null,
+							"ForgerySubtype": "Synthetic Photo Background",
+							"ForgeryType": "Digital",
+							"TestResult": "Authentic",
+							"Coordinates": [],
+							"CoordinatesInProcessedDocuments": []
+						},
+						{
+							"ForgeryLocation": null,
+							"ForgerySubtype": "Text Replacement",
+							"ForgeryType": "Digital",
+							"TestResult": "Authentic",
+							"Coordinates": [],
+							"CoordinatesInProcessedDocuments": []
+						},
+						{
+							"ForgeryLocation": null,
+							"ForgerySubtype": "Virtual Camera Injection (MetaData)",
+							"ForgeryType": "Digital",
+							"TestResult": "Authentic",
+							"Coordinates": [],
+							"CoordinatesInProcessedDocuments": []
+						},
+						{
+							"ForgeryLocation": null,
+							"ForgerySubtype": "Finger Covering",
+							"ForgeryType": "Structure",
+							"TestResult": "Authentic",
+							"Coordinates": [],
+							"CoordinatesInProcessedDocuments": []
+						},
+						{
+							"ForgeryLocation": null,
+							"ForgerySubtype": "Letter Case - VIZ Last Name",
+							"ForgeryType": "Structure",
+							"TestResult": "Authentic",
+							"Coordinates": [],
+							"CoordinatesInProcessedDocuments": []
+						},
+						{
+							"ForgeryLocation": null,
+							"ForgerySubtype": "Text Alignment",
+							"ForgeryType": "Structure",
+							"TestResult": "Authentic",
+							"Coordinates": [],
+							"CoordinatesInProcessedDocuments": []
+						},
+						{
+							"ForgeryLocation": null,
+							"ForgerySubtype": "Unexpected Fonts Size",
+							"ForgeryType": "Structure",
+							"TestResult": "Authentic",
+							"Coordinates": [],
+							"CoordinatesInProcessedDocuments": []
+						},
+						{
+							"ForgeryLocation": null,
+							"ForgerySubtype": "Unexpected Patch",
+							"ForgeryType": "Structure",
+							"TestResult": "Authentic",
+							"Coordinates": [],
+							"CoordinatesInProcessedDocuments": []
+						},
+						{
+							"ForgeryLocation": null,
+							"ForgerySubtype": "Partial Facial Replacement",
+							"ForgeryType": "Visible",
+							"TestResult": "Authentic",
+							"Coordinates": [],
+							"CoordinatesInProcessedDocuments": []
+						},
+						{
+							"ForgeryLocation": null,
+							"ForgerySubtype": "Public Appearance",
+							"ForgeryType": "Visible",
+							"TestResult": "Authentic",
+							"Coordinates": [],
+							"CoordinatesInProcessedDocuments": []
+						}
+					],
+					"IdentityDataInputReport": {
+						"AlternateNameSimilarity": null,
+						"AlternateNameStatus": null,
+						"BirthPlaceSimilarity": null,
+						"BirthPlaceStatus": null,
+						"CountryStatus": 0,
+						"DateOfBirthSimilarity": 100,
+						"DateOfBirthStatus": 0,
+						"DateOfExpirySimilarity": null,
+						"DateOfExpiryStatus": null,
+						"DateOfIssueSimilarity": null,
+						"DateOfIssueStatus": null,
+						"DocumentNumberSimilarity": 45,
+						"DocumentNumberStatus": 1,
+						"FirstNameSimilarity": null,
+						"FullNameStatus": 0,
+						"FullNameSimilarity": 100,
+						"FullNameSimilarityReport": {
+							"FullNameComparedWordsDetails": [
+								{
+									"FieldName": "FullName",
+									"WordConfidences": [
+										{
+											"Similarity": 100,
+											"Word": "Berniece"
+										},
+										{
+											"Similarity": 100,
+											"Word": "Feest"
+										}
+									]
+								}
+							],
+							"FullNameSimilarity": 100,
+							"FullNameWordAverageSimilarity": 100,
+							"FullNameWordSimilarityList": [
+								100,
+								100
+							],
+							"FullNameWordSimilarityListReverseLookup": [
+								100,
+								100
+							],
+							"FullNameStatus": 0
+						},
+						"LastNameSimilarity": null,
+						"MotherNameSimilarity": null,
+						"MotherNameStatus": null,
+						"NationalitySimilarity": null,
+						"NationalityStatus": null,
+						"NormalizedAddressComparisonReport": {
+							"IsAddressMatch": null,
+							"VerifiedAddressFromIdentity": null,
+							"VerifiedAddressFromInputData": null
+						},
+						"PersonalNumberSimilarity": null,
+						"PersonalNumberStatus": null,
+						"RegistryCodeSimilarity": null,
+						"RegistryCodeStatus": null,
+						"ResidentialAddressSimilarityReport": {
+							"AddressSimilarity": null,
+							"AddressWordAverageSimilarity": null,
+							"AddressWordSimilarityList": [],
+							"AddressStatus": null
+						},
+						"VoterNumberSimilarity": null,
+						"VoterNumberStatus": null
+					},
+					"IsDataExtracted": true,
+					"OverallQuality": "Acceptable",
+					"PageProcessingResults": [
+						{
+							"BarcodesProcessingReport": null,
+							"CompletionStatus": "Ok",
+							"DocumentReplay": 0,
+							"DocumentReplay2": 0,
+							"DurationInMilliseconds": 7266,
+							"IdentityDataInputReport": {
+								"AlternateNameSimilarity": null,
+								"AlternateNameStatus": null,
+								"BirthPlaceSimilarity": null,
+								"BirthPlaceStatus": null,
+								"CountryStatus": 0,
+								"DateOfBirthSimilarity": 100,
+								"DateOfBirthStatus": 0,
+								"DateOfExpirySimilarity": null,
+								"DateOfExpiryStatus": null,
+								"DateOfIssueSimilarity": null,
+								"DateOfIssueStatus": null,
+								"DocumentNumberSimilarity": 45,
+								"DocumentNumberStatus": 1,
+								"FirstNameSimilarity": null,
+								"FullNameStatus": 0,
+								"FullNameSimilarity": 100,
+								"FullNameSimilarityReport": {
+									"FullNameComparedWordsDetails": [
+										{
+											"FieldName": "FullName",
+											"WordConfidences": [
+												{
+													"Similarity": 100,
+													"Word": "Berniece"
+												},
+												{
+													"Similarity": 100,
+													"Word": "Feest"
+												}
+											]
+										}
+									],
+									"FullNameSimilarity": 100,
+									"FullNameWordAverageSimilarity": 100,
+									"FullNameWordSimilarityList": [
+										100,
+										100
+									],
+									"FullNameWordSimilarityListReverseLookup": [
+										100,
+										100
+									],
+									"FullNameStatus": 0
+								},
+								"LastNameSimilarity": null,
+								"MotherNameSimilarity": null,
+								"MotherNameStatus": null,
+								"NationalitySimilarity": null,
+								"NationalityStatus": null,
+								"NormalizedAddressComparisonReport": {
+									"IsAddressMatch": null,
+									"VerifiedAddressFromIdentity": null,
+									"VerifiedAddressFromInputData": null
+								},
+								"PersonalNumberSimilarity": null,
+								"PersonalNumberStatus": null,
+								"RegistryCodeSimilarity": null,
+								"RegistryCodeStatus": null,
+								"ResidentialAddressSimilarityReport": {
+									"AddressSimilarity": null,
+									"AddressWordAverageSimilarity": null,
+									"AddressWordSimilarityList": [],
+									"AddressStatus": null
+								},
+								"VoterNumberSimilarity": null,
+								"VoterNumberStatus": null
+							},
+							"IsChipExist": null,
+							"IsExpectedSecondSide": true,
+							"IsPrimaryPhotoDetected": true,
+							"IsSignature": true,
+							"IsSubPhotoDetected": true,
+							"ProcessedImages": [
+								{
+									"IsColored": true,
+									"IsReduced": null,
+									"IsValidSize": true,
+									"Quality": {
+										"IsAcceptableBlurMrz": null,
+										"IsAcceptableBlurViz": true,
+										"IsAcceptableBright": true,
+										"IsAcceptableDark": true,
+										"IsAcceptableDpi": true,
+										"IsAcceptableEntropy": true,
+										"IsAcceptableFaceNotFound": true,
+										"IsAcceptableImageIncomplete": true,
+										"IsAcceptableJpegCompression": true,
+										"IsAcceptableLayout": true,
+										"IsAcceptableMrz": null,
+										"IsAcceptableObliquity": true,
+										"IsAcceptableQuantization": true,
+										"IsAcceptableReflectionMrz": null,
+										"IsAcceptableReflectionViz": true,
+										"IsAcceptableSize": true,
+										"IsAcceptableTextConfidenceMrz": null,
+										"IsAcceptableTextConfidenceViz": true,
+										"IsGenerallyAcceptable": true
+									},
+									"QualityBeforeAdjustment": {
+										"IsAcceptableBlurMrz": null,
+										"IsAcceptableBlurViz": true,
+										"IsAcceptableBright": true,
+										"IsAcceptableDark": true,
+										"IsAcceptableDpi": true,
+										"IsAcceptableEntropy": true,
+										"IsAcceptableFaceNotFound": true,
+										"IsAcceptableImageIncomplete": true,
+										"IsAcceptableJpegCompression": true,
+										"IsAcceptableLayout": true,
+										"IsAcceptableMrz": null,
+										"IsAcceptableObliquity": true,
+										"IsAcceptableQuantization": true,
+										"IsAcceptableReflectionMrz": null,
+										"IsAcceptableReflectionViz": true,
+										"IsAcceptableSize": true,
+										"IsAcceptableTextConfidenceMrz": null,
+										"IsAcceptableTextConfidenceViz": true,
+										"IsGenerallyAcceptable": true
+									},
+									"UnexpectedImageCorners": false,
+									"Compression": 92,
+									"CroppedHeight": 495,
+									"CroppedWidth": 778,
+									"Data": null,
+									"Dpi": 231,
+									"ImageFileType": "jpg",
+									"ImageType": "Visible",
+									"OriginalHeight": 534,
+									"OriginalWidth": 851,
+									"ReverseGeocodingReport": null,
+									"SasToken": null,
+									"EquipmentMaker": "",
+									"EquipmentModel": "camera2 0, facing back",
+									"FileName": "Page0.Front.VIS.jpg",
+									"ImageCreationDateTime": "2025-06-29T08:15:04",
+									"Latitude": "",
+									"Longitude": "",
+									"SoftwareUsed": "AU10TIX WebSDK"
+								}
+							]
+						}
+					],
+					"SdrCompletionStatus": "Ok"
+				},
+				"ProcessingStartTime": "2025-06-29T15:17:11.11",
+				"ProofOfAddressReport": null,
+				"RequestAcceptanceWarnings": [],
+				"RequestRejectionInfo": null,
+				"RiskManagementReport": null,
+				"SdrVersion": "2506.100.0.6",
+				"VideoVerificationReport": null,
+				"VoiceTranscribeReport": null
+			},
+			{
+				"IsPageIgnored": true,
+				"PageIndex": 1,
+				"AgeVerificationReport": {
+					"AgeCalculation": null,
+					"AgeEstimation": 18,
+					"AgeEstimationCompletionStatus": 0,
+					"ProcessedSupplementaryImageIndex": 0
+				},
+				"CompletionStatus": "UnrecognizableDocument",
+				"CompletionTime": "2025-06-29T15:17:11.11",
+				"DataAnalyticsReport": null,
+				"DocumentAuthenticity": "NotApplicable",
+				"DocumentId": "FB97975F791A4AF3A5DAC9C3223AA01D",
+				"DocumentScope": "IdentityDocuments",
+				"DocumentSidesCode": 0,
+				"DocumentStatusReport2": {
+					"PrimaryProcessingResult": 20,
+					"ProcessingResultRemarks": [
+						180
+					]
+				},
+				"FaceAnalysisReport": null,
+				"FaceComparisonReport": {
+					"CompletionStatus": 30,
+					"FaceComparisonModelId": null,
+					"FaceSimilarityRatio": 0,
+					"ProcessedSupplementaryImageIndex": 0,
+					"ImageMetadata": {
+						"EquipmentMaker": "",
+						"EquipmentModel": "camera2 1, facing front",
+						"FileName": "PhotoForFaceComparison.jpg",
+						"ImageCreationDateTime": "2025-06-29T08:16:47",
+						"Latitude": "",
+						"Longitude": "",
+						"SoftwareUsed": "AU10TIX WebSDK"
+					},
+					"ImageQuality": {
+						"IsGenerallyAcceptable": true
+					},
+					"LivenessDetectionReport": null,
+					"ReverseGeocodingReport": null,
+					"SelfieGenderValidation": null
+				},
+				"IdentityDataInputStatus": null,
+				"InternalData": {
+					"Data12": "H4sIAAAAAAAEAIuuVnLLL0pPLaoMLk0qqSxIVbJSckksSVRwzs8tSCzKLM7PU9BVCE7NSctMVXBPzUtJLVIIS8zJTEksyczPU9KB6Q5B0uqZV5KaXpRZUgmUDkktLglKLS7NKVGysjCojQUA4uVx4XAAAAA=",
+					"Data9": "H4sIAAAAAAAEADMxAACk0SrcAgAAAA==",
+					"Data3": "MTExMTE="
+				},
+				"ManualInspectionTriggeredRules": [],
+				"OptionalData": null,
+				"PageAsSeparateDocumentProcessingReports": [],
+				"PassiveFaceLivenessDetectionReport": {
+					"CompletionStatus": 0,
+					"DetectionAttempts": [
+						{
+							"AttemptNumber": 1,
+							"Liveness": true,
+							"Message": null,
+							"Probability": 0.983663559,
+							"ProcessingRemark": null,
+							"Score": 10
+						}
+					],
+					"LivenessDetected": true
+				},
+				"PersonalInfoValidationReport": {
+					"IsPersonalInfoValid": null,
+					"PersonalInfoValidationTests": null
+				},
+				"PhotoProcessingReports": [
+					{
+						"EstimatedAge": 18,
+						"EstimatedGender": "Female",
+						"ImageTypeCode": 5
+					}
+				],
+				"ProcessedSupplementaryImages": [],
+				"ProcessingDetails": {
+					"ApiResponseProfile": 0,
+					"ServiceLevelAgeVerification": 0,
+					"ServiceLevelIdentityDocument": 0,
+					"ToleranceToRisk": 0
+				},
+				"ProcessingRequest": {
+					"ChipProcessingRequest": null,
+					"ClientIpAddress": "38.107.226.172",
+					"CreationTime": "2025-06-29T15:17:00",
+					"DataVerificationRequest": null,
+					"DocumentId": "FB97975F791A4AF3A5DAC9C3223AA01D",
+					"DocumentProcessingParameters": {
+						"IdentityDataInput": {
+							"AlternateName": null,
+							"BirthPlace": null,
+							"CountryIso3": "USA",
+							"DateOfBirth": "2000-07-19T12:00:00Z",
+							"DateOfExpiry": null,
+							"DateOfIssue": null,
+							"DocumentNumber": "302491538",
+							"Email": null,
+							"FirstName": "Feest",
+							"FirstName2": null,
+							"FullName": null,
+							"FullName2": null,
+							"Gender": null,
+							"IpAddress": null,
+							"LastName": "Berniece",
+							"LastName2": null,
+							"MiddleNames": null,
+							"MotherName": null,
+							"NationalityIso3": null,
+							"PersonalNumber": "302491538",
+							"PhoneNumber": null,
+							"Profile": null,
+							"RegistryCode": null,
+							"ResidentialAddress": null,
+							"UserName": null
+						},
+						"ImageSource": "Au10tixMobileWebSdkCamera",
+						"IsFromCertifiedScanner": false,
+						"IsToCheckAuthenticity": true,
+						"Tag": "{\"uploadBy\":\"SecureMe\",\"capturedBy\":\"WebSDK\",\"platform\":\"Android\"}",
+						"VentureId": null
+					},
+					"FaceComparisonRequest": {
+						"ImageFileProcessingRequest": {
+							"ImageIllumination": "Visible",
+							"DataUnitSize": 344810
+						},
+						"RequestState": 0
+					},
+					"PageProcessingRequests": [
+						{
+							"DataUnitProcessingRequests": [
+								{
+									"ImageIllumination": "Visible",
+									"DataUnitSize": 100231
+								}
+							]
+						}
+					],
+					"PersonaInfoComparisonRequest": {
+						"CreationTime": "2025-06-29T15:17:00",
+						"IdentityDataInput": {
+							"AlternateName": null,
+							"BirthPlace": null,
+							"CountryIso3": "USA",
+							"DateOfBirth": "2000-07-19T12:00:00Z",
+							"DateOfExpiry": null,
+							"DateOfIssue": null,
+							"DocumentNumber": "302491538",
+							"Email": null,
+							"FirstName": "Feest",
+							"FirstName2": null,
+							"FullName": null,
+							"FullName2": null,
+							"Gender": null,
+							"IpAddress": null,
+							"LastName": "Berniece",
+							"LastName2": null,
+							"MiddleNames": null,
+							"MotherName": null,
+							"NationalityIso3": null,
+							"PersonalNumber": "302491538",
+							"PhoneNumber": null,
+							"Profile": null,
+							"RegistryCode": null,
+							"ResidentialAddress": null,
+							"UserName": null
+						}
+					},
+					"ProcessingHints": {
+						"DataAnalyticsForcingDirective": null,
+						"DeclaredIdentityDocumentSpecification": {
+							"CountryIso3": "USA",
+							"DocumentType": "Driving License"
+						},
+						"DoubleCheckForcingDirective": "None",
+						"DoubleCheckConfigurationId": null,
+						"IsBiometricsEnabledForDataAnalytics": null,
+						"IsToSkipDoubleCheck": false,
+						"PersonalInfoRedactions": [],
+						"PersonalInfoRedactionConfiguration": null,
+						"ToleranceToRisk": null,
+						"WebhookInfo": null,
+						"FaceLiveness": null
+					},
+					"ProofOfAddressRequest": null,
+					"WorkerId": null,
+					"IsSessionIdFromRequest": true,
+					"IsToForceUsingInternalStorage": false
+				},
+				"ProcessingResult": {
+					"DocumentData2": null,
+					"DocumentData3": null,
+					"DocumentPartImages": null,
+					"IsDocumentExpired": null,
+					"ProcessedDocumentFeatures": "Barcode, ImageUnderVisibleIllumination",
+					"DocumentTypeDescriptor": {
+						"Alias": "",
+						"CountryIso3": "",
+						"CountryIso3166Alpha3": "",
+						"DigitalDocumentDescriptor": null,
+						"DocumentType": "",
+						"DocumentVersion": "",
+						"HasQrCode": false,
+						"IsRealID": null,
+						"IssuanceFormat": null,
+						"State": "",
+						"YearOfIssue": ""
+					},
+					"ForgeryTests": [],
+					"IdentityDataInputReport": null,
+					"IsDataExtracted": false,
+					"OverallQuality": "Acceptable",
+					"PageProcessingResults": [
+						{
+							"BarcodesProcessingReport": {
+								"BarcodeProcessingResults": [
+									{
+										"ProcessingStatus": 40
+									}
+								]
+							},
+							"CompletionStatus": "Ok",
+							"DocumentReplay": null,
+							"DocumentReplay2": null,
+							"DurationInMilliseconds": 2594,
+							"IdentityDataInputReport": null,
+							"IsChipExist": null,
+							"IsExpectedSecondSide": false,
+							"IsPrimaryPhotoDetected": null,
+							"IsSignature": false,
+							"IsSubPhotoDetected": false,
+							"ProcessedImages": [
+								{
+									"IsColored": true,
+									"IsReduced": null,
+									"IsValidSize": true,
+									"Quality": {
+										"IsAcceptableBlurMrz": null,
+										"IsAcceptableBlurViz": true,
+										"IsAcceptableBright": true,
+										"IsAcceptableDark": true,
+										"IsAcceptableDpi": true,
+										"IsAcceptableEntropy": true,
+										"IsAcceptableFaceNotFound": true,
+										"IsAcceptableImageIncomplete": null,
+										"IsAcceptableJpegCompression": true,
+										"IsAcceptableLayout": true,
+										"IsAcceptableMrz": null,
+										"IsAcceptableObliquity": true,
+										"IsAcceptableQuantization": true,
+										"IsAcceptableReflectionMrz": null,
+										"IsAcceptableReflectionViz": true,
+										"IsAcceptableSize": true,
+										"IsAcceptableTextConfidenceMrz": null,
+										"IsAcceptableTextConfidenceViz": null,
+										"IsGenerallyAcceptable": true
+									},
+									"QualityBeforeAdjustment": {
+										"IsAcceptableBlurMrz": null,
+										"IsAcceptableBlurViz": true,
+										"IsAcceptableBright": true,
+										"IsAcceptableDark": true,
+										"IsAcceptableDpi": true,
+										"IsAcceptableEntropy": true,
+										"IsAcceptableFaceNotFound": true,
+										"IsAcceptableImageIncomplete": null,
+										"IsAcceptableJpegCompression": true,
+										"IsAcceptableLayout": true,
+										"IsAcceptableMrz": null,
+										"IsAcceptableObliquity": true,
+										"IsAcceptableQuantization": true,
+										"IsAcceptableReflectionMrz": null,
+										"IsAcceptableReflectionViz": true,
+										"IsAcceptableSize": true,
+										"IsAcceptableTextConfidenceMrz": null,
+										"IsAcceptableTextConfidenceViz": null,
+										"IsGenerallyAcceptable": true
+									},
+									"UnexpectedImageCorners": false,
+									"Compression": 92,
+									"CroppedHeight": 492,
+									"CroppedWidth": 780,
+									"Data": null,
+									"Dpi": 400,
+									"ImageFileType": "jpg",
+									"ImageType": "Visible",
+									"OriginalHeight": 541,
+									"OriginalWidth": 847,
+									"ReverseGeocodingReport": null,
+									"SasToken": "https://weubosappsapr.blob.core.windows.net/bos/ImageStorage/Output/_42/FB97975F791A4AF3A5DAC9C3223AA01D/FB97975F791A4AF3A5DAC9C3223AA01D_Page1_vis.jpg?sv=2025-05-05&se=2025-06-30T15%3A21%3A04Z&sr=b&sp=r&sig=XSSlz5t0Fv3Js6uFBC%2BHveH3oHLvpbQJBdHvF%2BgqeN0%3D",
+									"EquipmentMaker": "",
+									"EquipmentModel": "camera2 0, facing back",
+									"FileName": "Page1.Data.VIS.jpg",
+									"ImageCreationDateTime": "2025-06-29T08:15:22",
+									"Latitude": "",
+									"Longitude": "",
+									"SoftwareUsed": "AU10TIX WebSDK"
+								}
+							]
+						}
+					],
+					"SdrCompletionStatus": "Ok"
+				},
+				"ProcessingStartTime": "2025-06-29T15:17:11.11",
+				"ProofOfAddressReport": null,
+				"RequestAcceptanceWarnings": [],
+				"RequestRejectionInfo": null,
+				"RiskManagementReport": {
+					"EffectiveConclusion": {
+						"PrimaryProcessingResult": 20,
+						"Reasons": {
+							"ProcessingResultRemarks": null,
+							"RiskManagementRemarks": [
+								18
+							]
+						}
+					},
+					"NotificationConclusions": [],
+					"OriginalPrimaryProcessingResult": 80,
+					"SecondaryConclusions": []
+				},
+				"SdrVersion": "2506.100.0.6",
+				"VideoVerificationReport": null,
+				"VoiceTranscribeReport": null
+			}
+		],
+		"PassiveFaceLivenessDetectionReport": {
+			"CompletionStatus": 0,
+			"DetectionAttempts": [
+				{
+					"AttemptNumber": 1,
+					"Liveness": true,
+					"Message": null,
+					"Probability": 0.983663559,
+					"ProcessingRemark": null,
+					"Score": 10
+				}
+			],
+			"LivenessDetected": true
+		},
+		"PersonalInfoValidationReport": {
+			"IsPersonalInfoValid": true,
+			"PersonalInfoValidationTests": {
+				"IsEyesInfoValid": true,
+				"IsHairInfoValid": null,
+				"IsHeightInfoValid": true,
+				"IsWeightInfoValid": true
+			}
+		},
+		"PhotoProcessingReports": [
+			{
+				"EstimatedAge": null,
+				"EstimatedGender": "",
+				"ImageTypeCode": 6
+			},
+			{
+				"EstimatedAge": 18,
+				"EstimatedGender": "Female",
+				"ImageTypeCode": 5
+			}
+		],
+		"ProcessedSupplementaryImages": [
+			{
+				"ImageData": null,
+				"SasToken": "https://weubosappsapr.blob.core.windows.net/bos/ImageStorage/Output/_42/FB97975F791A4AF3A5DAC9C3223AA01D/FB97975F791A4AF3A5DAC9C3223AA01D_photo.jpg?sv=2025-05-05&se=2025-06-30T15%3A21%3A04Z&sr=b&sp=r&sig=nN9l15sTWcwgWiLt1toRssEIuPB98gZAvOVLMJi1qr0%3D"
+			}
+		],
+		"ProcessingDetails": {
+			"ApiResponseProfile": 0,
+			"ServiceLevelAgeVerification": 0,
+			"ServiceLevelIdentityDocument": 0,
+			"ToleranceToRisk": 0
+		},
+		"ProcessingRequest": {
+			"ChipProcessingRequest": null,
+			"ClientIpAddress": "38.107.226.172",
+			"CreationTime": "2025-06-29T15:17:00",
+			"DataVerificationRequest": null,
+			"DocumentId": "FB97975F791A4AF3A5DAC9C3223AA01D",
+			"DocumentProcessingParameters": {
+				"IdentityDataInput": {
+					"AlternateName": null,
+					"BirthPlace": null,
+					"CountryIso3": "USA",
+					"DateOfBirth": "2000-07-19T12:00:00Z",
+					"DateOfExpiry": null,
+					"DateOfIssue": null,
+					"DocumentNumber": "302491538",
+					"Email": null,
+					"FirstName": "Feest",
+					"FirstName2": null,
+					"FullName": null,
+					"FullName2": null,
+					"Gender": null,
+					"IpAddress": null,
+					"LastName": "Berniece",
+					"LastName2": null,
+					"MiddleNames": null,
+					"MotherName": null,
+					"NationalityIso3": null,
+					"PersonalNumber": "302491538",
+					"PhoneNumber": null,
+					"Profile": null,
+					"RegistryCode": null,
+					"ResidentialAddress": null,
+					"UserName": null
+				},
+				"ImageSource": "Au10tixMobileWebSdkCamera",
+				"IsFromCertifiedScanner": false,
+				"IsToCheckAuthenticity": true,
+				"Tag": "{\"uploadBy\":\"SecureMe\",\"capturedBy\":\"WebSDK\",\"platform\":\"Android\"}",
+				"VentureId": null
+			},
+			"FaceComparisonRequest": {
+				"ImageFileProcessingRequest": {
+					"ImageIllumination": "Visible",
+					"DataUnitSize": 344810
+				},
+				"RequestState": 0
+			},
+			"PageProcessingRequests": [
+				{
+					"DataUnitProcessingRequests": [
+						{
+							"ImageIllumination": "Visible",
+							"DataUnitSize": 107620
+						}
+					]
+				},
+				{
+					"DataUnitProcessingRequests": [
+						{
+							"ImageIllumination": "Visible",
+							"DataUnitSize": 100231
+						}
+					]
+				}
+			],
+			"PersonaInfoComparisonRequest": {
+				"CreationTime": "2025-06-29T15:17:00",
+				"IdentityDataInput": {
+					"AlternateName": null,
+					"BirthPlace": null,
+					"CountryIso3": "USA",
+					"DateOfBirth": "2000-07-19T12:00:00Z",
+					"DateOfExpiry": null,
+					"DateOfIssue": null,
+					"DocumentNumber": "302491538",
+					"Email": null,
+					"FirstName": "Feest",
+					"FirstName2": null,
+					"FullName": null,
+					"FullName2": null,
+					"Gender": null,
+					"IpAddress": null,
+					"LastName": "Berniece",
+					"LastName2": null,
+					"MiddleNames": null,
+					"MotherName": null,
+					"NationalityIso3": null,
+					"PersonalNumber": "302491538",
+					"PhoneNumber": null,
+					"Profile": null,
+					"RegistryCode": null,
+					"ResidentialAddress": null,
+					"UserName": null
+				}
+			},
+			"ProcessingHints": {
+				"DataAnalyticsForcingDirective": null,
+				"DeclaredIdentityDocumentSpecification": {
+					"CountryIso3": "USA",
+					"DocumentType": "Driving License"
+				},
+				"DoubleCheckForcingDirective": "None",
+				"DoubleCheckConfigurationId": null,
+				"IsBiometricsEnabledForDataAnalytics": null,
+				"IsToSkipDoubleCheck": false,
+				"PersonalInfoRedactions": [],
+				"PersonalInfoRedactionConfiguration": null,
+				"ToleranceToRisk": null,
+				"WebhookInfo": null,
+				"FaceLiveness": null
+			},
+			"ProofOfAddressRequest": null,
+			"WorkerId": null,
+			"SessionId": "FB97975F791A4AF3A5DAC9C3223AA01D",
+			"IsSessionIdFromRequest": true,
+			"IsToForceUsingInternalStorage": false
+		},
+		"ProcessingResult": {
+			"DocumentData2": {
+				"Address": {
+					"DataSource": 0,
+					"LanguageCode": "eng",
+					"Value": "707 REDWOOD ST SW\nRIO RANCHO, NM 87124"
+				},
+				"AlternateName": null,
+				"Birthplace": null,
+				"DateOfBirth": {
+					"BadValueDescriptor": null,
+					"BadValueDescriptor2": null,
+					"DataSource": 0,
+					"Value": "Jul 19, 2000"
+				},
+				"DateOfBirthLocal": null,
+				"DateOfExpiry": {
+					"BadValueDescriptor": null,
+					"BadValueDescriptor2": null,
+					"DataSource": 0,
+					"Value": "Oct 20, 2027"
+				},
+				"DateOfExpiryLocal": null,
+				"DateOfIssue": {
+					"BadValueDescriptor": null,
+					"BadValueDescriptor2": null,
+					"DataSource": 0,
+					"Value": "Sep 10, 2021"
+				},
+				"DateOfIssueLocal": null,
+				"DocumentNumber": {
+					"DataSource": 0,
+					"LanguageCode": "eng",
+					"Value": "407319610"
+				},
+				"ExtendedData": {
+					"Authority": null,
+					"AuthorityLocal": null,
+					"Barcodes": [],
+					"BirthplaceLocal": null,
+					"BloodType": null,
+					"CivilStatus": null,
+					"CalculatedAge": 24,
+					"CitizenshipStatus": null,
+					"District": null,
+					"DocumentDiscriminator": null,
+					"Employer": null,
+					"Eyes": {
+						"DataSource": 0,
+						"LanguageCode": "eng",
+						"Value": "HAZ"
+					},
+					"FamilyName": null,
+					"FatherName": null,
+					"FirstNameLocal": null,
+					"FirstNameToLatin": null,
+					"FullNameToLatin": null,
+					"Hair": null,
+					"Height": {
+						"RawData": {
+							"DataSource": 0,
+							"LanguageCode": "eng",
+							"Value": "5'04\""
+						}
+					},
+					"HusbandName": null,
+					"IssuePlace": null,
+					"LastNameLocal": null,
+					"LastNameToLatin": null,
+					"LicenseType": {
+						"DataSource": 0,
+						"LanguageCode": "eng",
+						"Value": "Open"
+					},
+					"MiddleNameLocal": null,
+					"MiddleNameToLatin": null,
+					"MotherName": null,
+					"MotherNameLocal": null,
+					"NationalityLocal": null,
+					"Observations": null,
+					"Occupation": null,
+					"PermitType": null,
+					"PersonalNumber": null,
+					"PersonalNumberLocal": null,
+					"PersonalNumberToLatin": null,
+					"Province": null,
+					"RegistryCode": null,
+					"ReligiousAffiliation": null,
+					"SubDistrict": null,
+					"VerificationNumber": null,
+					"VisaType": null,
+					"VoterNumber": null,
+					"Weight": {
+						"RawData": {
+							"DataSource": 0,
+							"LanguageCode": "eng",
+							"Value": "127"
+						}
+					}
+				},
+				"FirstName": {
+					"DataSource": 0,
+					"LanguageCode": "eng",
+					"Value": "BERNIECE"
+				},
+				"FullName": null,
+				"FullNameLocal": null,
+				"Gender": {
+					"DataSource": 0,
+					"LanguageCode": "eng",
+					"Value": "Female"
+				},
+				"LastName": {
+					"DataSource": 0,
+					"LanguageCode": "eng",
+					"Value": "FEEST"
+				},
+				"LocalDateOfIssue": null,
+				"MiddleName": null,
+				"Mrz": null,
+				"Nationality": null,
+				"OptionalData": null,
+				"Race": null,
+				"SocialSecurityNumber": null,
+				"TaxIdNumber": null,
+				"VerifiedAddress": null,
+				"Declared CountryIso3": {
+					"Value": "USA"
+				},
+				"Declared DocumentType": {
+					"Value": "Driving License"
+				}
+			},
+			"DocumentData3": null,
+			"DocumentPartImages": [
+				{
+					"ImageTypeCode": 7,
+					"ImageQuality": null,
+					"ImageData": null,
+					"SasToken": "https://weubosappsapr.blob.core.windows.net/bos/ImageStorage/Output/_42/FB97975F791A4AF3A5DAC9C3223AA01D/FB97975F791A4AF3A5DAC9C3223AA01D_Page0_SignatureOfHolder.jpg?sv=2025-05-05&se=2025-06-30T15%3A21%3A04Z&sr=b&sp=r&sig=lxecGSdBsYthN%2BDhJxkOx7FDxCZKJoT10h%2F%2BFpPpX2w%3D"
+				},
+				{
+					"ImageTypeCode": 6,
+					"ImageQuality": {
+						"IsAcceptableVIZPhoto": true,
+						"IsGenerallyAcceptable": true
+					},
+					"ImageData": null,
+					"SasToken": "https://weubosappsapr.blob.core.windows.net/bos/ImageStorage/Output/_42/FB97975F791A4AF3A5DAC9C3223AA01D/FB97975F791A4AF3A5DAC9C3223AA01D_Page0_CroppedPhoto.jpg?sv=2025-05-05&se=2025-06-30T15%3A21%3A04Z&sr=b&sp=r&sig=6S%2FlRQybmT%2Flz55iOzsv5V5NvLaKnu7IK2nIY7Y8Ij8%3D"
+				}
+			],
+			"IsDocumentExpired": false,
+			"ProcessedDocumentFeatures": "ImageUnderVisibleIllumination",
+			"DocumentTypeDescriptor": {
+				"Alias": null,
+				"CountryIso3": "USA",
+				"CountryIso3166Alpha3": "USA",
+				"DigitalDocumentDescriptor": null,
+				"DocumentType": "Driving License",
+				"DocumentVersion": "V3",
+				"HasQrCode": false,
+				"IsRealID": true,
+				"IssuanceFormat": null,
+				"State": "NM",
+				"YearOfIssue": null
+			},
+			"ForgeryTests": [
+				{
+					"ForgeryLocation": null,
+					"ForgerySubtype": "Selfie Age Verification",
+					"ForgeryType": "Data Integrity",
+					"TestResult": "Authentic",
+					"Coordinates": [],
+					"CoordinatesInProcessedDocuments": []
+				},
+				{
+					"ForgeryLocation": null,
+					"ForgerySubtype": "Signature Validation",
+					"ForgeryType": "Data Integrity",
+					"TestResult": "Authentic",
+					"Coordinates": [],
+					"CoordinatesInProcessedDocuments": []
+				},
+				{
+					"ForgeryLocation": null,
+					"ForgerySubtype": "Validation - Photo",
+					"ForgeryType": "Data Integrity",
+					"TestResult": "Authentic",
+					"Coordinates": [],
+					"CoordinatesInProcessedDocuments": []
+				},
+				{
+					"ForgeryLocation": null,
+					"ForgerySubtype": "Validation - Real-ID Year of Issue",
+					"ForgeryType": "Data Integrity",
+					"TestResult": "Authentic",
+					"Coordinates": [],
+					"CoordinatesInProcessedDocuments": []
+				},
+				{
+					"ForgeryLocation": null,
+					"ForgerySubtype": "Validation - VIZ Date of Birth",
+					"ForgeryType": "Data Integrity",
+					"TestResult": "Authentic",
+					"Coordinates": [],
+					"CoordinatesInProcessedDocuments": []
+				},
+				{
+					"ForgeryLocation": null,
+					"ForgerySubtype": "Validation - VIZ Date of Expiry",
+					"ForgeryType": "Data Integrity",
+					"TestResult": "Authentic",
+					"Coordinates": [],
+					"CoordinatesInProcessedDocuments": []
+				},
+				{
+					"ForgeryLocation": null,
+					"ForgerySubtype": "Validation - VIZ Date of Issue",
+					"ForgeryType": "Data Integrity",
+					"TestResult": "Authentic",
+					"Coordinates": [],
+					"CoordinatesInProcessedDocuments": []
+				},
+				{
+					"ForgeryLocation": null,
+					"ForgerySubtype": "Altered by Photoshop",
+					"ForgeryType": "Digital",
+					"TestResult": "Authentic",
+					"Coordinates": [],
+					"CoordinatesInProcessedDocuments": []
+				},
+				{
+					"ForgeryLocation": null,
+					"ForgerySubtype": "FaceId Deepfake",
+					"ForgeryType": "Digital",
+					"TestResult": "Authentic",
+					"Coordinates": [],
+					"CoordinatesInProcessedDocuments": []
+				},
+				{
+					"ForgeryLocation": null,
+					"ForgerySubtype": "Photo Replacement - Blended Image",
+					"ForgeryType": "Digital",
+					"TestResult": "Authentic",
+					"Coordinates": [],
+					"CoordinatesInProcessedDocuments": []
+				},
+				{
+					"ForgeryLocation": null,
+					"ForgerySubtype": "Photo Replacement - Edge Profile",
+					"ForgeryType": "Digital",
+					"TestResult": "Authentic",
+					"Coordinates": [],
+					"CoordinatesInProcessedDocuments": []
+				},
+				{
+					"ForgeryLocation": null,
+					"ForgerySubtype": "Photo Replacement - Sharp Edge",
+					"ForgeryType": "Digital",
+					"TestResult": "Authentic",
+					"Coordinates": [],
+					"CoordinatesInProcessedDocuments": []
+				},
+				{
+					"ForgeryLocation": null,
+					"ForgerySubtype": "Synthetic Photo Background",
+					"ForgeryType": "Digital",
+					"TestResult": "Authentic",
+					"Coordinates": [],
+					"CoordinatesInProcessedDocuments": []
+				},
+				{
+					"ForgeryLocation": null,
+					"ForgerySubtype": "Text Replacement",
+					"ForgeryType": "Digital",
+					"TestResult": "Authentic",
+					"Coordinates": [],
+					"CoordinatesInProcessedDocuments": []
+				},
+				{
+					"ForgeryLocation": null,
+					"ForgerySubtype": "Virtual Camera Injection (MetaData)",
+					"ForgeryType": "Digital",
+					"TestResult": "Authentic",
+					"Coordinates": [],
+					"CoordinatesInProcessedDocuments": []
+				},
+				{
+					"ForgeryLocation": null,
+					"ForgerySubtype": "Finger Covering",
+					"ForgeryType": "Structure",
+					"TestResult": "Authentic",
+					"Coordinates": [],
+					"CoordinatesInProcessedDocuments": []
+				},
+				{
+					"ForgeryLocation": null,
+					"ForgerySubtype": "Letter Case - VIZ Last Name",
+					"ForgeryType": "Structure",
+					"TestResult": "Authentic",
+					"Coordinates": [],
+					"CoordinatesInProcessedDocuments": []
+				},
+				{
+					"ForgeryLocation": null,
+					"ForgerySubtype": "Text Alignment",
+					"ForgeryType": "Structure",
+					"TestResult": "Authentic",
+					"Coordinates": [],
+					"CoordinatesInProcessedDocuments": []
+				},
+				{
+					"ForgeryLocation": null,
+					"ForgerySubtype": "Unexpected Fonts Size",
+					"ForgeryType": "Structure",
+					"TestResult": "Authentic",
+					"Coordinates": [],
+					"CoordinatesInProcessedDocuments": []
+				},
+				{
+					"ForgeryLocation": null,
+					"ForgerySubtype": "Unexpected Patch",
+					"ForgeryType": "Structure",
+					"TestResult": "Authentic",
+					"Coordinates": [],
+					"CoordinatesInProcessedDocuments": []
+				},
+				{
+					"ForgeryLocation": null,
+					"ForgerySubtype": "Partial Facial Replacement",
+					"ForgeryType": "Visible",
+					"TestResult": "Authentic",
+					"Coordinates": [],
+					"CoordinatesInProcessedDocuments": []
+				},
+				{
+					"ForgeryLocation": null,
+					"ForgerySubtype": "Public Appearance",
+					"ForgeryType": "Visible",
+					"TestResult": "Authentic",
+					"Coordinates": [],
+					"CoordinatesInProcessedDocuments": []
+				}
+			],
+			"IdentityDataInputReport": {
+				"AlternateNameSimilarity": null,
+				"AlternateNameStatus": null,
+				"BirthPlaceSimilarity": null,
+				"BirthPlaceStatus": null,
+				"CountryStatus": 0,
+				"DateOfBirthSimilarity": 100,
+				"DateOfBirthStatus": 0,
+				"DateOfExpirySimilarity": null,
+				"DateOfExpiryStatus": null,
+				"DateOfIssueSimilarity": null,
+				"DateOfIssueStatus": null,
+				"DocumentNumberSimilarity": 45,
+				"DocumentNumberStatus": 1,
+				"FirstNameSimilarity": null,
+				"FullNameStatus": 0,
+				"FullNameSimilarity": 100,
+				"FullNameSimilarityReport": {
+					"FullNameComparedWordsDetails": [
+						{
+							"FieldName": "FullName",
+							"WordConfidences": [
+								{
+									"Similarity": 100,
+									"Word": "Berniece"
+								},
+								{
+									"Similarity": 100,
+									"Word": "Feest"
+								}
+							]
+						}
+					],
+					"FullNameSimilarity": 100,
+					"FullNameWordAverageSimilarity": 100,
+					"FullNameWordSimilarityList": [
+						100,
+						100
+					],
+					"FullNameWordSimilarityListReverseLookup": [
+						100,
+						100
+					],
+					"FullNameStatus": 0
+				},
+				"LastNameSimilarity": null,
+				"MotherNameSimilarity": null,
+				"MotherNameStatus": null,
+				"NationalitySimilarity": null,
+				"NationalityStatus": null,
+				"NormalizedAddressComparisonReport": {
+					"IsAddressMatch": null,
+					"VerifiedAddressFromIdentity": null,
+					"VerifiedAddressFromInputData": null
+				},
+				"PersonalNumberSimilarity": null,
+				"PersonalNumberStatus": null,
+				"RegistryCodeSimilarity": null,
+				"RegistryCodeStatus": null,
+				"ResidentialAddressSimilarityReport": {
+					"AddressSimilarity": null,
+					"AddressWordAverageSimilarity": null,
+					"AddressWordSimilarityList": [],
+					"AddressStatus": null
+				},
+				"VoterNumberSimilarity": null,
+				"VoterNumberStatus": null
+			},
+			"IsDataExtracted": true,
+			"OverallQuality": "Acceptable",
+			"PageProcessingResults": [
+				{
+					"BarcodesProcessingReport": null,
+					"CompletionStatus": "Ok",
+					"DocumentReplay": 0,
+					"DocumentReplay2": 0,
+					"DurationInMilliseconds": 7266,
+					"IdentityDataInputReport": {
+						"AlternateNameSimilarity": null,
+						"AlternateNameStatus": null,
+						"BirthPlaceSimilarity": null,
+						"BirthPlaceStatus": null,
+						"CountryStatus": 0,
+						"DateOfBirthSimilarity": 100,
+						"DateOfBirthStatus": 0,
+						"DateOfExpirySimilarity": null,
+						"DateOfExpiryStatus": null,
+						"DateOfIssueSimilarity": null,
+						"DateOfIssueStatus": null,
+						"DocumentNumberSimilarity": 45,
+						"DocumentNumberStatus": 1,
+						"FirstNameSimilarity": null,
+						"FullNameStatus": 0,
+						"FullNameSimilarity": 100,
+						"FullNameSimilarityReport": {
+							"FullNameComparedWordsDetails": [
+								{
+									"FieldName": "FullName",
+									"WordConfidences": [
+										{
+											"Similarity": 100,
+											"Word": "Berniece"
+										},
+										{
+											"Similarity": 100,
+											"Word": "Feest"
+										}
+									]
+								}
+							],
+							"FullNameSimilarity": 100,
+							"FullNameWordAverageSimilarity": 100,
+							"FullNameWordSimilarityList": [
+								100,
+								100
+							],
+							"FullNameWordSimilarityListReverseLookup": [
+								100,
+								100
+							],
+							"FullNameStatus": 0
+						},
+						"LastNameSimilarity": null,
+						"MotherNameSimilarity": null,
+						"MotherNameStatus": null,
+						"NationalitySimilarity": null,
+						"NationalityStatus": null,
+						"NormalizedAddressComparisonReport": {
+							"IsAddressMatch": null,
+							"VerifiedAddressFromIdentity": null,
+							"VerifiedAddressFromInputData": null
+						},
+						"PersonalNumberSimilarity": null,
+						"PersonalNumberStatus": null,
+						"RegistryCodeSimilarity": null,
+						"RegistryCodeStatus": null,
+						"ResidentialAddressSimilarityReport": {
+							"AddressSimilarity": null,
+							"AddressWordAverageSimilarity": null,
+							"AddressWordSimilarityList": [],
+							"AddressStatus": null
+						},
+						"VoterNumberSimilarity": null,
+						"VoterNumberStatus": null
+					},
+					"IsChipExist": null,
+					"IsExpectedSecondSide": true,
+					"IsPrimaryPhotoDetected": true,
+					"IsSignature": true,
+					"IsSubPhotoDetected": true,
+					"ProcessedImages": [
+						{
+							"IsColored": true,
+							"IsReduced": null,
+							"IsValidSize": true,
+							"Quality": {
+								"IsAcceptableBlurMrz": null,
+								"IsAcceptableBlurViz": true,
+								"IsAcceptableBright": true,
+								"IsAcceptableDark": true,
+								"IsAcceptableDpi": true,
+								"IsAcceptableEntropy": true,
+								"IsAcceptableFaceNotFound": true,
+								"IsAcceptableImageIncomplete": true,
+								"IsAcceptableJpegCompression": true,
+								"IsAcceptableLayout": true,
+								"IsAcceptableMrz": null,
+								"IsAcceptableObliquity": true,
+								"IsAcceptableQuantization": true,
+								"IsAcceptableReflectionMrz": null,
+								"IsAcceptableReflectionViz": true,
+								"IsAcceptableSize": true,
+								"IsAcceptableTextConfidenceMrz": null,
+								"IsAcceptableTextConfidenceViz": true,
+								"IsGenerallyAcceptable": true
+							},
+							"QualityBeforeAdjustment": {
+								"IsAcceptableBlurMrz": null,
+								"IsAcceptableBlurViz": true,
+								"IsAcceptableBright": true,
+								"IsAcceptableDark": true,
+								"IsAcceptableDpi": true,
+								"IsAcceptableEntropy": true,
+								"IsAcceptableFaceNotFound": true,
+								"IsAcceptableImageIncomplete": true,
+								"IsAcceptableJpegCompression": true,
+								"IsAcceptableLayout": true,
+								"IsAcceptableMrz": null,
+								"IsAcceptableObliquity": true,
+								"IsAcceptableQuantization": true,
+								"IsAcceptableReflectionMrz": null,
+								"IsAcceptableReflectionViz": true,
+								"IsAcceptableSize": true,
+								"IsAcceptableTextConfidenceMrz": null,
+								"IsAcceptableTextConfidenceViz": true,
+								"IsGenerallyAcceptable": true
+							},
+							"UnexpectedImageCorners": false,
+							"Compression": 92,
+							"CroppedHeight": 495,
+							"CroppedWidth": 778,
+							"Data": null,
+							"Dpi": 231,
+							"ImageFileType": "jpg",
+							"ImageType": "Visible",
+							"OriginalHeight": 534,
+							"OriginalWidth": 851,
+							"ReverseGeocodingReport": null,
+							"SasToken": "https://weubosappsapr.blob.core.windows.net/bos/ImageStorage/Output/_42/FB97975F791A4AF3A5DAC9C3223AA01D/FB97975F791A4AF3A5DAC9C3223AA01D_Page0_vis.jpg?sv=2025-05-05&se=2025-06-30T15%3A21%3A04Z&sr=b&sp=r&sig=KVB3sq1MCEV%2BABUwLhMF5UWkYDR%2BGpyYT%2B33MrnJW3k%3D",
+							"EquipmentMaker": "",
+							"EquipmentModel": "camera2 0, facing back",
+							"FileName": "Page0.Front.VIS.jpg",
+							"ImageCreationDateTime": "2025-06-29T08:15:04",
+							"Latitude": "",
+							"Longitude": "",
+							"SoftwareUsed": "AU10TIX WebSDK"
+						}
+					]
+				}
+			],
+			"SdrCompletionStatus": "Ok"
+		},
+		"ProcessingStartTime": "2025-06-29T15:17:00.61",
+		"ProofOfAddressReport": null,
+		"RequestAcceptanceWarnings": [],
+		"RequestRejectionInfo": null,
+		"RiskManagementReport": {
+			"EffectiveConclusion": {
+				"PrimaryProcessingResult": 20,
+				"Reasons": {
+					"ProcessingResultRemarks": [
+						280
+					],
+					"RiskManagementRemarks": null
+				}
+			},
+			"NotificationConclusions": [],
+			"OriginalPrimaryProcessingResult": 0,
+			"SecondaryConclusions": []
+		},
+		"SdrVersion": "2506.100.0.6",
+		"VideoVerificationReport": null,
+		"VoiceTranscribeReport": null
+	},
+	"uploadedImagesData": {
+		"isThreatsFound": false,
+		"isSanitizedSuccess": true,
+		"sanitizedImages": [
+			{
+				"uploadType": "idFront",
+				"uri": "https://mediasaprweu.blob.core.windows.net/ms-42/FB97975F791A4AF3A5DAC9C3223AA01D/cdr/FB97975F791A4AF3A5DAC9C3223AA01D_page0.jpeg?sv=2024-05-04&spr=https&st=2025-06-29T15%3A20%3A01Z&se=2025-06-29T16%3A01%3A01Z&sr=b&sp=r&sig=yHG77WXMJvD%2Fd9zlmLYQTQ18lI77k9sxzawATLZg4RY%3D",
+				"mimeType": "image/jpeg",
+				"uploadDate": "2025-06-29T15:15:23.000Z",
+				"attachments": {
+					"thumbnailUri": "https://mediasaprweu.blob.core.windows.net/ms-42/FB97975F791A4AF3A5DAC9C3223AA01D/cdr/FB97975F791A4AF3A5DAC9C3223AA01D_page0_thumbnail.jpeg?sv=2024-05-04&spr=https&st=2025-06-29T15%3A20%3A01Z&se=2025-06-29T16%3A01%3A01Z&sr=b&sp=r&sig=ElW1qshuAppFsOguZcljJyTPM%2FFJ7EU%2BkECrex1R7o4%3D",
+					"fullHDUri": "https://mediasaprweu.blob.core.windows.net/ms-42/FB97975F791A4AF3A5DAC9C3223AA01D/cdr/FB97975F791A4AF3A5DAC9C3223AA01D_page0_fullHD.jpeg?sv=2024-05-04&spr=https&st=2025-06-29T15%3A20%3A01Z&se=2025-06-29T16%3A01%3A01Z&sr=b&sp=r&sig=SYG03bf9EOcqcNMWD5Ea4Mr57cj2UaCYTdAIpcSNwnk%3D"
+				},
+				"type": "page0",
+				"isThreatFound": false
+			},
+			{
+				"uploadType": "idBack",
+				"uri": "https://mediasaprweu.blob.core.windows.net/ms-42/FB97975F791A4AF3A5DAC9C3223AA01D/cdr/FB97975F791A4AF3A5DAC9C3223AA01D_page1.jpeg?sv=2024-05-04&spr=https&st=2025-06-29T15%3A20%3A01Z&se=2025-06-29T16%3A01%3A01Z&sr=b&sp=r&sig=GreyTjNKKFxUkB%2FYLSVKJteKjPc%2B0DG8UZYYZA72bCg%3D",
+				"mimeType": "image/jpeg",
+				"uploadDate": "2025-06-29T15:15:34.000Z",
+				"attachments": {
+					"thumbnailUri": "https://mediasaprweu.blob.core.windows.net/ms-42/FB97975F791A4AF3A5DAC9C3223AA01D/cdr/FB97975F791A4AF3A5DAC9C3223AA01D_page1_thumbnail.jpeg?sv=2024-05-04&spr=https&st=2025-06-29T15%3A20%3A01Z&se=2025-06-29T16%3A01%3A01Z&sr=b&sp=r&sig=pHuUkpZXogCehdMykasbLkLZx8gX8RFzGgUS%2BGWLefE%3D",
+					"fullHDUri": "https://mediasaprweu.blob.core.windows.net/ms-42/FB97975F791A4AF3A5DAC9C3223AA01D/cdr/FB97975F791A4AF3A5DAC9C3223AA01D_page1_fullHD.jpeg?sv=2024-05-04&spr=https&st=2025-06-29T15%3A20%3A01Z&se=2025-06-29T16%3A01%3A01Z&sr=b&sp=r&sig=H0PHgmbNZGD8G9Tj7YCId%2F9ZpM5pnWJbWrT8bXhXoiU%3D"
+				},
+				"type": "page1",
+				"isThreatFound": false
+			},
+			{
+				"uploadType": "selfie",
+				"uri": "https://mediasaprweu.blob.core.windows.net/ms-42/FB97975F791A4AF3A5DAC9C3223AA01D/cdr/FB97975F791A4AF3A5DAC9C3223AA01D_photo.jpeg?sv=2024-05-04&spr=https&st=2025-06-29T15%3A20%3A01Z&se=2025-06-29T16%3A01%3A01Z&sr=b&sp=r&sig=yEV09VaCWZfOFEz4G%2B5wAV%2BV3UpgVJEhBczpijlwJRI%3D",
+				"mimeType": "image/jpeg",
+				"uploadDate": "2025-06-29T15:16:54.000Z",
+				"attachments": {},
+				"type": "photo",
+				"isThreatFound": false
+			}
+		],
+		"originalImages": [
+			{
+				"avStatus": "safe",
+				"size": 107472,
+				"mimeType": "image/jpeg",
+				"uploadType": "idFront",
+				"uploadDate": "2025-06-29T15:15:22.000Z",
+				"sanitizationStatus": "done"
+			},
+			{
+				"avStatus": "safe",
+				"size": 100083,
+				"mimeType": "image/jpeg",
+				"uploadType": "idBack",
+				"uploadDate": "2025-06-29T15:15:34.000Z",
+				"sanitizationStatus": "done"
+			},
+			{
+				"avStatus": "safe",
+				"size": 344662,
+				"mimeType": "image/jpeg",
+				"uploadType": "selfie",
+				"uploadDate": "2025-06-29T15:16:53.000Z",
+				"sanitizationStatus": "done"
+			}
+		],
+		"processedImages": [
+			{
+				"uploadType": "signatureOfHolder",
+				"uri": "https://mediasaprweu.blob.core.windows.net/ms-42/FB97975F791A4AF3A5DAC9C3223AA01D/output/FB97975F791A4AF3A5DAC9C3223AA01D_signatureOfHolder.jpeg?sv=2024-05-04&spr=https&st=2025-06-29T15%3A20%3A01Z&se=2025-06-29T16%3A01%3A01Z&sr=b&sp=r&sig=pE19fD%2Fvls9o8om5lfY4O4EjHN8aa2g8yd3l24lTYko%3D",
+				"mimeType": "image/jpeg",
+				"uploadDate": "2025-06-29T15:17:11.000Z",
+				"attachments": [
+					{
+						"attachmentId": "203690394",
+						"type": "thumbnail",
+						"mimeType": "image/jpeg",
+						"sasTokenUri": "https://mediasaprweu.blob.core.windows.net/ms-42/FB97975F791A4AF3A5DAC9C3223AA01D/output/FB97975F791A4AF3A5DAC9C3223AA01D_signatureOfHolder_thumbnail.jpeg?sv=2024-05-04&spr=https&st=2025-06-29T15%3A20%3A01Z&se=2025-06-29T16%3A01%3A01Z&sr=b&sp=r&sig=wb1y4ktx34Zt6ezFX%2BVcbgkL2ymvXjcRRBiQUO872HA%3D",
+						"status": "safe"
+					},
+					{
+						"attachmentId": "203690395",
+						"type": "fullHD",
+						"mimeType": "image/jpeg",
+						"sasTokenUri": "https://mediasaprweu.blob.core.windows.net/ms-42/FB97975F791A4AF3A5DAC9C3223AA01D/output/FB97975F791A4AF3A5DAC9C3223AA01D_signatureOfHolder_fullHD.jpeg?sv=2024-05-04&spr=https&st=2025-06-29T15%3A20%3A01Z&se=2025-06-29T16%3A01%3A01Z&sr=b&sp=r&sig=c070HKRB815yqhXUxLu2pFRK%2Bd0waKioDg3pgaVqTlc%3D",
+						"status": "safe"
+					}
+				],
+				"type": "signatureOfHolder",
+				"isThreatFound": false
+			},
+			{
+				"uploadType": "idBack",
+				"uri": "https://mediasaprweu.blob.core.windows.net/ms-42/FB97975F791A4AF3A5DAC9C3223AA01D/output/FB97975F791A4AF3A5DAC9C3223AA01D_page1.jpeg?sv=2024-05-04&spr=https&st=2025-06-29T15%3A20%3A01Z&se=2025-06-29T16%3A01%3A01Z&sr=b&sp=r&sig=9gfMi1bPR6izu7vys4jLQnd6FxFSxbD8XyRTUaLBrdI%3D",
+				"mimeType": "image/jpeg",
+				"uploadDate": "2025-06-29T15:17:11.000Z",
+				"attachments": [
+					{
+						"attachmentId": "203690396",
+						"type": "thumbnail",
+						"mimeType": "image/jpeg",
+						"sasTokenUri": "https://mediasaprweu.blob.core.windows.net/ms-42/FB97975F791A4AF3A5DAC9C3223AA01D/output/FB97975F791A4AF3A5DAC9C3223AA01D_page1_thumbnail.jpeg?sv=2024-05-04&spr=https&st=2025-06-29T15%3A20%3A01Z&se=2025-06-29T16%3A01%3A01Z&sr=b&sp=r&sig=vD7wMPrzanHHmcQRp5r84GwGMpuVWFGJ9mR63GA4b4I%3D",
+						"status": "safe"
+					},
+					{
+						"attachmentId": "203690397",
+						"type": "fullHD",
+						"mimeType": "image/jpeg",
+						"sasTokenUri": "https://mediasaprweu.blob.core.windows.net/ms-42/FB97975F791A4AF3A5DAC9C3223AA01D/output/FB97975F791A4AF3A5DAC9C3223AA01D_page1_fullHD.jpeg?sv=2024-05-04&spr=https&st=2025-06-29T15%3A20%3A01Z&se=2025-06-29T16%3A01%3A01Z&sr=b&sp=r&sig=5DmOZ0VOOrrtifQaeC0hAQ0g60BBLzjXzxOM6v7Js9U%3D",
+						"status": "safe"
+					}
+				],
+				"type": "page1",
+				"isThreatFound": false
+			},
+			{
+				"uploadType": "idFront",
+				"uri": "https://mediasaprweu.blob.core.windows.net/ms-42/FB97975F791A4AF3A5DAC9C3223AA01D/output/FB97975F791A4AF3A5DAC9C3223AA01D_page0.jpeg?sv=2024-05-04&spr=https&st=2025-06-29T15%3A20%3A01Z&se=2025-06-29T16%3A01%3A01Z&sr=b&sp=r&sig=eWy3IWuz4KyACMfiwWcF78XZzykpl60xCtMnTff6om4%3D",
+				"mimeType": "image/jpeg",
+				"uploadDate": "2025-06-29T15:17:11.000Z",
+				"attachments": [
+					{
+						"attachmentId": "203690398",
+						"type": "thumbnail",
+						"mimeType": "image/jpeg",
+						"sasTokenUri": "https://mediasaprweu.blob.core.windows.net/ms-42/FB97975F791A4AF3A5DAC9C3223AA01D/output/FB97975F791A4AF3A5DAC9C3223AA01D_page0_thumbnail.jpeg?sv=2024-05-04&spr=https&st=2025-06-29T15%3A20%3A01Z&se=2025-06-29T16%3A01%3A01Z&sr=b&sp=r&sig=MxFNjImACPesiUor3umJKuTxntf2v6fUyRVhoCuIkEE%3D",
+						"status": "safe"
+					},
+					{
+						"attachmentId": "203690399",
+						"type": "fullHD",
+						"mimeType": "image/jpeg",
+						"sasTokenUri": "https://mediasaprweu.blob.core.windows.net/ms-42/FB97975F791A4AF3A5DAC9C3223AA01D/output/FB97975F791A4AF3A5DAC9C3223AA01D_page0_fullHD.jpeg?sv=2024-05-04&spr=https&st=2025-06-29T15%3A20%3A01Z&se=2025-06-29T16%3A01%3A01Z&sr=b&sp=r&sig=DPjFsB3DiDKK%2BqcEYMe%2F6BSdS0zzgj4Wb5sO%2BhdWJF8%3D",
+						"status": "safe"
+					}
+				],
+				"type": "page0",
+				"isThreatFound": false
+			},
+			{
+				"uploadType": "selfie",
+				"uri": "https://mediasaprweu.blob.core.windows.net/ms-42/FB97975F791A4AF3A5DAC9C3223AA01D/output/FB97975F791A4AF3A5DAC9C3223AA01D_photo.jpeg?sv=2024-05-04&spr=https&st=2025-06-29T15%3A20%3A01Z&se=2025-06-29T16%3A01%3A01Z&sr=b&sp=r&sig=2geNtvNhIP7PE24YbA4iA64SGD%2Bt064hGr1CNH%2BJa7I%3D",
+				"mimeType": "image/jpeg",
+				"uploadDate": "2025-06-29T15:17:11.000Z",
+				"attachments": [
+					{
+						"attachmentId": "203690400",
+						"type": "thumbnail",
+						"mimeType": "image/jpeg",
+						"sasTokenUri": "https://mediasaprweu.blob.core.windows.net/ms-42/FB97975F791A4AF3A5DAC9C3223AA01D/output/FB97975F791A4AF3A5DAC9C3223AA01D_photo_thumbnail.jpeg?sv=2024-05-04&spr=https&st=2025-06-29T15%3A20%3A01Z&se=2025-06-29T16%3A01%3A01Z&sr=b&sp=r&sig=vzmQHjcjygrAhoET%2BIFWz90jmJyZ57%2Fb1n7k31fZo%2Bc%3D",
+						"status": "safe"
+					},
+					{
+						"attachmentId": "203690401",
+						"type": "fullHD",
+						"mimeType": "image/jpeg",
+						"sasTokenUri": "https://mediasaprweu.blob.core.windows.net/ms-42/FB97975F791A4AF3A5DAC9C3223AA01D/output/FB97975F791A4AF3A5DAC9C3223AA01D_photo_fullHD.jpeg?sv=2024-05-04&spr=https&st=2025-06-29T15%3A20%3A01Z&se=2025-06-29T16%3A01%3A01Z&sr=b&sp=r&sig=i3%2Fln9rxSrGQpTGke9L2o2p9pGgW8x1tKfCusn%2F7DA0%3D",
+						"status": "safe"
+					}
+				],
+				"type": "photo",
+				"isThreatFound": false
+			},
+			{
+				"uploadType": "croppedPhoto",
+				"uri": "https://mediasaprweu.blob.core.windows.net/ms-42/FB97975F791A4AF3A5DAC9C3223AA01D/output/FB97975F791A4AF3A5DAC9C3223AA01D_croppedPhoto.jpeg?sv=2024-05-04&spr=https&st=2025-06-29T15%3A20%3A01Z&se=2025-06-29T16%3A01%3A01Z&sr=b&sp=r&sig=kDn4wzU791J1GgI5JQXRR5oQCKjKVay2aIagbACHlaw%3D",
+				"mimeType": "image/jpeg",
+				"uploadDate": "2025-06-29T15:17:12.000Z",
+				"attachments": [
+					{
+						"attachmentId": "203690402",
+						"type": "thumbnail",
+						"mimeType": "image/jpeg",
+						"sasTokenUri": "https://mediasaprweu.blob.core.windows.net/ms-42/FB97975F791A4AF3A5DAC9C3223AA01D/output/FB97975F791A4AF3A5DAC9C3223AA01D_croppedPhoto_thumbnail.jpeg?sv=2024-05-04&spr=https&st=2025-06-29T15%3A20%3A01Z&se=2025-06-29T16%3A01%3A01Z&sr=b&sp=r&sig=tEEQ%2FSQqfqW9mqQ5Rb7qC1OpIuTBz1r4N9iZ9%2Bmm%2Bok%3D",
+						"status": "safe"
+					},
+					{
+						"attachmentId": "203690403",
+						"type": "fullHD",
+						"mimeType": "image/jpeg",
+						"sasTokenUri": "https://mediasaprweu.blob.core.windows.net/ms-42/FB97975F791A4AF3A5DAC9C3223AA01D/output/FB97975F791A4AF3A5DAC9C3223AA01D_croppedPhoto_fullHD.jpeg?sv=2024-05-04&spr=https&st=2025-06-29T15%3A20%3A01Z&se=2025-06-29T16%3A01%3A01Z&sr=b&sp=r&sig=9o%2BLDifWYcKfVSJhT6v5M0dbTiUdVZe8sF8xIZC0tTk%3D",
+						"status": "safe"
+					}
+				],
+				"type": "croppedPhoto",
+				"isThreatFound": false
+			}
+		]
+	},
+	"originalImages": [
+		{
+			"ImageType": 1,
+			"FileExtension": ".jpeg",
+			"Uri": "https://mediasaprweu.blob.core.windows.net/ms-42/FB97975F791A4AF3A5DAC9C3223AA01D/cdr/FB97975F791A4AF3A5DAC9C3223AA01D_page0.jpeg?sv=2024-05-04&spr=https&st=2025-06-29T15%3A20%3A01Z&se=2025-06-29T16%3A01%3A01Z&sr=b&sp=r&sig=yHG77WXMJvD%2Fd9zlmLYQTQ18lI77k9sxzawATLZg4RY%3D"
+		},
+		{
+			"ImageType": 2,
+			"FileExtension": ".jpeg",
+			"Uri": "https://mediasaprweu.blob.core.windows.net/ms-42/FB97975F791A4AF3A5DAC9C3223AA01D/cdr/FB97975F791A4AF3A5DAC9C3223AA01D_page1.jpeg?sv=2024-05-04&spr=https&st=2025-06-29T15%3A20%3A01Z&se=2025-06-29T16%3A01%3A01Z&sr=b&sp=r&sig=GreyTjNKKFxUkB%2FYLSVKJteKjPc%2B0DG8UZYYZA72bCg%3D"
+		},
+		{
+			"ImageType": 4,
+			"FileExtension": ".jpeg",
+			"Uri": "https://mediasaprweu.blob.core.windows.net/ms-42/FB97975F791A4AF3A5DAC9C3223AA01D/cdr/FB97975F791A4AF3A5DAC9C3223AA01D_photo.jpeg?sv=2024-05-04&spr=https&st=2025-06-29T15%3A20%3A01Z&se=2025-06-29T16%3A01%3A01Z&sr=b&sp=r&sig=yEV09VaCWZfOFEz4G%2B5wAV%2BV3UpgVJEhBczpijlwJRI%3D"
+		}
+	],
+	"instinctResultData": {
+		"IsRiskFlag": false,
+		"LastUpdated": "2025-06-29T15:17:00.610Z"
+	}
+}

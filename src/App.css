@@ -1,0 +1,44 @@
+/* App-specific styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.nav-tabs {
+  margin-bottom: 20px;
+}
+
+.tab-content {
+  padding: 20px 0;
+}
+
+.alert {
+  margin-top: 20px;
+}
+
+/* Results display styles */
+.results-display {
+  margin-top: 20px;
+}
+
+.summary-section,
+.remarks-section,
+.metadata-section {
+  margin-bottom: 30px;
+}
+
+/* Documentation page styles */
+.documentation-page {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+} 

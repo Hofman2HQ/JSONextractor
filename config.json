@@ -1,0 +1,23 @@
+{
+  "api": {
+    "baseUrl": "http://localhost:3001",
+    "endpoints": {
+      "processJson": "/api/process-json",
+      "getData": "/api/get-data"
+    },
+    "auth": {
+      "tokenHeader": "Authorization",
+      "tokenPrefix": "Bearer"
+    }
+  },
+  "app": {
+    "name": "JSON Data Extractor",
+    "version": "1.0.0",
+    "maxFileSize": 5242880,
+    "supportedFileTypes": [".json"],
+    "extractionRules": {
+      "primaryFields": ["PrimaryProcessingResult"],
+      "remarkFields": ["ProcessingResultRemarks"]
+    }
+  }
+}
