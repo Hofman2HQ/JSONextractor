@@ -92,18 +92,10 @@ const RemarksList = ({ remarks, title, type, category, onShowDocumentation }) =>
             <h5 className="card-title d-flex align-items-center mb-0" style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
               {title || 'Remarks'}
               {/* Add InfoTooltip next to the title for both types */}
-              {type === 'processing' && remarks[0]?.path && (
+              {remarks[0]?.path && (
                 (() => {
                   const firstPath = remarks[0].path || '';
-                  const arrayPath = firstPath.replace(/\[\d+\]$/, '');
-                  return <InfoTooltip path={arrayPath} additionalInfo={arrayPath ? 'Array location' : ''} />;
-                })()
-              )}
-              {type === 'risk' && remarks[0]?.path && (
-                (() => {
-                  const firstPath = remarks[0].path || '';
-                  const arrayPath = firstPath.replace(/\[\d+\]$/, '');
-                  return <InfoTooltip path={arrayPath} additionalInfo={arrayPath ? 'Array location' : ''} />;
+                  return <InfoTooltip path={firstPath} />;
                 })()
               )}
             </h5>
@@ -159,9 +151,7 @@ const RemarksList = ({ remarks, title, type, category, onShowDocumentation }) =>
                               <span>
                                 {remark.message || `Remark ${remark.code}`}
                                 {remark.path && (
-                                  type === 'risk'
-                                    ? <InfoTooltip path={remark.path.replace(/\[\d+\]$/, '')} />
-                                    : <InfoTooltip path={remark.path} additionalInfo={remark.path.match(/\[\d+\]$/) ? 'Array location' : ''} />
+                                  <InfoTooltip path={remark.path} />
                                 )}
                               </span>
                               <span className="badge bg-secondary">{remark.code}</span>
