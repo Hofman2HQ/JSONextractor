@@ -17,16 +17,12 @@ export const PROCESSING_CATEGORIES = {
     codes: [100, 200, 220, 230, 250, 260, 280, 300]
   },
   'DoubleCheck': {
-    description: 'DoubleCheck and related processing',
-    codes: [320, 340, 360, 380, 400, 420, 440, 460, 480, 500, 520, 540, 550, 560, 580, 600, 620, 640, 720, 740]
+    description: 'DoubleCheck and manual inspection related processing',
+    codes: [320, 340, 360, 380, 400, 420, 440, 460, 480, 500, 520, 540, 550, 560, 580, 600, 620, 640, 720, 740, 840, 860, 880]
   },
   'Processing Issues': {
     description: 'General processing and technical issues',
     codes: [700, 760, 780, 800, 820, 960]
-  },
-  'Manual Inspection': {
-    description: 'Results from manual inspection processes',
-    codes: [840, 860, 880]
   },
   'Face Comparison': {
     description: 'Results from face comparison and detection',

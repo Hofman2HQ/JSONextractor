@@ -32,9 +32,11 @@ const DocumentationPage = ({ onBack, onBackToMain }) => {
           <button className="btn btn-outline-secondary me-2" onClick={() => onBackToMain && onBackToMain()}>
             <i className="bi bi-house"></i> Back to Main Page
           </button>
-          <button className="btn btn-outline-primary" onClick={handleBack}>
-            <i className="bi bi-arrow-left"></i> Back to Results
-          </button>
+          {onBack && (
+            <button className="btn btn-outline-primary" onClick={handleBack}>
+              <i className="bi bi-arrow-left"></i> Back to Results
+            </button>
+          )}
         </div>
       </div>
 

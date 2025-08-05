@@ -11,7 +11,13 @@ const InstructionsModal = ({ show, onClose }) => {
             <button type="button" className="btn-close" onClick={onClose}></button>
           </div>
           <div className="modal-body">
+            <p>
+              Load a JSON document by dropping a file or issuing an HTTP GET request. The file is parsed in the browser and the
+              DocumentStatusReport2 payload is processed to extract summary fields, metadata and categorized remarks. All
+              computation occurs in-memory in your session; nothing is transmitted to a backend service or written to disk.
+            </p>
             <p>Upload a JSON file or use the API tab to fetch data. All processing happens locally and no information is stored.</p>
+
           </div>
           <div className="modal-footer">
             <button type="button" className="btn btn-secondary" onClick={onClose}>Close</button>
