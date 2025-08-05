@@ -4,6 +4,8 @@ import ResultsDisplay from './components/ResultsDisplay.js';
 import DocumentationPage from './components/DocumentationPage.js';
 import GetRequestForm from './components/GetRequestForm.js';
 import DoubleCheckTabs from './components/DoubleCheckTabs.js';
+import InstructionsModal from './components/InstructionsModal.js';
+
 import './App.css';
 import { processJsonData } from './logic/extractor.js';
 
@@ -13,6 +15,7 @@ function App() {
   const [error, setError] = useState(null);
   const [showDocumentation, setShowDocumentation] = useState(false);
   const [documentationType, setDocumentationType] = useState(null);
+  const [showInstructions, setShowInstructions] = useState(false);
   const tooltipInstances = useRef([]);
 
   useEffect(() => {
@@ -102,7 +105,17 @@ function App() {
 
   return (
     <div className="container mt-4">
-      <h1 className="text-center mb-4">JSON Reader</h1>
+      <h1 className="text-center mb-2">JSON Reader</h1>
+      <p className="text-center text-muted mb-3">All processing happens locally and no information is saved.</p>
+      <div className="d-flex justify-content-end mb-3">
+        <button
+          className="btn btn-outline-info btn-sm"
+          onClick={() => setShowInstructions(true)}
+        >
+          <i className="bi bi-info-circle me-1"></i> Instructions
+        </button>
+      </div>
+      <InstructionsModal show={showInstructions} onClose={() => setShowInstructions(false)} />
       
       <ul className="nav nav-tabs mb-4">
         <li className="nav-item">

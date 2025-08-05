@@ -1,5 +1,5 @@
 import config from '../../config.json';
-import { PROCESSING_CATEGORIES, getProcessingRemarkCategory } from '../components/documentationCategories.js';
+import { PROCESSING_CATEGORIES, getProcessingRemarkCategory, getRiskRemarkCategory } from '../components/documentationCategories.js';
 
 // Processing remarks mapping - Updated with DocumentStatusReport2 codes
 const PROCESSING_REMARKS = {
@@ -496,7 +496,8 @@ export const processJsonData = (data, options = {}) => {
         processingRemarks = dsr2.ProcessingResultRemarks.map((code) => ({
           code: Number(code),
           message: PROCESSING_REMARKS[Number(code)] || `Unknown processing remark (${code})`,
-          path: extractionRootPath + '.DocumentStatusReport2.ProcessingResultRemarks'
+          path: extractionRootPath + '.DocumentStatusReport2.ProcessingResultRemarks',
+          category: getProcessingRemarkCategory(Number(code))
         }));
       }
       processed.remarks.processing = processingRemarks;
@@ -506,7 +507,8 @@ export const processJsonData = (data, options = {}) => {
         riskManagementRemarks = dsr2.RiskManagerRemarks.map((code, idx) => ({
           code: Number(code),
           message: RISK_REMARKS[Number(code)] || `Unknown risk remark (${code})`,
-          path: extractionRootPath + `.DocumentStatusReport2.RiskManagerRemarks[${idx}]`
+          path: extractionRootPath + `.DocumentStatusReport2.RiskManagerRemarks[${idx}]`,
+          category: getRiskRemarkCategory(Number(code))
         }));
       }
       processed.remarks.riskManagement = riskManagementRemarks;
@@ -549,7 +551,8 @@ export const processJsonData = (data, options = {}) => {
       const rmRiskManagementRemarks = resultData.RiskManagementReport.EffectiveConclusion.Reasons.RiskManagementRemarks.map((code, idx) => ({
         code: Number(code),
         message: RISK_REMARKS[Number(code)] || `Unknown risk remark (${code})`,
-        path: `${extractionRootPath}.RiskManagementReport.EffectiveConclusion.Reasons.RiskManagementRemarks[${idx}]`
+        path: `${extractionRootPath}.RiskManagementReport.EffectiveConclusion.Reasons.RiskManagementRemarks[${idx}]`,
+        category: getRiskRemarkCategory(Number(code))
       }));
       if (!processed.remarks.riskManagement) processed.remarks.riskManagement = [];
       processed.remarks.riskManagement = processed.remarks.riskManagement.concat(rmRiskManagementRemarks);
@@ -667,7 +670,8 @@ export const processJsonData = (data, options = {}) => {
       .map((code, idx) => ({
         code: Number(code),
         message: PROCESSING_REMARKS[Number(code)] || `Unknown processing remark (${code})`,
-        path: processingRemarksPaths[idx] || 'ProcessingResultRemarks'
+        path: processingRemarksPaths[idx] || 'ProcessingResultRemarks',
+        category: getProcessingRemarkCategory(Number(code))
       }));
 
     // Risk Management Remarks
@@ -676,7 +680,8 @@ export const processJsonData = (data, options = {}) => {
       .map((code, idx) => ({
         code: Number(code),
         message: RISK_REMARKS[Number(code)] || `Unknown risk remark (${code})`,
-        path: riskRemarksPaths[idx] || 'RiskManagerRemarks'
+        path: riskRemarksPaths[idx] || 'RiskManagerRemarks',
+        category: getRiskRemarkCategory(Number(code))
       }));
 
     // Failure Reason
