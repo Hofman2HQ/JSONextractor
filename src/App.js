@@ -5,6 +5,7 @@ import DocumentationPage from './components/DocumentationPage.js';
 import GetRequestForm from './components/GetRequestForm.js';
 import DoubleCheckTabs from './components/DoubleCheckTabs.js';
 import InstructionsModal from './components/InstructionsModal.js';
+
 import './App.css';
 import { processJsonData } from './logic/extractor.js';
 
