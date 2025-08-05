@@ -601,7 +601,7 @@ const GetRequestForm = ({ onDataReceived, onError }) => {
       case 'workflow':
         return `/result/v2/results/person/${requestId}?includeDetailed=true`;
       case 'secureme':
-        return `/cm/v2/documentprocessingrequests/${requestId}`;
+        return `/cm/v2/documentprocessingrequests/${requestId}?getIdvAndDcData=true`;
       case 'bos':
         return `/Au10tixBos4/IdentityDocuments/Results/${requestId}?imageTypes=all&sasToken=true&sasLifetimeInSeconds=600`;
       default:
