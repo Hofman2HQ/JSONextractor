@@ -1,5 +1,5 @@
 import config from '../../config.json';
-import { PROCESSING_CATEGORIES, getProcessingRemarkCategory } from '../components/documentationCategories.js';
+import { PROCESSING_CATEGORIES, getProcessingRemarkCategory, getRiskRemarkCategory } from '../components/documentationCategories.js';
 
 // Processing remarks mapping - Updated with DocumentStatusReport2 codes
 const PROCESSING_REMARKS = {
@@ -230,7 +230,8 @@ const findAllByKey = (obj, key) => {
   return results;
 };
 
-export const processJsonData = (data) => {
+export const processJsonData = (data, options = {}) => {
+  const { forceResultKey } = options;
   if (!data) {
     console.warn('No data provided to processJsonData');
     return {
@@ -300,9 +301,15 @@ export const processJsonData = (data) => {
       jsonType = 'Workflow';
       extractionRootPath = 'verificationResults.idv.payload.ProcessingReport';
       isWorkflow = true;
+    } else if (forceResultKey && data[forceResultKey]) {
+      resultData = data[forceResultKey];
+      extractionRootPath = forceResultKey;
     } else if (data.resultData) {
       resultData = data.resultData;
       extractionRootPath = 'resultData';
+    } else if (data.idvResultData) {
+      resultData = data.idvResultData;
+      extractionRootPath = 'idvResultData';
     } else {
       resultData = data;
       extractionRootPath = 'root';
@@ -489,7 +496,8 @@ export const processJsonData = (data) => {
         processingRemarks = dsr2.ProcessingResultRemarks.map((code) => ({
           code: Number(code),
           message: PROCESSING_REMARKS[Number(code)] || `Unknown processing remark (${code})`,
-          path: extractionRootPath + '.DocumentStatusReport2.ProcessingResultRemarks'
+          path: extractionRootPath + '.DocumentStatusReport2.ProcessingResultRemarks',
+          category: getProcessingRemarkCategory(Number(code))
         }));
       }
       processed.remarks.processing = processingRemarks;
@@ -499,7 +507,8 @@ export const processJsonData = (data) => {
         riskManagementRemarks = dsr2.RiskManagerRemarks.map((code, idx) => ({
           code: Number(code),
           message: RISK_REMARKS[Number(code)] || `Unknown risk remark (${code})`,
-          path: extractionRootPath + `.DocumentStatusReport2.RiskManagerRemarks[${idx}]`
+          path: extractionRootPath + `.DocumentStatusReport2.RiskManagerRemarks[${idx}]`,
+          category: getRiskRemarkCategory(Number(code))
         }));
       }
       processed.remarks.riskManagement = riskManagementRemarks;
@@ -532,17 +541,18 @@ export const processJsonData = (data) => {
       // RiskManagementReport extraction will be handled below if present
       // Return will be after the next block
     }
-    // Always extract RiskManagementReport.EffectiveConclusion.Reasons.ProcessingResultRemarks for Secure me
+    // Always extract RiskManagementReport.EffectiveConclusion.Reasons.RiskManagementRemarks for Secure me
     if (
       resultData.RiskManagementReport &&
       resultData.RiskManagementReport.EffectiveConclusion &&
       resultData.RiskManagementReport.EffectiveConclusion.Reasons &&
-      Array.isArray(resultData.RiskManagementReport.EffectiveConclusion.Reasons.ProcessingResultRemarks)
+      Array.isArray(resultData.RiskManagementReport.EffectiveConclusion.Reasons.RiskManagementRemarks)
     ) {
-      const rmRiskManagementRemarks = resultData.RiskManagementReport.EffectiveConclusion.Reasons.ProcessingResultRemarks.map((code) => ({
+      const rmRiskManagementRemarks = resultData.RiskManagementReport.EffectiveConclusion.Reasons.RiskManagementRemarks.map((code, idx) => ({
         code: Number(code),
         message: RISK_REMARKS[Number(code)] || `Unknown risk remark (${code})`,
-        path: extractionRootPath + '.RiskManagementReport.EffectiveConclusion.Reasons.ProcessingResultRemarks'
+        path: `${extractionRootPath}.RiskManagementReport.EffectiveConclusion.Reasons.RiskManagementRemarks[${idx}]`,
+        category: getRiskRemarkCategory(Number(code))
       }));
       if (!processed.remarks.riskManagement) processed.remarks.riskManagement = [];
       processed.remarks.riskManagement = processed.remarks.riskManagement.concat(rmRiskManagementRemarks);
@@ -660,7 +670,8 @@ export const processJsonData = (data) => {
       .map((code, idx) => ({
         code: Number(code),
         message: PROCESSING_REMARKS[Number(code)] || `Unknown processing remark (${code})`,
-        path: processingRemarksPaths[idx] || 'ProcessingResultRemarks'
+        path: processingRemarksPaths[idx] || 'ProcessingResultRemarks',
+        category: getProcessingRemarkCategory(Number(code))
       }));
 
     // Risk Management Remarks
@@ -669,7 +680,8 @@ export const processJsonData = (data) => {
       .map((code, idx) => ({
         code: Number(code),
         message: RISK_REMARKS[Number(code)] || `Unknown risk remark (${code})`,
-        path: riskRemarksPaths[idx] || 'RiskManagerRemarks'
+        path: riskRemarksPaths[idx] || 'RiskManagerRemarks',
+        category: getRiskRemarkCategory(Number(code))
       }));
 
     // Failure Reason

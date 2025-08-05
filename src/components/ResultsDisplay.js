@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { getProcessingRemarkCategory, RISK_CATEGORIES, getRiskRemarkCategory } from './documentationCategories.js';
+import { getProcessingRemarkCategory, getRiskRemarkCategory } from './documentationCategories.js';
 
 const InfoTooltip = React.memo(({ path, additionalInfo, category }) => (
   <span 
@@ -27,21 +27,17 @@ const ResultCard = React.memo(({ title, value, path, className = '', additionalI
 const RemarksList = ({ remarks, title, type, category, onShowDocumentation }) => {
   const [openCategories, setOpenCategories] = useState({});
 
-  const getRemarkCategory = (code) => {
-    if (!code && code !== 0) return 'Other';
+  const getRemarkCategory = (remark) => {
+    if (remark && remark.category) return remark.category;
+    const code = remark?.code;
+    if (code === undefined || code === null) return 'Other';
     if (type === 'risk') {
       return getRiskRemarkCategory(code);
     }
     if (type === 'processing') {
       return getProcessingRemarkCategory(code);
-    } else {
-      if (code <= 20) return 'Face Comparison';
-      if (code <= 60) return 'Document Quality';
-      if (code <= 200) return 'Missing Fields';
-      if (code <= 460) return 'Field Issues';
-      if (code <= 680) return 'OCR Confidence';
-      return 'Other';
     }
+    return 'Other';
   };
 
   if (!remarks || !Array.isArray(remarks)) {
@@ -55,14 +51,14 @@ const RemarksList = ({ remarks, title, type, category, onShowDocumentation }) =>
     );
   }
 
-  const categorizedRemarks = remarks.reduce((acc, remark) => {
-    if (!remark || typeof remark.code === 'undefined') return acc;
-    
-    const category = getRemarkCategory(remark.code);
-    if (!acc[category]) acc[category] = [];
-    acc[category].push(remark);
-    return acc;
-  }, {});
+    const categorizedRemarks = remarks.reduce((acc, remark) => {
+      if (!remark || typeof remark.code === 'undefined') return acc;
+
+      const category = getRemarkCategory(remark);
+      if (!acc[category]) acc[category] = [];
+      acc[category].push({ ...remark, category });
+      return acc;
+    }, {});
 
   const handleShowDocumentation = () => {
     if (onShowDocumentation && type) {
@@ -92,18 +88,10 @@ const RemarksList = ({ remarks, title, type, category, onShowDocumentation }) =>
             <h5 className="card-title d-flex align-items-center mb-0" style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
               {title || 'Remarks'}
               {/* Add InfoTooltip next to the title for both types */}
-              {type === 'processing' && remarks[0]?.path && (
+              {remarks[0]?.path && (
                 (() => {
                   const firstPath = remarks[0].path || '';
-                  const arrayPath = firstPath.replace(/\[\d+\]$/, '');
-                  return <InfoTooltip path={arrayPath} additionalInfo={arrayPath ? 'Array location' : ''} />;
-                })()
-              )}
-              {type === 'risk' && remarks[0]?.path && (
-                (() => {
-                  const firstPath = remarks[0].path || '';
-                  const arrayPath = firstPath.replace(/\[\d+\]$/, '');
-                  return <InfoTooltip path={arrayPath} additionalInfo={arrayPath ? 'Array location' : ''} />;
+                  return <InfoTooltip path={firstPath} />;
                 })()
               )}
             </h5>
@@ -159,9 +147,7 @@ const RemarksList = ({ remarks, title, type, category, onShowDocumentation }) =>
                               <span>
                                 {remark.message || `Remark ${remark.code}`}
                                 {remark.path && (
-                                  type === 'risk'
-                                    ? <InfoTooltip path={remark.path.replace(/\[\d+\]$/, '')} />
-                                    : <InfoTooltip path={remark.path} additionalInfo={remark.path.match(/\[\d+\]$/) ? 'Array location' : ''} />
+                                  <InfoTooltip path={remark.path} category={remark.category} />
                                 )}
                               </span>
                               <span className="badge bg-secondary">{remark.code}</span>
