@@ -150,7 +150,6 @@ function App() {
         </button>
       </div>
       <InstructionsModal show={showInstructions} onClose={() => setShowInstructions(false)} />
-
       <ul className="nav nav-tabs mb-4">
         <li className="nav-item">
           <button

@@ -37,7 +37,7 @@ const GetRequestForm = ({ onDataReceived, onError }) => {
       case 'workflow:api':
         return `https://${region.toLowerCase()}-api.${env === 'PRD' ? 'au10tixservices.com' : 'au10tixservicesstaging.com'}/result/v2/results/person/${requestId}?includeDetailed=true`;
       case 'secure.me:request':
-        return `https://${region.toLowerCase()}-api.${env === 'PRD' ? 'au10tixservices.com' : 'au10tixservicesstaging.com'}/cm/v2/documentprocessingrequests/${requestId}`;
+        return `https://${region.toLowerCase()}-api.${env === 'PRD' ? 'au10tixservices.com' : 'au10tixservicesstaging.com'}/cm/v2/documentprocessingrequests/${requestId}?getIdvAndDcData=true`;
       case 'bos':
         return `https://bos-${region.toLowerCase()}.${env === 'PRD' ? 'au10tixservices.com' : 'au10tixservicesstaging.com'}/Au10tixBos4/IdentityDocuments/Results/${requestId}?imageTypes=all&sasToken=true&sasLifetimeInSeconds=600`;
       default:
