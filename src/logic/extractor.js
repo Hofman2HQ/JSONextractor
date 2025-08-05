@@ -230,7 +230,8 @@ const findAllByKey = (obj, key) => {
   return results;
 };
 
-export const processJsonData = (data) => {
+export const processJsonData = (data, options = {}) => {
+  const { forceResultKey } = options;
   if (!data) {
     console.warn('No data provided to processJsonData');
     return {
@@ -300,9 +301,15 @@ export const processJsonData = (data) => {
       jsonType = 'Workflow';
       extractionRootPath = 'verificationResults.idv.payload.ProcessingReport';
       isWorkflow = true;
+    } else if (forceResultKey && data[forceResultKey]) {
+      resultData = data[forceResultKey];
+      extractionRootPath = forceResultKey;
     } else if (data.resultData) {
       resultData = data.resultData;
       extractionRootPath = 'resultData';
+    } else if (data.idvResultData) {
+      resultData = data.idvResultData;
+      extractionRootPath = 'idvResultData';
     } else {
       resultData = data;
       extractionRootPath = 'root';
@@ -532,17 +539,17 @@ export const processJsonData = (data) => {
       // RiskManagementReport extraction will be handled below if present
       // Return will be after the next block
     }
-    // Always extract RiskManagementReport.EffectiveConclusion.Reasons.ProcessingResultRemarks for Secure me
+    // Always extract RiskManagementReport.EffectiveConclusion.Reasons.RiskManagementRemarks for Secure me
     if (
       resultData.RiskManagementReport &&
       resultData.RiskManagementReport.EffectiveConclusion &&
       resultData.RiskManagementReport.EffectiveConclusion.Reasons &&
-      Array.isArray(resultData.RiskManagementReport.EffectiveConclusion.Reasons.ProcessingResultRemarks)
+      Array.isArray(resultData.RiskManagementReport.EffectiveConclusion.Reasons.RiskManagementRemarks)
     ) {
-      const rmRiskManagementRemarks = resultData.RiskManagementReport.EffectiveConclusion.Reasons.ProcessingResultRemarks.map((code) => ({
+      const rmRiskManagementRemarks = resultData.RiskManagementReport.EffectiveConclusion.Reasons.RiskManagementRemarks.map((code, idx) => ({
         code: Number(code),
         message: RISK_REMARKS[Number(code)] || `Unknown risk remark (${code})`,
-        path: extractionRootPath + '.RiskManagementReport.EffectiveConclusion.Reasons.ProcessingResultRemarks'
+        path: `${extractionRootPath}.RiskManagementReport.EffectiveConclusion.Reasons.RiskManagementRemarks[${idx}]`
       }));
       if (!processed.remarks.riskManagement) processed.remarks.riskManagement = [];
       processed.remarks.riskManagement = processed.remarks.riskManagement.concat(rmRiskManagementRemarks);
