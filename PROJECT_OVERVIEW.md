@@ -65,3 +65,23 @@
 ---
 
 For more details on any part of the project, see the source files or ask for a specific breakdown.
+
+## Known issues (short list)
+
+The repository was reviewed automatically and a short list of issues that may affect stability or developer experience was identified:
+
+- Leftover debug logging: several `console.log` calls remain in source files (`src/App.js`, `src/components/GetRequestForm.js`, `src/components/ResultsDisplay.js`, and built files in `public/`). Remove or gate them behind a debug flag for production builds.
+- Undefined variable in UI: `ResultsDisplay.js` references `dataSourceMap` inside the DocumentData2 table but `dataSourceMap` is not defined or imported in that file — this will throw at runtime when metadata contains `documentData2DataSource` values.
+- Missing favicon: the browser requests `/favicon.ico` and currently returns 404; add a `favicon.ico` to `public/` or reference an existing icon in `public/index.html`.
+- Debug code in bundled assets: `public/bundle.js` and `public/dist/bundle.js` contain debug `console.log` statements which should be removed (or rebuilt without them) before production deployment.
+- Large bundle warnings: production build warns about large bundle sizes. Consider code-splitting and removing large dependencies to reduce bundle size.
+
+Action items (suggested priority):
+
+1. Fix runtime bug: define or import `dataSourceMap` in `src/components/ResultsDisplay.js` or change the table to not depend on it.
+2. Remove or conditionalize `console.log` debug statements in source files; rebuild bundles and verify `public/dist` is updated.
+3. Add `public/favicon.ico` and a `<link rel="icon" href="favicon.ico" />` in `public/index.html`.
+4. Audit `public/` for committed build artifacts (bundles, maps). Prefer keeping only source and building during CI; if keeping bundles is intentional, ensure they are up-to-date with source.
+5. Address bundle-size warnings with code-splitting or dependency review.
+
+If you want, I can fix the `dataSourceMap` reference and remove a small number of debug logs as a follow-up change.

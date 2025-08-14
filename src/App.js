@@ -1,11 +1,14 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, Suspense } from 'react';
 import FileUpload from './components/FileUpload.js';
 import ResultsDisplay from './components/ResultsDisplay.js';
-import DocumentationPage from './components/DocumentationPage.js';
 import GetRequestForm from './components/GetRequestForm.js';
 import DoubleCheckTabs from './components/DoubleCheckTabs.js';
-import InstructionsModal from './components/InstructionsModal.js';
+
+// Lazy load heavy components to reduce initial bundle size
+const DocumentationPage = React.lazy(() => import('./components/DocumentationPage.js'));
+const InstructionsModal = React.lazy(() => import('./components/InstructionsModal.js'));
 import secureMeDemo from '../SecureMe.json';
+// Updated demo Workflow JSON (user-supplied latest version)
 import workflowDemo from '../Workflow.json';
 import './App.css';
 import { processJsonData } from './logic/extractor.js';
@@ -52,8 +55,6 @@ function App() {
       setError('No data received');
       return;
     }
-    // Debug log: show the received data
-    console.log('Received data:', data);
     // Always process the data before displaying
     const processed = processJsonData(data);
     // If remark 400 is present and idvResultData exists, process both datasets
@@ -65,8 +66,6 @@ function App() {
       const bosProcessed = processJsonData(data, { forceResultKey: 'idvResultData' });
       finalProcessed = { doubleCheck: processed, bos: bosProcessed };
     }
-    // Debug log: show the processed data
-    console.log('Processed data:', finalProcessed);
     setProcessedData(finalProcessed);
     setError(null);
     setShowDocumentation(false); // Reset documentation view when new data is received
@@ -149,7 +148,9 @@ function App() {
           <i className="bi bi-info-circle me-1"></i> Instructions
         </button>
       </div>
-      <InstructionsModal show={showInstructions} onClose={() => setShowInstructions(false)} />
+      <Suspense fallback={<div className="text-center"><div className="spinner-border" role="status"><span className="visually-hidden">Loading...</span></div></div>}>
+        <InstructionsModal show={showInstructions} onClose={() => setShowInstructions(false)} />
+      </Suspense>
       <ul className="nav nav-tabs mb-4">
         <li className="nav-item">
           <button
@@ -189,11 +190,13 @@ function App() {
 
       {showDocumentation ? (
         <div className="mt-4">
-          <DocumentationPage
-            type={documentationType}
-            onBack={processedData ? handleBackToResults : undefined}
-            onBackToMain={handleBackToMain}
-          />
+          <Suspense fallback={<div className="text-center"><div className="spinner-border" role="status"><span className="visually-hidden">Loading documentation...</span></div></div>}>
+            <DocumentationPage
+              type={documentationType}
+              onBack={processedData ? handleBackToResults : undefined}
+              onBackToMain={handleBackToMain}
+            />
+          </Suspense>
         </div>
       ) : (
         processedData && (

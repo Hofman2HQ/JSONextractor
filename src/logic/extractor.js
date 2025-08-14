@@ -217,6 +217,29 @@ const RISK_REMARKS = {
   1490: "Instinct risk flag of attack info is activated for seen that signature"
 };
 
+// --- Path aliasing helpers -------------------------------------------------
+// We expose a unified canonical path for Risk Management Remarks regardless of
+// their real location/key in the source JSON. The underlying source may use:
+//  - RiskManagementReport.EffectiveConclusion.Reasons.RiskManagementRemarks
+//  - RiskManagementReport.EffectiveConclusion.Reasons.RiskManagerRemarks (legacy)
+//  - DocumentStatusReport2.RiskManagementRemarks / RiskManagerRemarks (legacy flat)
+//  - Root-level RiskManagementRemarks / RiskManagerRemarks
+// For UI tooltips we alias them to a canonical form using 'ProcessingResultRemarks'
+// under the closest known parent (Reasons.* or DocumentStatusReport2.*) so that
+// business users see a single consistent path.
+function aliasRiskRemarkPath(originalPath) {
+  if (!originalPath || typeof originalPath !== 'string') return originalPath;
+  let alias = originalPath;
+  // Reasons variant
+  alias = alias.replace(/RiskManagementReport\.EffectiveConclusion\.Reasons\.(RiskManagementRemarks|RiskManagerRemarks)/, 'RiskManagementReport.EffectiveConclusion.Reasons.ProcessingResultRemarks');
+  // DocumentStatusReport2 variant
+  alias = alias.replace(/DocumentStatusReport2\.(RiskManagementRemarks|RiskManagerRemarks)/, 'DocumentStatusReport2.ProcessingResultRemarks');
+  // Root-level variant
+  alias = alias.replace(/(^|\.)RiskManagementRemarks(\[)/, '$1ProcessingResultRemarks$2');
+  alias = alias.replace(/(^|\.)RiskManagerRemarks(\[)/, '$1ProcessingResultRemarks$2');
+  return alias;
+}
+
 // Helper: Recursively find all objects with a given key in a JSON tree
 const findAllByKey = (obj, key) => {
   let results = [];
@@ -233,7 +256,7 @@ const findAllByKey = (obj, key) => {
 export const processJsonData = (data, options = {}) => {
   const { forceResultKey } = options;
   if (!data) {
-    console.warn('No data provided to processJsonData');
+    if (process.env.NODE_ENV !== 'production') console.warn('No data provided to processJsonData');
     return {
       error: 'No data provided',
       summary: {
@@ -363,7 +386,12 @@ export const processJsonData = (data, options = {}) => {
       }
       // 3. Extract workflowId and present as 'Au10tix{num}'
       if (data.sessionResult && data.sessionResult.workflowId !== undefined && data.sessionResult.workflowId !== null) {
-        processed.metadata.workflowNumber = `Au10tix${data.sessionResult.workflowId}`;
+        const wf = data.sessionResult.workflowId;
+        if (typeof wf === 'string' && /^Au10tix/i.test(wf)) {
+          processed.metadata.workflowNumber = wf; // already prefixed
+        } else {
+          processed.metadata.workflowNumber = `Au10tix${wf}`;
+        }
       }
       // Optionally, extract other fields as before (primaryResult, etc.)
       // Primary Result (from ProcessingReport)
@@ -443,6 +471,10 @@ export const processJsonData = (data, options = {}) => {
         riskRemarksList = riskRemarksList.concat(resultData.RiskManagerRemarks);
         riskRemarksPaths = riskRemarksPaths.concat(resultData.RiskManagerRemarks.map((_, idx) => `${extractionRootPath}.RiskManagerRemarks[${idx}]`));
       }
+      if (Array.isArray(resultData.RiskManagementRemarks)) {
+        riskRemarksList = riskRemarksList.concat(resultData.RiskManagementRemarks);
+        riskRemarksPaths = riskRemarksPaths.concat(resultData.RiskManagementRemarks.map((_, idx) => `${extractionRootPath}.RiskManagementRemarks[${idx}]`));
+      }
       // Also check under DocumentStatusReport2 (legacy)
       if (resultData.DocumentStatusReport2) {
         if (Array.isArray(resultData.DocumentStatusReport2.ProcessingResultRemarks)) {
@@ -452,6 +484,10 @@ export const processJsonData = (data, options = {}) => {
         if (Array.isArray(resultData.DocumentStatusReport2.RiskManagerRemarks)) {
           riskRemarksList = riskRemarksList.concat(resultData.DocumentStatusReport2.RiskManagerRemarks);
           riskRemarksPaths = riskRemarksPaths.concat(resultData.DocumentStatusReport2.RiskManagerRemarks.map((_, idx) => `${extractionRootPath}.DocumentStatusReport2.RiskManagerRemarks[${idx}]`));
+        }
+        if (Array.isArray(resultData.DocumentStatusReport2.RiskManagementRemarks)) {
+          riskRemarksList = riskRemarksList.concat(resultData.DocumentStatusReport2.RiskManagementRemarks);
+          riskRemarksPaths = riskRemarksPaths.concat(resultData.DocumentStatusReport2.RiskManagementRemarks.map((_, idx) => `${extractionRootPath}.DocumentStatusReport2.RiskManagementRemarks[${idx}]`));
         }
       }
 
@@ -464,7 +500,8 @@ export const processJsonData = (data, options = {}) => {
         .map((code, idx) => ({
           code: Number(code),
           message: RISK_REMARKS[Number(code)] || `Unknown risk remark (${code})`,
-          path: riskRemarksPaths[idx] || 'RiskManagerRemarks'
+          path: aliasRiskRemarkPath(riskRemarksPaths[idx] || 'RiskManagerRemarks'),
+          originalPath: riskRemarksPaths[idx] || 'RiskManagerRemarks'
         }));
 
       processed.metadata = extractMetadata(resultData, processed.metadata);
@@ -490,6 +527,17 @@ export const processJsonData = (data, options = {}) => {
         }
         processed.paths.primaryResult = extractionRootPath + '.DocumentStatusReport2.PrimaryProcessingResult';
       }
+      // If RiskManagementReport.EffectiveConclusion.PrimaryProcessingResult exists, prefer it (more domain-specific)
+      if (resultData.RiskManagementReport && resultData.RiskManagementReport.EffectiveConclusion &&
+          resultData.RiskManagementReport.EffectiveConclusion.PrimaryProcessingResult !== undefined) {
+        const rmPrim = resultData.RiskManagementReport.EffectiveConclusion.PrimaryProcessingResult;
+        if (typeof rmPrim === 'number' && PRIMARY_PROCESSING_RESULTS[rmPrim]) {
+          processed.summary.primaryResult = `${rmPrim} - ${PRIMARY_PROCESSING_RESULTS[rmPrim]}`;
+        } else {
+          processed.summary.primaryResult = String(rmPrim);
+        }
+        processed.paths.primaryResult = extractionRootPath + '.RiskManagementReport.EffectiveConclusion.PrimaryProcessingResult';
+      }
       // Processing Remarks
       let processingRemarks = [];
       if (Array.isArray(dsr2.ProcessingResultRemarks)) {
@@ -502,14 +550,29 @@ export const processJsonData = (data, options = {}) => {
       }
       processed.remarks.processing = processingRemarks;
       // Risk Management Remarks (DocumentStatusReport2)
+      // Support both legacy "RiskManagerRemarks" and newer "RiskManagementRemarks".
       let riskManagementRemarks = [];
       if (Array.isArray(dsr2.RiskManagerRemarks)) {
-        riskManagementRemarks = dsr2.RiskManagerRemarks.map((code, idx) => ({
-          code: Number(code),
-          message: RISK_REMARKS[Number(code)] || `Unknown risk remark (${code})`,
-          path: extractionRootPath + `.DocumentStatusReport2.RiskManagerRemarks[${idx}]`,
-          category: getRiskRemarkCategory(Number(code))
-        }));
+        riskManagementRemarks = riskManagementRemarks.concat(
+          dsr2.RiskManagerRemarks.map((code, idx) => ({
+            code: Number(code),
+            message: RISK_REMARKS[Number(code)] || `Unknown risk remark (${code})`,
+            path: aliasRiskRemarkPath(`${extractionRootPath}.DocumentStatusReport2.RiskManagerRemarks[${idx}]`),
+            originalPath: `${extractionRootPath}.DocumentStatusReport2.RiskManagerRemarks[${idx}]`,
+            category: getRiskRemarkCategory(Number(code))
+          }))
+        );
+      }
+      if (Array.isArray(dsr2.RiskManagementRemarks)) {
+        riskManagementRemarks = riskManagementRemarks.concat(
+          dsr2.RiskManagementRemarks.map((code, idx) => ({
+            code: Number(code),
+            message: RISK_REMARKS[Number(code)] || `Unknown risk remark (${code})`,
+            path: aliasRiskRemarkPath(`${extractionRootPath}.DocumentStatusReport2.RiskManagementRemarks[${idx}]`),
+            originalPath: `${extractionRootPath}.DocumentStatusReport2.RiskManagementRemarks[${idx}]`,
+            category: getRiskRemarkCategory(Number(code))
+          }))
+        );
       }
       processed.remarks.riskManagement = riskManagementRemarks;
       // DocumentData2 extraction for Secure me
@@ -541,21 +604,20 @@ export const processJsonData = (data, options = {}) => {
       // RiskManagementReport extraction will be handled below if present
       // Return will be after the next block
     }
-    // Always extract RiskManagementReport.EffectiveConclusion.Reasons.RiskManagementRemarks for Secure me
-    if (
-      resultData.RiskManagementReport &&
-      resultData.RiskManagementReport.EffectiveConclusion &&
-      resultData.RiskManagementReport.EffectiveConclusion.Reasons &&
-      Array.isArray(resultData.RiskManagementReport.EffectiveConclusion.Reasons.RiskManagementRemarks)
-    ) {
-      const rmRiskManagementRemarks = resultData.RiskManagementReport.EffectiveConclusion.Reasons.RiskManagementRemarks.map((code, idx) => ({
+    // For Secure me: Extract Risk Management Remarks ONLY from RiskManagementReport.EffectiveConclusion.Reasons.ProcessingResultRemarks
+    if (resultData.RiskManagementReport && 
+        resultData.RiskManagementReport.EffectiveConclusion &&
+        resultData.RiskManagementReport.EffectiveConclusion.Reasons &&
+        Array.isArray(resultData.RiskManagementReport.EffectiveConclusion.Reasons.ProcessingResultRemarks)) {
+      const rmProcessingResultRemarks = resultData.RiskManagementReport.EffectiveConclusion.Reasons.ProcessingResultRemarks.map((code, idx) => ({
         code: Number(code),
-        message: RISK_REMARKS[Number(code)] || `Unknown risk remark (${code})`,
-        path: `${extractionRootPath}.RiskManagementReport.EffectiveConclusion.Reasons.RiskManagementRemarks[${idx}]`,
+        message: PROCESSING_REMARKS[Number(code)] || `Unknown processing remark (${code})`,
+        path: `${extractionRootPath}.RiskManagementReport.EffectiveConclusion.Reasons.ProcessingResultRemarks[${idx}]`,
+        originalPath: `${extractionRootPath}.RiskManagementReport.EffectiveConclusion.Reasons.ProcessingResultRemarks[${idx}]`,
         category: getRiskRemarkCategory(Number(code))
       }));
       if (!processed.remarks.riskManagement) processed.remarks.riskManagement = [];
-      processed.remarks.riskManagement = processed.remarks.riskManagement.concat(rmRiskManagementRemarks);
+      processed.remarks.riskManagement = processed.remarks.riskManagement.concat(rmProcessingResultRemarks);
       processedRiskManagement = true;
     }
     // Always extract DocumentTypeDescriptor for Secure me
@@ -618,6 +680,10 @@ export const processJsonData = (data, options = {}) => {
       riskRemarksList = riskRemarksList.concat(resultData.RiskManagerRemarks);
       riskRemarksPaths = riskRemarksPaths.concat(resultData.RiskManagerRemarks.map((_, idx) => `${extractionRootPath}.RiskManagerRemarks[${idx}]`));
     }
+    if (Array.isArray(resultData.RiskManagementRemarks)) {
+      riskRemarksList = riskRemarksList.concat(resultData.RiskManagementRemarks);
+      riskRemarksPaths = riskRemarksPaths.concat(resultData.RiskManagementRemarks.map((_, idx) => `${extractionRootPath}.RiskManagementRemarks[${idx}]`));
+    }
     // Also check under DocumentStatusReport2 (legacy)
     if (resultData.DocumentStatusReport2) {
       if (Array.isArray(resultData.DocumentStatusReport2.ProcessingResultRemarks)) {
@@ -627,6 +693,10 @@ export const processJsonData = (data, options = {}) => {
       if (Array.isArray(resultData.DocumentStatusReport2.RiskManagerRemarks)) {
         riskRemarksList = riskRemarksList.concat(resultData.DocumentStatusReport2.RiskManagerRemarks);
         riskRemarksPaths = riskRemarksPaths.concat(resultData.DocumentStatusReport2.RiskManagerRemarks.map((_, idx) => `${extractionRootPath}.DocumentStatusReport2.RiskManagerRemarks[${idx}]`));
+      }
+      if (Array.isArray(resultData.DocumentStatusReport2.RiskManagementRemarks)) {
+        riskRemarksList = riskRemarksList.concat(resultData.DocumentStatusReport2.RiskManagementRemarks);
+        riskRemarksPaths = riskRemarksPaths.concat(resultData.DocumentStatusReport2.RiskManagementRemarks.map((_, idx) => `${extractionRootPath}.DocumentStatusReport2.RiskManagementRemarks[${idx}]`));
       }
     }
 
@@ -680,7 +750,8 @@ export const processJsonData = (data, options = {}) => {
       .map((code, idx) => ({
         code: Number(code),
         message: RISK_REMARKS[Number(code)] || `Unknown risk remark (${code})`,
-        path: riskRemarksPaths[idx] || 'RiskManagerRemarks',
+  path: aliasRiskRemarkPath(riskRemarksPaths[idx] || 'RiskManagerRemarks'),
+  originalPath: riskRemarksPaths[idx] || 'RiskManagerRemarks',
         category: getRiskRemarkCategory(Number(code))
       }));
 
@@ -821,7 +892,7 @@ export const processJsonData = (data, options = {}) => {
 
     return processed;
   } catch (error) {
-    console.error('Error processing JSON data:', error);
+  if (process.env.NODE_ENV !== 'production') console.error('Error processing JSON data:', error);
     return {
       error: error.message,
       summary: {
@@ -909,7 +980,7 @@ const extractMetadata = (data, baseMetadata) => {
       }
     });
   } catch (error) {
-    console.warn('Error extracting metadata:', error);
+  if (process.env.NODE_ENV !== 'production') console.warn('Error extracting metadata:', error);
   }
   return metadata;
 };
@@ -939,7 +1010,7 @@ const findNestedValue = (obj, fieldNames, currentPath = '') => {
       }
     }
   } catch (error) {
-    console.warn('Error in findNestedValue:', error);
+    if (process.env.NODE_ENV !== 'production') console.warn('Error in findNestedValue:', error);
     return null;
   }
 

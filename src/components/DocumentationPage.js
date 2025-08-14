@@ -19,7 +19,7 @@ const DocumentationPage = ({ onBack, onBackToMain }) => {
     try {
       return remarksMap[code] || `Unknown remark code: ${code}`;
     } catch (error) {
-      console.warn('Error getting remark description:', error);
+  if (process.env.NODE_ENV !== 'production') console.warn('Error getting remark description:', error);
       return `Error retrieving description for code: ${code}`;
     }
   };

@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 import { getProcessingRemarkCategory, getRiskRemarkCategory } from './documentationCategories.js';
 
+// Lightweight mapping for data source display in the DocumentData2 table.
+// Add more mappings here if you use other source keys in metadata.documentData2DataSource
+const dataSourceMap = {
+  sessionResult: 'Session Result',
+  idvResultData: 'IDV Result Data',
+  resultData: 'Result Data',
+  root: 'Root'
+};
+
 const InfoTooltip = React.memo(({ path, additionalInfo, category }) => (
   <span 
     className="ms-2" 

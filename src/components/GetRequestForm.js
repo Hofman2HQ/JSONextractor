@@ -147,12 +147,11 @@ const GetRequestForm = ({ onDataReceived, onError }) => {
         throw new Error(`HTTP error! status: ${response.status} - ${errorText}`);
       }
 
-      const data = await response.json();
-      console.log('API response:', data); // Debug log
-      
-      if (onDataReceived) onDataReceived(data);
+  const data = await response.json();
+  if (onDataReceived) onDataReceived(data);
     } catch (error) {
-      console.error('Error in handleRequestSubmit:', error); // Debug log
+  // Log error to console in development only
+  if (process.env.NODE_ENV !== 'production') console.error('Error in handleRequestSubmit:', error);
       if (onError) onError(error.message);
     } finally {
       setLoading(false);
