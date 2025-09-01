@@ -1,5 +1,14 @@
 import React, { useState } from 'react';
-import { getProcessingRemarkCategory, RISK_CATEGORIES, getRiskRemarkCategory } from './documentationCategories.js';
+import { getProcessingRemarkCategory, getRiskRemarkCategory } from './documentationCategories.js';
+
+// Lightweight mapping for data source display in the DocumentData2 table.
+// Add more mappings here if you use other source keys in metadata.documentData2DataSource
+const dataSourceMap = {
+  sessionResult: 'Session Result',
+  idvResultData: 'IDV Result Data',
+  resultData: 'Result Data',
+  root: 'Root'
+};
 
 const InfoTooltip = React.memo(({ path, additionalInfo, category }) => (
   <span 
@@ -27,21 +36,17 @@ const ResultCard = React.memo(({ title, value, path, className = '', additionalI
 const RemarksList = ({ remarks, title, type, category, onShowDocumentation }) => {
   const [openCategories, setOpenCategories] = useState({});
 
-  const getRemarkCategory = (code) => {
-    if (!code && code !== 0) return 'Other';
+  const getRemarkCategory = (remark) => {
+    if (remark && remark.category) return remark.category;
+    const code = remark?.code;
+    if (code === undefined || code === null) return 'Other';
     if (type === 'risk') {
       return getRiskRemarkCategory(code);
     }
     if (type === 'processing') {
       return getProcessingRemarkCategory(code);
-    } else {
-      if (code <= 20) return 'Face Comparison';
-      if (code <= 60) return 'Document Quality';
-      if (code <= 200) return 'Missing Fields';
-      if (code <= 460) return 'Field Issues';
-      if (code <= 680) return 'OCR Confidence';
-      return 'Other';
     }
+    return 'Other';
   };
 
   if (!remarks || !Array.isArray(remarks)) {
@@ -55,14 +60,14 @@ const RemarksList = ({ remarks, title, type, category, onShowDocumentation }) =>
     );
   }
 
-  const categorizedRemarks = remarks.reduce((acc, remark) => {
-    if (!remark || typeof remark.code === 'undefined') return acc;
-    
-    const category = getRemarkCategory(remark.code);
-    if (!acc[category]) acc[category] = [];
-    acc[category].push(remark);
-    return acc;
-  }, {});
+    const categorizedRemarks = remarks.reduce((acc, remark) => {
+      if (!remark || typeof remark.code === 'undefined') return acc;
+
+      const category = getRemarkCategory(remark);
+      if (!acc[category]) acc[category] = [];
+      acc[category].push({ ...remark, category });
+      return acc;
+    }, {});
 
   const handleShowDocumentation = () => {
     if (onShowDocumentation && type) {
@@ -151,7 +156,7 @@ const RemarksList = ({ remarks, title, type, category, onShowDocumentation }) =>
                               <span>
                                 {remark.message || `Remark ${remark.code}`}
                                 {remark.path && (
-                                  <InfoTooltip path={remark.path} />
+                                  <InfoTooltip path={remark.path} category={remark.category} />
                                 )}
                               </span>
                               <span className="badge bg-secondary">{remark.code}</span>

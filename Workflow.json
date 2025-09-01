@@ -1,1486 +1,1751 @@
 {
-  "sessionId": "39B4F0F2EA0D44609BF9393C9F1E9904",
-  "organizationId": 1135,
-  "sessionResult": {
-    "workflowId": "Au10tix201",
-    "primaryResult": "PASSED",
-    "remarks": [],
-    "completionStatus": "COMPLETED",
-    "identity": {
-      "firstName": "STEPHÁNIE",
-      "lastName": "PADILLA",
-      "dateOfBirth": "2005-09-03T00:00:00",
-      "idNumber": "3871-8074-0691-4350",
-      "idType": "ID Card",
-      "Addresses": {
-        "countryIso3": "PHL",
-        "addressLine1": "PUROK TIBKER. DOMANPOT, BATINGAN, PANGASINAN"
-      }
-    }
-  },
-  "verificationResults": {
-    "idv": {
-      "remarks": [
-        0,
-        1440,
-        1820
-      ],
-      "processingStartTime": "2025-07-07T11:59:39.640Z",
-      "completionTime": "2025-07-07T11:59:47.080Z",
-      "payload": {
-        "ClientOrganizationId": 1135,
-        "EventContext": {
-          "isFrontEndClassification": false,
-          "isFrontEndDataExtraction": false
-        },
-        "EventType": 3,
-        "Identity": {
-          "addresses": {
-            "addressLine1": "PUROK TIBKER. DOMANPOT, BATINGAN, PANGASINAN",
-            "countryIso3": "PHL",
-            "state": ""
-          },
-          "birthPlace": null,
-          "dateOfBirth": "2005-09-03T00:00:00",
-          "documentDateOfExpiry": null,
-          "fatherName": null,
-          "firstName": "STEPHÁNIE",
-          "firstNameLatin": null,
-          "fullName": null,
-          "fullNameLatin": null,
-          "gender": null,
-          "idNumber": "3871-8074-0691-4350",
-          "idType": "ID Card",
-          "lastName": "PADILLA",
-          "lastNameLatin": null,
-          "middleNames": null,
-          "middleNamesLatin": null,
-          "nationality": null,
-          "personalNumber": null
-        },
-        "IdvResultVersion": "V1",
-        "IsReportFromManualInspection": false,
-        "ProcessingReport": {
-          "AgeVerificationReport": {
-            "AgeCalculation": 19,
-            "AgeEstimation": 22,
-            "AgeEstimationCompletionStatus": 0,
-            "ProcessedSupplementaryImageIndex": 0
-          },
-          "CompletionStatus": "Ok",
-          "CompletionTime": "2025-07-07T11:59:47.08",
-          "DataAnalyticsReport": {
-            "All": {
-              "SeenThatAddress": {
-                "RepetitionDocInfo": [],
-                "CountAll": 0,
-                "CountHour": 0,
-                "CountDay": 0
-              },
-              "SeenThatDocumentNumber": {
-                "ConflictDocInfo": [],
-                "RepetitionDocInfo": [],
-                "IndConflict": false,
-                "CountAll": 0,
-                "CountHour": 0,
-                "CountDay": 0
-              },
-              "SeenThatFacePicture": {
-                "ConflictDocInfo": [],
-                "RepetitionDocInfo": [
-                  {
-                    "DocumentDate": "2025-07-07T11:56:09.68",
-                    "DocumentId": "BADDE3DAD2F148088C43C8607E9AC0AA"
-                  },
-                  {
-                    "DocumentDate": "2025-07-07T11:51:46.63",
-                    "DocumentId": "052398B5F04F429E9B958FE887C41539"
-                  },
-                  {
-                    "DocumentDate": "2025-07-07T11:37:14.77",
-                    "DocumentId": "B109F52D90E240E8B6173946A813C1BF"
-                  },
-                  {
-                    "DocumentDate": "2025-07-07T11:22:13.73",
-                    "DocumentId": "B87A35D029BC49B39C047A6B252F4FE5"
-                  }
-                ],
-                "IndConflict": false,
-                "CountAll": 4,
-                "CountHour": 4,
-                "CountDay": 4
-              },
-              "SeenThatPerson": {
-                "ConflictDocInfo": [],
-                "RepetitionDocInfo": [],
-                "IndConflict": false,
-                "CountAll": 0,
-                "CountHour": 0,
-                "CountDay": 0
-              },
-              "SeenThatSelfie": {
-                "ConflictDocInfo": [],
-                "RepetitionDocInfo": [
-                  {
-                    "DocumentDate": "2025-07-07T11:56:09.68",
-                    "DocumentId": "BADDE3DAD2F148088C43C8607E9AC0AA"
-                  },
-                  {
-                    "DocumentDate": "2025-07-07T11:51:46.63",
-                    "DocumentId": "052398B5F04F429E9B958FE887C41539"
-                  },
-                  {
-                    "DocumentDate": "2025-07-07T11:37:14.77",
-                    "DocumentId": "B109F52D90E240E8B6173946A813C1BF"
-                  }
-                ],
-                "IndConflict": false,
-                "CountAll": 3,
-                "CountHour": 3,
-                "CountDay": 3
-              },
-              "SeenThatSelfieBackground": {
-                "ConflictDocInfo": [],
-                "RepetitionDocInfo": [],
-                "IndConflict": false,
-                "CountAll": 0,
-                "CountHour": 0,
-                "CountDay": 0
-              }
-            },
-            "AttackInfo": {},
-            "ExecutionStatus": 0,
-            "MyOrganization": {
-              "SeenThatAddress": {
-                "RepetitionDocInfo": [],
-                "CountAll": 0,
-                "CountHour": 0,
-                "CountDay": 0
-              },
-              "SeenThatDocumentNumber": {
-                "ConflictDocInfo": [],
-                "RepetitionDocInfo": [],
-                "IndConflict": false,
-                "CountAll": 0,
-                "CountHour": 0,
-                "CountDay": 0
-              },
-              "SeenThatFacePicture": {
-                "ConflictDocInfo": [],
-                "RepetitionDocInfo": [
-                  {
-                    "DocumentDate": "2025-07-07T11:56:09.68",
-                    "DocumentId": "BADDE3DAD2F148088C43C8607E9AC0AA"
-                  },
-                  {
-                    "DocumentDate": "2025-07-07T11:51:46.63",
-                    "DocumentId": "052398B5F04F429E9B958FE887C41539"
-                  },
-                  {
-                    "DocumentDate": "2025-07-07T11:37:14.77",
-                    "DocumentId": "B109F52D90E240E8B6173946A813C1BF"
-                  },
-                  {
-                    "DocumentDate": "2025-07-07T11:22:13.73",
-                    "DocumentId": "B87A35D029BC49B39C047A6B252F4FE5"
-                  }
-                ],
-                "IndConflict": false,
-                "CountAll": 4,
-                "CountHour": 4,
-                "CountDay": 4
-              },
-              "SeenThatPerson": {
-                "ConflictDocInfo": [],
-                "RepetitionDocInfo": [],
-                "IndConflict": false,
-                "CountAll": 0,
-                "CountHour": 0,
-                "CountDay": 0
-              },
-              "SeenThatSelfie": {
-                "ConflictDocInfo": [],
-                "RepetitionDocInfo": [
-                  {
-                    "DocumentDate": "2025-07-07T11:56:09.68",
-                    "DocumentId": "BADDE3DAD2F148088C43C8607E9AC0AA"
-                  },
-                  {
-                    "DocumentDate": "2025-07-07T11:51:46.63",
-                    "DocumentId": "052398B5F04F429E9B958FE887C41539"
-                  },
-                  {
-                    "DocumentDate": "2025-07-07T11:37:14.77",
-                    "DocumentId": "B109F52D90E240E8B6173946A813C1BF"
-                  }
-                ],
-                "IndConflict": false,
-                "CountAll": 3,
-                "CountHour": 3,
-                "CountDay": 3
-              },
-              "SeenThatSelfieBackground": {
-                "ConflictDocInfo": [],
-                "RepetitionDocInfo": [],
-                "IndConflict": false,
-                "CountAll": 0,
-                "CountHour": 0,
-                "CountDay": 0
-              }
-            },
-            "PED": []
-          },
-          "DocumentAuthenticity": "Authentic",
-          "DocumentId": "39B4F0F2EA0D44609BF9393C9F1E9904",
-          "DocumentScope": "IdentityDocuments",
-          "DocumentSidesCode": 3,
-          "DocumentStatusReport2": {
-            "PrimaryProcessingResult": 0,
-            "ProcessingResultRemarks": [
-              0,
-              1440,
-              1820
-            ]
-          },
-          "FaceAnalysisReport": {
-            "DeepFakeReport": {
-              "Details": {
-                "IsDeepFakeDetected": false,
-                "ProbabilityOfDeepFake": 0.05655664000000005
-              },
-              "Result": 0
-            }
-          },
-          "FaceComparisonReport": {
-            "CompletionStatus": 0,
-            "FaceComparisonModelId": "3",
-            "FaceSimilarityRatio": 62.9,
-            "ProcessedSupplementaryImageIndex": 0,
-            "ImageMetadata": {
-              "EquipmentMaker": "",
-              "EquipmentModel": "Front Camera",
-              "FileName": "PhotoForFaceComparison.jpg",
-              "ImageCreationDateTime": "2025-07-07T19:59:29",
-              "Latitude": "",
-              "Longitude": "",
-              "SoftwareUsed": "AU10TIX WebSDK"
-            },
-            "ImageQuality": {
-              "IsGenerallyAcceptable": true
-            }
-          },
-          "InternalData": {
-            "Data12": "H4sIAAAAAAAEANVWwW7bMAz9FSGnDeiwHYfekmYZDLRF0KQ5bNiBthlbiywZMjXUGPbvo+0FSeekqyMlwE6OI+ORIh/f49efo5mxGdp64WKqSxxdj5b4RGKsTQGqHl1tz5fd4YKsS8hZ5JMlVvSAlVM0uv7w6+oAVKRz4yoUC1RriWKKWK5hgz3UqcwkgXoV5kpacqDEDRRoQUT6OyYkjRZvogKaT996wd/zF5iKeW7I7IFPkbpfXuBtac9chTskmAKBXxkWtaYcSSbb3k0g2WTWOJ0Kv8RByRTaVN91Ve7DcfZ8I8LMSqpfhTpWhJbbFtcdZpWb0ivNNocbU5RgZdXm+qcOn1GnaMXuGsPS/3ik3B34OEOxQivXMjkB+zD0DBJ8fpNHzclvULQnd0BJ7jnmf4XwROuXfgI2MSm+X0Vf+G1qElegJnHvihhtiBr9K+RM2orj8axdItotXDAYn6MwazFhQenz4BS+Sc1/cMgfTGSdeZIhoBk9anwqWSUbdQ9A+p1CMhqrj58zNCMUpf+HNzyT8IZF6XYidbCJDOeUwa1hDpYkl5db1jwesFTcvOb+PdiVrGSsBjD9JbDBi8ZYyUwfhBrG9LmLFdN8XJYIFnTS78eQe55nAdibxnZz260rfr1uwfa6wjl/Stml59aspfJj5iHwRQ62bEN4Qd9iI0msALx8dzN63FSGkaGP/II5DoPu6UpwbzoaIaoqdxG7bQO1YUNECzuZQRUouOye29XCOU7YzSDw2hJwoTp90/v2G7oY/IZ4EAAA",
-            "Data8": "H4sIAAAAAAAEAM3SsWrDMBAG4FcRmh0oHb2VGIMhFBO7GVI6XOQ/sYgsGekEMaXv3rhpC8UEOrTEk+B0Eh93//OrzJ0/wA8rp4i1szK9T75qVdzx0EOmssaJRQb0ezpCfjfUl9tMHzSTOddrBF4jRMMyvUvk0jnfaEuMIFMbjflRKmzpnUIIaDKnYgfLn21vyS9dhW1dDBAVzF5jjsKPyT1Y15EZJqyKfVQcPf4Zdnk/sVWD5RaslSiJGd7eaG5XeHMI3RXaCuO8xJLO2VuITbEVufaBxSN1U+mNtzznBD5ZnHooRjNGULVz85XkWZMROanxWKM3pDB+NpFudNA785fOl3flY9AFngUAAA==",
-            "Data9": "H4sIAAAAAAAEADMxAACk0SrcAgAAAA==",
-            "Data3": "MTExMTE=",
-            "Data4": "MTExMQ==",
-            "Data1": "eyJXYWl0VGltZUluTWlsbGlzZWNvbmRzIjozNDJ9"
-          },
-          "OptionalData": {
-            "DocumentInBlockList": "False"
-          },
-          "PageAsSeparateDocumentProcessingReports": [
+    "sessionId": "A69161685C884682864C0E8900EE95AF",
+    "organizationId": 1135,
+    "sessionResult": {
+        "workflowId": "Au10tix201",
+        "primaryResult": "FAILED",
+        "remarks": [
             {
-              "IsPageIgnored": false,
-              "PageIndex": 0,
-              "AgeVerificationReport": {
-                "AgeCalculation": 19,
-                "AgeEstimation": 22,
-                "AgeEstimationCompletionStatus": 0,
-                "ProcessedSupplementaryImageIndex": 0
-              },
-              "CompletionStatus": "Ok",
-              "CompletionTime": "2025-07-07T11:59:46.99",
-              "DocumentAuthenticity": "Authentic",
-              "DocumentId": "39B4F0F2EA0D44609BF9393C9F1E9904",
-              "DocumentScope": "IdentityDocuments",
-              "DocumentSidesCode": 1,
-              "DocumentStatusReport2": {
-                "PrimaryProcessingResult": 0,
-                "ProcessingResultRemarks": [
-                  0
-                ]
-              },
-              "InternalData": {
-                "Data12": "H4sIAAAAAAAEAK2UUUvDMBSF/0rok8IEn/fWbRYGU8Y6+6D4cJvetXFpEtIbWRH/u2mnMKmIW/rUQpLv5t5zcp7fo0TbEm2bupxag9E0ykCKAkhoxW5YtnxiCyBkesdmwlIVTb5PbI/b/SqwpSIsraDWL2+xoQ02TlI0vf2Y/FJhhURo2Rwa/CqRCNsQe4AaB/yUrOPkLF6IXsE45HWlSbMNGgkca1Tk+WkF1rC7ohzCF6IUBPJidAdla6t3QobB01ZRhSQ4O5aZAd+XVjtVBGF/uKQnj+GMtculv2lsDIIFxYetZ6IRufyfZFs8EIulKFU31ED9e9iJRmGKgyUBkiXAu89f2HMajqU3PxYsb4+SNJU2Qffsm14gmh3sw2w4SJVCc9d7Xbk6RzuGezIfUM6Pc+5fu+0OvyLvK17dI0EHvA7qwauFy2KceZw8S+giSwXRHhUejG/Wa+9xfJjSF3g9VroG2QaiEqHKLpD1G1r/ewbt5RMbh4qOnQYAAA==",
-                "Data8": "H4sIAAAAAAAEAM2OMQvCMBCF/0rIXMG5m1QKhSLFlg6KwzU9JJDmyuUCFvG/S9GK4OLg4HTw7uO973jVOfEZeSrJgFjyOvXRuWSJ69jJNKJOdYkiyCqDgGql2uKgcstB1A4G1C++ecC1cDQSef40GGSPITrR6TrRGRH31oNgWLbeosJXTAZDwH5LJg7o5Yndku9dG7yI2ngawE3/5lYBiwWncjDz2ePowOBc9mHa2mA790vP0x0jmr//8QEAAA==",
-                "Data9": "H4sIAAAAAAAEADMxAACk0SrcAgAAAA=="
-              },
-              "OptionalData": {
-                "DocumentInBlockList": "False"
-              },
-              "PassiveFaceLivenessDetectionReport": {
-                "CompletionStatus": 0,
-                "DetectionAttempts": [
-                  {
-                    "AttemptNumber": 1,
-                    "Liveness": true,
-                    "Probability": 0.9739646,
-                    "Score": 10
-                  }
-                ],
-                "LivenessDetected": true
-              },
-              "ProcessingDetails": {
-                "ApiResponseProfile": 0,
-                "ServiceLevelAgeVerification": 0,
-                "ServiceLevelIdentityDocument": 0,
-                "ToleranceToRisk": 0
-              },
-              "ProcessingRequest": {
-                "CreationTime": "2025-07-07T11:59:39.14",
-                "DocumentId": "39B4F0F2EA0D44609BF9393C9F1E9904",
-                "DocumentProcessingParameters": {
-                  "ImageSource": "UncertifiedScanner",
-                  "IsFromCertifiedScanner": false,
-                  "IsToCheckAuthenticity": true
+                "serviceName": "idv",
+                "code": 5020,
+                "message": "One or more services returned a failed result"
+            }
+        ],
+        "completionStatus": "COMPLETED",
+        "identity": {
+            "fullName": "Trần Thị Duyên",
+            "dateOfBirth": "2007-09-19T00:00:00",
+            "birthplace": "Vĩnh Thới, Lai Vung, Đồng Tháp",
+            "gender": "F",
+            "nationality": "VNM",
+            "idNumber": "087307010649",
+            "idType": "ID Card",
+            "documentDateOfExpiry": "2032-09-19T00:00:00",
+            "Addresses": {
+                "countryIso3": "VNM",
+                "addressLine1": "Số Nhà 126A/1, Ấp Thới Mỹ 2, Vĩnh Thới, Lai Vung, Đồng Tháp"
+            }
+        }
+    },
+    "verificationResults": {
+        "idv": {
+            "remarks": [
+                0,
+                1440,
+                1820
+            ],
+            "processingStartTime": "2025-08-14T16:58:02.670Z",
+            "completionTime": "2025-08-14T16:58:09.750Z",
+            "payload": {
+                "ClientOrganizationId": 1135,
+                "EventContext": {
+                    "isFrontEndClassification": false,
+                    "isFrontEndDataExtraction": false
                 },
-                "FaceComparisonRequest": {
-                  "ImageFileProcessingRequest": {
-                    "ImageIllumination": "Visible",
-                    "DataUnitSize": 634051
-                  },
-                  "RequestState": 0
+                "EventType": 3,
+                "Identity": {
+                    "addresses": {
+                        "addressLine1": "Số Nhà 126A/1, Ấp Thới Mỹ 2, Vĩnh Thới, Lai Vung, Đồng Tháp",
+                        "countryIso3": "VNM",
+                        "state": ""
+                    },
+                    "birthPlace": "Vĩnh Thới, Lai Vung, Đồng Tháp",
+                    "dateOfBirth": "2007-09-19T00:00:00",
+                    "documentDateOfExpiry": "2032-09-19T00:00:00",
+                    "fatherName": null,
+                    "firstName": null,
+                    "firstNameLatin": null,
+                    "fullName": "Trần Thị Duyên",
+                    "fullNameLatin": null,
+                    "gender": "F",
+                    "idNumber": "087307010649",
+                    "idType": "ID Card",
+                    "lastName": null,
+                    "lastNameLatin": null,
+                    "middleNames": null,
+                    "middleNamesLatin": null,
+                    "nationality": "VNM",
+                    "personalNumber": null
                 },
-                "PageProcessingRequests": [
-                  {
-                    "DataUnitProcessingRequests": [
-                      {
-                        "ImageIllumination": "Visible",
-                        "DataUnitSize": 220242
-                      }
-                    ]
-                  }
-                ],
-                "ProcessingHints": {
-                  "IsToSkipDoubleCheck": false,
-                  "PersonalInfoRedactions": [],
-                  "ProofOfAddressRelevantFields": []
-                },
-                "IsSessionIdFromRequest": true,
-                "IsToForceUsingInternalStorage": false
-              },
-              "ProcessingResult": {
-                "DocumentData2": {
-                  "Address": {
-                    "DataSource": 0,
-                    "LanguageCode": "spa",
-                    "Value": "PUROK TIBKER. DOMANPOT, BATINGAN, PANGASINAN"
-                  },
-                  "DateOfBirth": {
-                    "DataSource": 0,
-                    "Value": "2005-09-03T00:00:00"
-                  },
-                  "DocumentNumber": {
-                    "DataSource": 0,
-                    "LanguageCode": "eng",
-                    "Value": "3871-8074-0691-4350"
-                  },
-                  "ExtendedData": {
-                    "CalculatedAge": 19
-                  },
-                  "FirstName": {
-                    "DataSource": 0,
-                    "LanguageCode": "eng",
-                    "Value": "STEPHÁNIE"
-                  },
-                  "FullName": {
-                    "DataSource": 0,
-                    "LanguageCode": "eng",
-                    "Value": "STEPHÁNIE LUMANLAN PADILLA"
-                  },
-                  "LastName": {
-                    "DataSource": 0,
-                    "LanguageCode": "eng",
-                    "Value": "PADILLA"
-                  },
-                  "MiddleName": {
-                    "DataSource": 0,
-                    "LanguageCode": "eng",
-                    "Value": "LUMANLAN"
-                  },
-                  "VerifiedAddress": {
-                    "Address": "Domanpot, Asingan, Pangasinan, Philippines",
-                    "AdministrativeAreaLevel1": "Ilocos Region",
-                    "AdministrativeAreaLevel2": "Pangasinan",
-                    "BorderInDispute": "Domanpot",
-                    "Country": "Philippines",
-                    "Locality": "Asingan"
-                  }
-                },
-                "ProcessedDocumentFeatures": "ImageUnderVisibleIllumination",
-                "DocumentTypeDescriptor": {
-                  "CountryIso3": "PHL",
-                  "CountryIso3166Alpha3": "PHL",
-                  "DocumentType": "ID Card",
-                  "DocumentVersion": "V9",
-                  "HasQrCode": false,
-                  "State": ""
-                },
-                "ForgeryTests": [
-                  {
-                    "ForgerySubtype": "Validation - Photo",
-                    "ForgeryType": "Data Integrity",
-                    "TestResult": "Authentic"
-                  },
-                  {
-                    "ForgerySubtype": "Validation - VIZ Date of Birth",
-                    "ForgeryType": "Data Integrity",
-                    "TestResult": "Authentic"
-                  },
-                  {
-                    "ForgerySubtype": "Validation - VIZ document number",
-                    "ForgeryType": "Data Integrity",
-                    "TestResult": "Authentic"
-                  },
-                  {
-                    "ForgerySubtype": "Altered by Photoshop",
-                    "ForgeryType": "Digital",
-                    "TestResult": "Authentic"
-                  },
-                  {
-                    "ForgerySubtype": "FaceId Deepfake",
-                    "ForgeryType": "Digital",
-                    "TestResult": "Authentic"
-                  },
-                  {
-                    "ForgerySubtype": "Photo Replacement - Edge Profile",
-                    "ForgeryType": "Digital",
-                    "TestResult": "Authentic"
-                  },
-                  {
-                    "ForgerySubtype": "Photo Replacement - Sharp Edge",
-                    "ForgeryType": "Digital",
-                    "TestResult": "Authentic"
-                  },
-                  {
-                    "ForgerySubtype": "Synthetic Pattern",
-                    "ForgeryType": "Digital",
-                    "TestResult": "Authentic"
-                  },
-                  {
-                    "ForgerySubtype": "Synthetic Photo Background",
-                    "ForgeryType": "Digital",
-                    "TestResult": "Authentic"
-                  },
-                  {
-                    "ForgerySubtype": "Text Deepfake",
-                    "ForgeryType": "Digital",
-                    "TestResult": "Authentic"
-                  },
-                  {
-                    "ForgerySubtype": "Text Replacement",
-                    "ForgeryType": "Digital",
-                    "TestResult": "Authentic"
-                  },
-                  {
-                    "ForgerySubtype": "Virtual Camera Injection (MetaData)",
-                    "ForgeryType": "Digital",
-                    "TestResult": "Authentic"
-                  },
-                  {
-                    "ForgerySubtype": "Finger Covering",
-                    "ForgeryType": "Structure",
-                    "TestResult": "Authentic"
-                  },
-                  {
-                    "ForgerySubtype": "Letter Case - VIZ Last Name",
-                    "ForgeryType": "Structure",
-                    "TestResult": "Authentic"
-                  },
-                  {
-                    "ForgerySubtype": "Text Alignment",
-                    "ForgeryType": "Structure",
-                    "TestResult": "Authentic"
-                  },
-                  {
-                    "ForgerySubtype": "Unexpected Patch",
-                    "ForgeryType": "Structure",
-                    "TestResult": "Authentic"
-                  },
-                  {
-                    "ForgerySubtype": "Public Appearance",
-                    "ForgeryType": "Visible",
-                    "TestResult": "Authentic"
-                  }
-                ],
-                "IsDataExtracted": true,
-                "OverallQuality": "Acceptable",
-                "PageProcessingResults": [
-                  {
+                "IdvResultVersion": "V1",
+                "IsReportFromManualInspection": false,
+                "ProcessingReport": {
+                    "AgeVerificationReport": {
+                        "AgeCalculation": 17,
+                        "AgeEstimation": 24,
+                        "AgeEstimationCompletionStatus": 0,
+                        "ProcessedSupplementaryImageIndex": 0
+                    },
                     "CompletionStatus": "Ok",
-                    "DocumentReplay": 0,
-                    "DocumentReplay2": 0,
-                    "DurationInMilliseconds": 5828,
-                    "IsExpectedSecondSide": true,
-                    "IsPrimaryPhotoDetected": true,
-                    "IsSignature": false,
-                    "IsSubPhotoDetected": true,
-                    "ProcessedImages": [
-                      {
-                        "IsColored": true,
-                        "IsValidSize": true,
-                        "Quality": {
-                          "IsAcceptableBlurViz": true,
-                          "IsAcceptableBright": true,
-                          "IsAcceptableDark": true,
-                          "IsAcceptableDpi": true,
-                          "IsAcceptableEntropy": true,
-                          "IsAcceptableFaceNotFound": true,
-                          "IsAcceptableImageIncomplete": true,
-                          "IsAcceptableJpegCompression": true,
-                          "IsAcceptableLayout": true,
-                          "IsAcceptableObliquity": true,
-                          "IsAcceptableQuantization": true,
-                          "IsAcceptableReflectionViz": true,
-                          "IsAcceptableSize": true,
-                          "IsAcceptableTextConfidenceViz": true,
-                          "IsGenerallyAcceptable": true
+                    "CompletionTime": "2025-08-14T16:58:09.75",
+                    "DataAnalyticsReport": {
+                        "All": {
+                            "SeenThatAddress": {
+                                "RepetitionDocInfo": [],
+                                "CountAll": 0,
+                                "CountHour": 0,
+                                "CountDay": 0
+                            },
+                            "SeenThatDocumentNumber": {
+                                "ConflictDocInfo": [],
+                                "RepetitionDocInfo": [],
+                                "IndConflict": false,
+                                "CountAll": 0,
+                                "CountHour": 0,
+                                "CountDay": 0
+                            },
+                            "SeenThatFacePicture": {
+                                "ConflictDocInfo": [],
+                                "RepetitionDocInfo": [
+                                    {
+                                        "DocumentDate": "2025-08-14T16:54:52.22",
+                                        "DocumentId": "E0C0B60F7C0B4522B2FF28B7D7D9033B"
+                                    },
+                                    {
+                                        "DocumentDate": "2025-08-14T16:53:44.26",
+                                        "DocumentId": "2DCCC9D07B564A60B5D844E7A55BBD48"
+                                    },
+                                    {
+                                        "DocumentDate": "2025-08-14T16:48:12.56",
+                                        "DocumentId": "AE8A7387FF774FBDAEB7DC9C01055C6B"
+                                    },
+                                    {
+                                        "DocumentDate": "2025-08-14T16:46:47.28",
+                                        "DocumentId": "9C3386D15C794AD6B8A161F031F32020"
+                                    },
+                                    {
+                                        "DocumentDate": "2025-08-14T16:44:21.91",
+                                        "DocumentId": "3FD74B93C9844624BEFA66B33157DCEE"
+                                    },
+                                    {
+                                        "DocumentDate": "2025-08-14T16:42:55.25",
+                                        "DocumentId": "A47D59D0655246F5A6BB704776549E01"
+                                    }
+                                ],
+                                "IndConflict": false,
+                                "CountAll": 6,
+                                "CountHour": 6,
+                                "CountDay": 6
+                            },
+                            "SeenThatPerson": {
+                                "ConflictDocInfo": [],
+                                "RepetitionDocInfo": [],
+                                "IndConflict": false,
+                                "CountAll": 0,
+                                "CountHour": 0,
+                                "CountDay": 0
+                            },
+                            "SeenThatSelfie": {
+                                "ConflictDocInfo": [],
+                                "RepetitionDocInfo": [
+                                    {
+                                        "DocumentDate": "2025-08-14T16:54:52.22",
+                                        "DocumentId": "E0C0B60F7C0B4522B2FF28B7D7D9033B"
+                                    },
+                                    {
+                                        "DocumentDate": "2025-08-14T16:49:37.69",
+                                        "DocumentId": "701086EE051B4EB4BBDEDEF76C49398C"
+                                    },
+                                    {
+                                        "DocumentDate": "2025-08-14T16:48:12.56",
+                                        "DocumentId": "AE8A7387FF774FBDAEB7DC9C01055C6B"
+                                    },
+                                    {
+                                        "DocumentDate": "2025-08-14T16:46:47.28",
+                                        "DocumentId": "9C3386D15C794AD6B8A161F031F32020"
+                                    },
+                                    {
+                                        "DocumentDate": "2025-08-14T16:44:21.91",
+                                        "DocumentId": "3FD74B93C9844624BEFA66B33157DCEE"
+                                    }
+                                ],
+                                "IndConflict": false,
+                                "CountAll": 5,
+                                "CountHour": 5,
+                                "CountDay": 5
+                            },
+                            "SeenThatSelfieBackground": {
+                                "ConflictDocInfo": [],
+                                "RepetitionDocInfo": [],
+                                "IndConflict": false,
+                                "CountAll": 0,
+                                "CountHour": 0,
+                                "CountDay": 0
+                            }
                         },
-                        "QualityBeforeAdjustment": {
-                          "IsAcceptableBlurViz": true,
-                          "IsAcceptableBright": true,
-                          "IsAcceptableDark": true,
-                          "IsAcceptableDpi": true,
-                          "IsAcceptableEntropy": true,
-                          "IsAcceptableFaceNotFound": true,
-                          "IsAcceptableImageIncomplete": true,
-                          "IsAcceptableJpegCompression": true,
-                          "IsAcceptableLayout": true,
-                          "IsAcceptableObliquity": true,
-                          "IsAcceptableQuantization": true,
-                          "IsAcceptableReflectionViz": true,
-                          "IsAcceptableSize": true,
-                          "IsAcceptableTextConfidenceViz": true,
-                          "IsGenerallyAcceptable": true
+                        "AttackInfo": {},
+                        "ExecutionStatus": 0,
+                        "MyOrganization": {
+                            "SeenThatAddress": {
+                                "RepetitionDocInfo": [],
+                                "CountAll": 0,
+                                "CountHour": 0,
+                                "CountDay": 0
+                            },
+                            "SeenThatDocumentNumber": {
+                                "ConflictDocInfo": [],
+                                "RepetitionDocInfo": [],
+                                "IndConflict": false,
+                                "CountAll": 0,
+                                "CountHour": 0,
+                                "CountDay": 0
+                            },
+                            "SeenThatFacePicture": {
+                                "ConflictDocInfo": [],
+                                "RepetitionDocInfo": [
+                                    {
+                                        "DocumentDate": "2025-08-14T16:54:52.22",
+                                        "DocumentId": "E0C0B60F7C0B4522B2FF28B7D7D9033B"
+                                    },
+                                    {
+                                        "DocumentDate": "2025-08-14T16:53:44.26",
+                                        "DocumentId": "2DCCC9D07B564A60B5D844E7A55BBD48"
+                                    },
+                                    {
+                                        "DocumentDate": "2025-08-14T16:48:12.56",
+                                        "DocumentId": "AE8A7387FF774FBDAEB7DC9C01055C6B"
+                                    },
+                                    {
+                                        "DocumentDate": "2025-08-14T16:46:47.28",
+                                        "DocumentId": "9C3386D15C794AD6B8A161F031F32020"
+                                    },
+                                    {
+                                        "DocumentDate": "2025-08-14T16:44:21.91",
+                                        "DocumentId": "3FD74B93C9844624BEFA66B33157DCEE"
+                                    },
+                                    {
+                                        "DocumentDate": "2025-08-14T16:42:55.25",
+                                        "DocumentId": "A47D59D0655246F5A6BB704776549E01"
+                                    }
+                                ],
+                                "IndConflict": false,
+                                "CountAll": 6,
+                                "CountHour": 6,
+                                "CountDay": 6
+                            },
+                            "SeenThatPerson": {
+                                "ConflictDocInfo": [],
+                                "RepetitionDocInfo": [],
+                                "IndConflict": false,
+                                "CountAll": 0,
+                                "CountHour": 0,
+                                "CountDay": 0
+                            },
+                            "SeenThatSelfie": {
+                                "ConflictDocInfo": [],
+                                "RepetitionDocInfo": [
+                                    {
+                                        "DocumentDate": "2025-08-14T16:54:52.22",
+                                        "DocumentId": "E0C0B60F7C0B4522B2FF28B7D7D9033B"
+                                    },
+                                    {
+                                        "DocumentDate": "2025-08-14T16:49:37.69",
+                                        "DocumentId": "701086EE051B4EB4BBDEDEF76C49398C"
+                                    },
+                                    {
+                                        "DocumentDate": "2025-08-14T16:48:12.56",
+                                        "DocumentId": "AE8A7387FF774FBDAEB7DC9C01055C6B"
+                                    },
+                                    {
+                                        "DocumentDate": "2025-08-14T16:46:47.28",
+                                        "DocumentId": "9C3386D15C794AD6B8A161F031F32020"
+                                    },
+                                    {
+                                        "DocumentDate": "2025-08-14T16:44:21.91",
+                                        "DocumentId": "3FD74B93C9844624BEFA66B33157DCEE"
+                                    }
+                                ],
+                                "IndConflict": false,
+                                "CountAll": 5,
+                                "CountHour": 5,
+                                "CountDay": 5
+                            },
+                            "SeenThatSelfieBackground": {
+                                "ConflictDocInfo": [],
+                                "RepetitionDocInfo": [],
+                                "IndConflict": false,
+                                "CountAll": 0,
+                                "CountHour": 0,
+                                "CountDay": 0
+                            }
                         },
-                        "UnexpectedImageCorners": false,
-                        "Compression": 94,
-                        "CroppedHeight": 589,
-                        "CroppedWidth": 952,
-                        "Dpi": 281,
-                        "ImageFileType": "jpg",
-                        "ImageType": "Visible",
-                        "OriginalHeight": 683,
-                        "OriginalWidth": 1034,
-                        "EquipmentMaker": "",
-                        "EquipmentModel": "Back Camera",
-                        "FileName": "Page0.Front.VIS.jpg",
-                        "ImageCreationDateTime": "2025-07-07T19:58:58",
-                        "Latitude": "",
-                        "Longitude": "",
-                        "SoftwareUsed": "AU10TIX WebSDK"
-                      }
-                    ]
-                  }
-                ],
-                "SdrCompletionStatus": "Ok"
-              },
-              "ProcessingStartTime": "2025-07-07T11:59:46.99",
-              "RequestAcceptanceWarnings": [],
-              "SdrVersion": "2506.200.0.9"
-            },
-            {
-              "IsPageIgnored": false,
-              "PageIndex": 1,
-              "AgeVerificationReport": {
-                "AgeCalculation": 19,
-                "AgeEstimation": 22,
-                "AgeEstimationCompletionStatus": 0,
-                "ProcessedSupplementaryImageIndex": 0
-              },
-              "CompletionStatus": "Ok",
-              "CompletionTime": "2025-07-07T11:59:47.08",
-              "DocumentAuthenticity": "Authentic",
-              "DocumentId": "39B4F0F2EA0D44609BF9393C9F1E9904",
-              "DocumentScope": "IdentityDocuments",
-              "DocumentSidesCode": 2,
-              "DocumentStatusReport2": {
-                "PrimaryProcessingResult": 0,
-                "ProcessingResultRemarks": [
-                  0
-                ]
-              },
-              "InternalData": {
-                "Data12": "H4sIAAAAAAAEAK2SMU/DMBCF/4qVCaRWMHcLrSp1QIqakAHEcHGuicGxrfMZNUL8d5xUTOnQKGyWz/e9u/f89p3sLTVIfR4q7h0mm6QErWpgZY1Yi/LwKnbAKOxJHLwPmKz+OorL81gFcTCMDSnuY7lAz0f0QXOyefxZXVEYW7a2c0DKjzJPQNLW+DDIrS9Co+x/qGWh0kqK1DkEAiOn0FJ5VWm8iVbgmcURnQaJHRqeTqgaxaBvgqWakbAWVS+y1rL1rXWLgKUiDqDFFjqkwagPlGOSd8/IMJh3v4g/br9DdCf4vBLODFLeG26RYzAZcHTBLKK9GDy7uGr0MuJkO4HlTEFyoBkhp8Z2oPuFqL0y8SL+9i+keJxBe/8FHll9O50DAAA=",
-                "Data8": "H4sIAAAAAAAEAM2RsQrCMBRFf0Uyd3DuJhZBcCi2TuIQ02sbTN8ryQu0iP+uohXBxUldD4fLgbs9qQX7Gn5YsdFimVRK0blkxEXcy9BBpaoYSBqINZNci8CTekrl3chsbUW7Ky8RZI0Qnah0mqg5s68saUEY51/QknLPBiGgytjEFiQP7Zx8nleil0kGdAd9xB+mzYhb7Ya3skJ8NBI9ftO2IfQdjKC63Wqar/TtLv2S2K53AgAA",
-                "Data9": "H4sIAAAAAAAEADMxAACk0SrcAgAAAA=="
-              },
-              "OptionalData": {
-                "DocumentInBlockList": "False"
-              },
-              "PassiveFaceLivenessDetectionReport": {
-                "CompletionStatus": 0,
-                "DetectionAttempts": [
-                  {
-                    "AttemptNumber": 1,
-                    "Liveness": true,
-                    "Probability": 0.9739646,
-                    "Score": 10
-                  }
-                ],
-                "LivenessDetected": true
-              },
-              "ProcessingDetails": {
-                "ApiResponseProfile": 0,
-                "ServiceLevelAgeVerification": 0,
-                "ServiceLevelIdentityDocument": 0,
-                "ToleranceToRisk": 0
-              },
-              "ProcessingRequest": {
-                "CreationTime": "2025-07-07T11:59:39.14",
-                "DocumentId": "39B4F0F2EA0D44609BF9393C9F1E9904",
-                "DocumentProcessingParameters": {
-                  "ImageSource": "UncertifiedScanner",
-                  "IsFromCertifiedScanner": false,
-                  "IsToCheckAuthenticity": true
-                },
-                "FaceComparisonRequest": {
-                  "ImageFileProcessingRequest": {
-                    "ImageIllumination": "Visible",
-                    "DataUnitSize": 634051
-                  },
-                  "RequestState": 0
-                },
-                "PageProcessingRequests": [
-                  {
-                    "DataUnitProcessingRequests": [
-                      {
-                        "ImageIllumination": "Visible",
-                        "DataUnitSize": 240236
-                      }
-                    ]
-                  }
-                ],
-                "ProcessingHints": {
-                  "IsToSkipDoubleCheck": false,
-                  "PersonalInfoRedactions": [],
-                  "ProofOfAddressRelevantFields": []
-                },
-                "IsSessionIdFromRequest": true,
-                "IsToForceUsingInternalStorage": false
-              },
-              "ProcessingResult": {
-                "DocumentData2": {
-                  "DateOfBirth": {
-                    "DataSource": 2,
-                    "Value": "2005-09-03T00:00:00"
-                  },
-                  "DateOfIssue": {
-                    "DataSource": 2,
-                    "Value": "2022-11-16T00:00:00"
-                  },
-                  "DocumentNumber": {
-                    "DataSource": 2,
-                    "LanguageCode": "eng",
-                    "Value": "3871-8074-0691-4350"
-                  },
-                  "ExtendedData": {
-                    "CalculatedAge": 19
-                  },
-                  "FirstName": {
-                    "DataSource": 2,
-                    "LanguageCode": "eng",
-                    "Value": "STEPHANIE"
-                  },
-                  "LastName": {
-                    "DataSource": 2,
-                    "LanguageCode": "eng",
-                    "Value": "PADILLA"
-                  }
-                },
-                "ProcessedDocumentFeatures": "Barcode, ImageUnderVisibleIllumination, Mrz",
-                "DocumentTypeDescriptor": {
-                  "CountryIso3": "PHL",
-                  "CountryIso3166Alpha3": "PHL",
-                  "DocumentType": "ID Card",
-                  "DocumentVersion": "V9",
-                  "HasQrCode": false,
-                  "State": ""
-                },
-                "ForgeryTests": [
-                  {
-                    "ForgerySubtype": "Data Comparison - Barcode/VIZ - Issue Date",
-                    "ForgeryType": "Data Integrity",
-                    "TestResult": "Authentic"
-                  },
-                  {
-                    "ForgerySubtype": "Validation - VIZ Date of Issue",
-                    "ForgeryType": "Data Integrity",
-                    "TestResult": "Authentic"
-                  },
-                  {
-                    "ForgerySubtype": "Altered by Photoshop",
-                    "ForgeryType": "Digital",
-                    "TestResult": "Authentic"
-                  },
-                  {
-                    "ForgerySubtype": "Text Replacement",
-                    "ForgeryType": "Digital",
-                    "TestResult": "Authentic"
-                  },
-                  {
-                    "ForgerySubtype": "Virtual Camera Injection (MetaData)",
-                    "ForgeryType": "Digital",
-                    "TestResult": "Authentic"
-                  },
-                  {
-                    "ForgerySubtype": "Finger Covering",
-                    "ForgeryType": "Structure",
-                    "TestResult": "Authentic"
-                  },
-                  {
-                    "ForgerySubtype": "Public Appearance",
-                    "ForgeryType": "Visible",
-                    "TestResult": "Authentic"
-                  }
-                ],
-                "IsDataExtracted": true,
-                "OverallQuality": "Acceptable",
-                "PageProcessingResults": [
-                  {
-                    "BarcodesProcessingReport": {
-                      "BarcodeProcessingResults": [
-                        {
-                          "ProcessingStatus": 0
+                        "PED": []
+                    },
+                    "DocumentAuthenticity": "Authentic",
+                    "DocumentId": "A69161685C884682864C0E8900EE95AF",
+                    "DocumentScope": "IdentityDocuments",
+                    "DocumentSidesCode": 3,
+                    "DocumentStatusReport2": {
+                        "PrimaryProcessingResult": 40,
+                        "ProcessingResultRemarks": [
+                            0,
+                            1440,
+                            1820
+                        ]
+                    },
+                    "FaceAnalysisReport": {
+                        "DeepFakeReport": {
+                            "Details": {
+                                "IsDeepFakeDetected": false,
+                                "ProbabilityOfDeepFake": 0.0010413000000000228
+                            },
+                            "Result": 0
                         }
-                      ]
                     },
-                    "CompletionStatus": "Ok",
-                    "DurationInMilliseconds": 4719,
-                    "IsExpectedSecondSide": true,
-                    "IsSignature": false,
-                    "IsSubPhotoDetected": false,
-                    "ProcessedImages": [
-                      {
-                        "IsColored": true,
-                        "IsValidSize": true,
-                        "Quality": {
-                          "IsAcceptableBlurViz": true,
-                          "IsAcceptableBright": true,
-                          "IsAcceptableDark": true,
-                          "IsAcceptableDpi": true,
-                          "IsAcceptableEntropy": true,
-                          "IsAcceptableFaceNotFound": true,
-                          "IsAcceptableImageIncomplete": true,
-                          "IsAcceptableJpegCompression": true,
-                          "IsAcceptableLayout": true,
-                          "IsAcceptableObliquity": true,
-                          "IsAcceptableQuantization": true,
-                          "IsAcceptableReflectionViz": true,
-                          "IsAcceptableSize": true,
-                          "IsGenerallyAcceptable": true
+                    "FaceComparisonReport": {
+                        "CompletionStatus": 0,
+                        "FaceComparisonModelId": "3",
+                        "FaceSimilarityRatio": 53.2,
+                        "ProcessedSupplementaryImageIndex": 0,
+                        "ImageMetadata": {
+                            "EquipmentMaker": "",
+                            "EquipmentModel": "Camera mt trc",
+                            "FileName": "PhotoForFaceComparison.jpg",
+                            "ImageCreationDateTime": "2025-08-14T23:57:53",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "SoftwareUsed": "AU10TIX WebSDK"
                         },
-                        "QualityBeforeAdjustment": {
-                          "IsAcceptableBlurViz": true,
-                          "IsAcceptableBright": true,
-                          "IsAcceptableDark": true,
-                          "IsAcceptableDpi": true,
-                          "IsAcceptableEntropy": true,
-                          "IsAcceptableFaceNotFound": true,
-                          "IsAcceptableImageIncomplete": true,
-                          "IsAcceptableJpegCompression": true,
-                          "IsAcceptableLayout": true,
-                          "IsAcceptableObliquity": true,
-                          "IsAcceptableQuantization": true,
-                          "IsAcceptableReflectionViz": true,
-                          "IsAcceptableSize": true,
-                          "IsGenerallyAcceptable": true
+                        "ImageQuality": {
+                            "IsGenerallyAcceptable": true
                         },
-                        "UnexpectedImageCorners": false,
-                        "Compression": 94,
-                        "CroppedHeight": 625,
-                        "CroppedWidth": 964,
-                        "Dpi": 292,
-                        "ImageFileType": "jpg",
-                        "ImageType": "Visible",
-                        "OriginalHeight": 678,
-                        "OriginalWidth": 1049,
-                        "EquipmentMaker": "",
-                        "EquipmentModel": "Back Camera",
-                        "FileName": "Page1.Back.VIS.jpg",
-                        "ImageCreationDateTime": "2025-07-07T19:59:12",
-                        "Latitude": "",
-                        "Longitude": "",
-                        "SoftwareUsed": "AU10TIX WebSDK"
-                      }
-                    ]
-                  }
-                ],
-                "SdrCompletionStatus": "Ok"
-              },
-              "ProcessingStartTime": "2025-07-07T11:59:47.08",
-              "RequestAcceptanceWarnings": [],
-              "SdrVersion": "2506.200.0.9"
-            }
-          ],
-          "PassiveFaceLivenessDetectionReport": {
-            "CompletionStatus": 0,
-            "DetectionAttempts": [
-              {
-                "AttemptNumber": 1,
-                "Liveness": true,
-                "Probability": 0.9739646,
-                "Score": 10
-              }
-            ],
-            "LivenessDetected": true
-          },
-          "PersonalInfoValidationReport": {},
-          "PhotoProcessingReports": [
-            {
-              "EstimatedGender": "",
-              "ImageTypeCode": 6
-            },
-            {
-              "EstimatedAge": 22,
-              "EstimatedGender": "Female",
-              "ImageTypeCode": 5
-            }
-          ],
-          "ProcessedSupplementaryImages": [
-            {}
-          ],
-          "ProcessingDetails": {
-            "ApiResponseProfile": 0,
-            "ServiceLevelAgeVerification": 0,
-            "ServiceLevelIdentityDocument": 0,
-            "ToleranceToRisk": 0
-          },
-          "ProcessingRequest": {
-            "CreationTime": "2025-07-07T11:59:39.14",
-            "DocumentId": "39B4F0F2EA0D44609BF9393C9F1E9904",
-            "DocumentProcessingParameters": {
-              "ImageSource": "UncertifiedScanner",
-              "IsFromCertifiedScanner": false,
-              "IsToCheckAuthenticity": true
-            },
-            "FaceComparisonRequest": {
-              "ImageFileProcessingRequest": {
-                "ImageIllumination": "Visible",
-                "DataUnitSize": 634051
-              },
-              "RequestState": 0
-            },
-            "PageProcessingRequests": [
-              {
-                "DataUnitProcessingRequests": [
-                  {
-                    "ImageIllumination": "Visible",
-                    "DataUnitSize": 220242
-                  }
-                ]
-              },
-              {
-                "DataUnitProcessingRequests": [
-                  {
-                    "ImageIllumination": "Visible",
-                    "DataUnitSize": 240236
-                  }
-                ]
-              }
-            ],
-            "ProcessingHints": {
-              "IsToSkipDoubleCheck": false,
-              "PersonalInfoRedactions": [],
-              "ProofOfAddressRelevantFields": []
-            },
-            "SessionId": "39B4F0F2EA0D44609BF9393C9F1E9904",
-            "IsSessionIdFromRequest": true,
-            "IsToForceUsingInternalStorage": false
-          },
-          "ProcessingResult": {
-            "DocumentData2": {
-              "Address": {
-                "DataSource": 0,
-                "LanguageCode": "spa",
-                "Value": "PUROK TIBKER. DOMANPOT, BATINGAN, PANGASINAN"
-              },
-              "DateOfBirth": {
-                "DataSource": 2,
-                "Value": "2005-09-03T00:00:00"
-              },
-              "DateOfIssue": {
-                "DataSource": 2,
-                "Value": "2022-11-16T00:00:00"
-              },
-              "DocumentNumber": {
-                "DataSource": 2,
-                "LanguageCode": "eng",
-                "Value": "3871-8074-0691-4350"
-              },
-              "ExtendedData": {
-                "CalculatedAge": 19
-              },
-              "FirstName": {
-                "DataSource": 0,
-                "LanguageCode": "spa",
-                "Value": "STEPHÁNIE"
-              },
-              "LastName": {
-                "DataSource": 2,
-                "LanguageCode": "eng",
-                "Value": "PADILLA"
-              },
-              "VerifiedAddress": {
-                "Address": "Domanpot, Asingan, Pangasinan, Philippines",
-                "AdministrativeAreaLevel1": "Ilocos Region",
-                "AdministrativeAreaLevel2": "Pangasinan",
-                "BorderInDispute": "Domanpot",
-                "Country": "Philippines",
-                "Locality": "Asingan"
-              }
-            },
-            "ProcessedDocumentFeatures": "Barcode, ImageUnderVisibleIllumination, Mrz",
-            "DocumentTypeDescriptor": {
-              "CountryIso3": "PHL",
-              "CountryIso3166Alpha3": "PHL",
-              "DocumentType": "ID Card",
-              "DocumentVersion": "V9",
-              "HasQrCode": false,
-              "IssuanceFormat": 4,
-              "State": ""
-            },
-            "ForgeryTests": [
-              {
-                "ForgerySubtype": "Data Comparison - Barcode/VIZ - Date of Birth",
-                "ForgeryType": "Data Integrity",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgerySubtype": "Data Comparison - Barcode/VIZ - Document Number",
-                "ForgeryType": "Data Integrity",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgerySubtype": "Data Comparison - Barcode/VIZ - First Name",
-                "ForgeryType": "Data Integrity",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgerySubtype": "Data Comparison - Barcode/VIZ - Issue Date",
-                "ForgeryType": "Data Integrity",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgerySubtype": "Data Comparison - Barcode/VIZ - Last Name",
-                "ForgeryType": "Data Integrity",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgerySubtype": "Selfie Age Verification",
-                "ForgeryType": "Data Integrity",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgeryLocation": 2,
-                "ForgerySubtype": "Validation - Photo",
-                "ForgeryType": "Data Integrity",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgerySubtype": "Validation - Photo",
-                "ForgeryType": "Data Integrity",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgerySubtype": "Validation - VIZ Date of Birth",
-                "ForgeryType": "Data Integrity",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgerySubtype": "Validation - VIZ Date of Issue",
-                "ForgeryType": "Data Integrity",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgerySubtype": "Validation - VIZ document number",
-                "ForgeryType": "Data Integrity",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgeryLocation": 2,
-                "ForgerySubtype": "Altered by Photoshop",
-                "ForgeryType": "Digital",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgerySubtype": "Altered by Photoshop",
-                "ForgeryType": "Digital",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgerySubtype": "FaceId Deepfake",
-                "ForgeryType": "Digital",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgeryLocation": 2,
-                "ForgerySubtype": "Nested Photo Injection Detection",
-                "ForgeryType": "Digital",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgerySubtype": "Photo Replacement - Edge Profile",
-                "ForgeryType": "Digital",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgerySubtype": "Photo Replacement - Sharp Edge",
-                "ForgeryType": "Digital",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgerySubtype": "Synthetic Pattern",
-                "ForgeryType": "Digital",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgerySubtype": "Synthetic Photo Background",
-                "ForgeryType": "Digital",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgeryLocation": 2,
-                "ForgerySubtype": "Synthetic Selfie Background ",
-                "ForgeryType": "Digital",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgerySubtype": "Text Deepfake",
-                "ForgeryType": "Digital",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgerySubtype": "Text Replacement",
-                "ForgeryType": "Digital",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgeryLocation": 2,
-                "ForgerySubtype": "Virtual Camera Injection (Imagery)",
-                "ForgeryType": "Digital",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgeryLocation": 2,
-                "ForgerySubtype": "Virtual Camera Injection (MetaData)",
-                "ForgeryType": "Digital",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgerySubtype": "Virtual Camera Injection (MetaData)",
-                "ForgeryType": "Digital",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgerySubtype": "Finger Covering",
-                "ForgeryType": "Structure",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgerySubtype": "Letter Case - VIZ Last Name",
-                "ForgeryType": "Structure",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgerySubtype": "Text Alignment",
-                "ForgeryType": "Structure",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgerySubtype": "Unexpected Patch",
-                "ForgeryType": "Structure",
-                "TestResult": "Authentic"
-              },
-              {
-                "ForgerySubtype": "Public Appearance",
-                "ForgeryType": "Visible",
-                "TestResult": "Authentic"
-              }
-            ],
-            "IsDataExtracted": true,
-            "OverallQuality": "Acceptable",
-            "PageProcessingResults": [
-              {
-                "CompletionStatus": "Ok",
-                "DocumentReplay": 0,
-                "DocumentReplay2": 0,
-                "DurationInMilliseconds": 5828,
-                "IsExpectedSecondSide": true,
-                "IsPrimaryPhotoDetected": true,
-                "IsSignature": false,
-                "IsSubPhotoDetected": true,
-                "ProcessedImages": [
-                  {
-                    "IsColored": true,
-                    "IsValidSize": true,
-                    "Quality": {
-                      "IsAcceptableBlurViz": true,
-                      "IsAcceptableBright": true,
-                      "IsAcceptableDark": true,
-                      "IsAcceptableDpi": true,
-                      "IsAcceptableEntropy": true,
-                      "IsAcceptableFaceNotFound": true,
-                      "IsAcceptableImageIncomplete": true,
-                      "IsAcceptableJpegCompression": true,
-                      "IsAcceptableLayout": true,
-                      "IsAcceptableObliquity": true,
-                      "IsAcceptableQuantization": true,
-                      "IsAcceptableReflectionViz": true,
-                      "IsAcceptableSize": true,
-                      "IsAcceptableTextConfidenceViz": true,
-                      "IsGenerallyAcceptable": true
+                        "SelfieGenderValidation": true
                     },
-                    "QualityBeforeAdjustment": {
-                      "IsAcceptableBlurViz": true,
-                      "IsAcceptableBright": true,
-                      "IsAcceptableDark": true,
-                      "IsAcceptableDpi": true,
-                      "IsAcceptableEntropy": true,
-                      "IsAcceptableFaceNotFound": true,
-                      "IsAcceptableImageIncomplete": true,
-                      "IsAcceptableJpegCompression": true,
-                      "IsAcceptableLayout": true,
-                      "IsAcceptableObliquity": true,
-                      "IsAcceptableQuantization": true,
-                      "IsAcceptableReflectionViz": true,
-                      "IsAcceptableSize": true,
-                      "IsAcceptableTextConfidenceViz": true,
-                      "IsGenerallyAcceptable": true
+                    "InternalData": {
+                        "Data12": "H4sIAAAAAAAEAMVYTY/aMBD9KxanVqLq9soN2KWKVCglLIdWPZhkSFwcO3LsirTqf+8kLIU2gQRi0xNREubNx5uZ53z52ZtIFYHKfbPWeQq9Qe+RakrGMkmpYpkU5A2ZUc2koJzpvNc//GF58rYnNERq/3gJmV5AZrjuDR5+9VsB4B0gckNGTOnYDcTTLmUqL5HcAEwM55ipxIr5CQ3gxHzFpK+VCbRRcIs1dPa5qOYWSPlkSnVQzfp1ED7wDQMyjICsQLENC0rOuEn1C9h7ECEossJQQmtoQ65BQUjWOZnHUssslmnVLouYpryVwaN76Hlp0oabfi50DJoFh2SMaLCNlDQiJN3cxRY0lJMxMlkVXn2DoHT+1RQ0LTx93cn+DN/A9JaJOLH+CHp/5ch5L6HFq91890QsTQaHlD8CpBu6rWn4K2x+MuVcxSYULDX8DI+vMLiEnSZDIRPKq9O6TVN/kC+9O3joN9B55X22Nbsvo1ZnwIiqQIbwtnABF4gMTAJCk5lJ1qD+mxv3yMW+dRaQchzeZdA4EWOqUvIURreQ8TLccdLsgY+DxjrUWW7tl7erhNqc0A2lM2uOiRymKVBFRVCt1oplbM1vb8+y+0+4Yb1Gc6o0wxGLyqH4uQTVNZY6ohcUJ3MlN4zbp/o4hmBLfJPcb6JYkhsNBHey01sQscOGvGzd0ta8nn8jXojOkJR6wuWspRqJYT+mZwG7FKuPIUyk0JkDhfAvBPHZj2qqrOLMbz7BtCCxOy01YQJvoKD4jkcmEXVEeNc00WyLk7aA9rZ3HeJf23u6cCBIG+O0vyqaIPHoi5Oc3yWnp0LMyzLT4QNH+wA/pvtPTgUydQaISp7jwbOgjYPmO8tMtw1hV2TWIVgVmXUA1lVRbXkcq6KzmbOiimrT5pExp1n25/Nbgz6ywzfrWqwOxK4yqkOwLCfOVt+OnKgzf7uc+PobDToSiAgYAAA=",
+                        "Data8": "H4sIAAAAAAAEANXUX0/CMBAA8K9y6TMk6OPe+CNmiSgy5EHjQ+luW0PXLu01YRq/u4yJkUCCL0J9be+aX6539/LOxsbmaOs7IzhJo1l01dmdJX5JdYUsYv0Yhoo7JzPZhsGEa1l51eZ8Z8zb8BEnDrEmzK2kenM9R0czdF4Ri3odNjTGplJzQsci7ZXaO4r11BqBzmE6MsKXqOkr7KPzS++wQLGCxJfQhd0bcO/LJdqwsbeo0XIVNvKhauK4gkYVHnXBlUzbLu3CZPbcMBFMBgNpqfhH3pt1JW19WXDvFHhaGDKBGxdxWEW9PgKOdWG8Q0hQZRJhhFhlfIWHUJlL2m6Icwsf/aamVJ9Y/WfhHRujpNZUIEkBU06E9lK2Y934w9aMCwy4WOXWeJ0GVMA5rinEvtu6+tqUXB3ObULWC/IWL/CrTxrXFQrCFMZmkw6JfDss3F8IXz8Bx0ta/bkJAAA=",
+                        "Data9": "H4sIAAAAAAAEADMxAACk0SrcAgAAAA==",
+                        "Data3": "MTExMTE=",
+                        "Data4": "MTExMQ==",
+                        "Data1": "eyJXYWl0VGltZUluTWlsbGlzZWNvbmRzIjo0NjF9"
                     },
-                    "UnexpectedImageCorners": false,
-                    "Compression": 94,
-                    "CroppedHeight": 589,
-                    "CroppedWidth": 952,
-                    "Dpi": 281,
-                    "ImageFileType": "jpg",
-                    "ImageType": "Visible",
-                    "OriginalHeight": 683,
-                    "OriginalWidth": 1034,
-                    "EquipmentMaker": "",
-                    "EquipmentModel": "Back Camera",
-                    "FileName": "Page0.Front.VIS.jpg",
-                    "ImageCreationDateTime": "2025-07-07T19:58:58",
-                    "Latitude": "",
-                    "Longitude": "",
-                    "SoftwareUsed": "AU10TIX WebSDK"
-                  }
-                ]
-              },
-              {
-                "BarcodesProcessingReport": {
-                  "BarcodeProcessingResults": [
-                    {
-                      "ProcessingStatus": 0
-                    }
-                  ]
+                    "OptionalData": {
+                        "DocumentInBlockList": "False"
+                    },
+                    "PageAsSeparateDocumentProcessingReports": [
+                        {
+                            "IsPageIgnored": false,
+                            "PageIndex": 0,
+                            "AgeVerificationReport": {
+                                "AgeCalculation": 17,
+                                "AgeEstimation": 24,
+                                "AgeEstimationCompletionStatus": 0,
+                                "ProcessedSupplementaryImageIndex": 0
+                            },
+                            "CompletionStatus": "Ok",
+                            "CompletionTime": "2025-08-14T16:58:09.73",
+                            "DocumentAuthenticity": "Authentic",
+                            "DocumentId": "A69161685C884682864C0E8900EE95AF",
+                            "DocumentScope": "IdentityDocuments",
+                            "DocumentSidesCode": 1,
+                            "DocumentStatusReport2": {
+                                "PrimaryProcessingResult": 40,
+                                "ProcessingResultRemarks": [
+                                    0
+                                ]
+                            },
+                            "InternalData": {
+                                "Data12": "H4sIAAAAAAAEAMWWT4/TMBDFv8ooJ5C2Ys9765+tVIlFZVN6AHGYONPE1LGtyRg1IL47TioQSxYErbt7SmQ7/vnNe7bz4Wu2dFwRd6+dQtHOZjfXVz/a8lBI5ym7ybZodDn0wwS2q/ewQCFwO5hpljr7+cXmODz2IqysUMVauti9oVbuqQ1G4vzfrv6ROkwzd41H1u2AniErV9KrfgkTWDgVGrICb0JTED/bMp6iFuvaiYN78gYVDaInkNfIHm7LisZUXWlBczIu76zUJFrBETxDta/YBVsmR/0xW7cHr7m7VEEfYAeRF7MuFCYWcuo9IaNVY7e2utWFoZMJGzrIr9lI7tEaWTQaWKLqH39DnavlsaD3EYc1u5026aM+r0ntIQ/N050oUyPEVELRHZPX1s6n31fxOArRrDk2xP2qP5Ea4v7ijgR7JS+TM4cgLoj8DvfpnXob5cSywx1a7YM5jkwe9UfyNzNky+jXqsHLnrUoMRjpNb2zdPDR/Shh6ay0I0AuHJQEPn3b/o6AXH8ZlyopJ1ZLje/b8xFDiKfWNWjGt8/50y+1jQ3xh+IzcXz9D8LH7/lBPAOvCQAA",
+                                "Data8": "H4sIAAAAAAAEAM2SwUrEQAyGXyXMeQXPvenWhYLCuq17UDyM09gNO5uUmQx0FN/d0lVBevEiu9c/X8JHkqd3s5LQYci34qySsCkuF99ZnV4092gKU2fWHSo5WO9EBa6t23dBErfmh26OaEkdqfVj3mDUDcbkdRq6FAktsVWMpuDk/a+o4nUQhzFiW4pLB2T9wj4Wf5TcWk/tVIcL2FaPUI6DQV7hZugp5LmpVQsVK3aBNJ9aeFrs+Tnep1FSM9xZpj75I3k+N39gHHp0ii2sZGyHmt5w5ldrSE5TwBMYNjgoXLEcrJ+/4H+IPX8Ck5z+OtUDAAA=",
+                                "Data9": "H4sIAAAAAAAEADMxAACk0SrcAgAAAA=="
+                            },
+                            "OptionalData": {
+                                "DocumentInBlockList": "False"
+                            },
+                            "PassiveFaceLivenessDetectionReport": {
+                                "CompletionStatus": 0,
+                                "DetectionAttempts": [
+                                    {
+                                        "AttemptNumber": 1,
+                                        "Liveness": true,
+                                        "Probability": 0.988396943,
+                                        "Score": 10
+                                    }
+                                ],
+                                "LivenessDetected": true
+                            },
+                            "ProcessingDetails": {
+                                "ApiResponseProfile": 0,
+                                "ServiceLevelAgeVerification": 0,
+                                "ServiceLevelIdentityDocument": 0,
+                                "ToleranceToRisk": 0
+                            },
+                            "ProcessingRequest": {
+                                "CreationTime": "2025-08-14T16:58:02.5",
+                                "DocumentId": "A69161685C884682864C0E8900EE95AF",
+                                "DocumentProcessingParameters": {
+                                    "ImageSource": "UncertifiedScanner",
+                                    "IsFromCertifiedScanner": false,
+                                    "IsToCheckAuthenticity": true
+                                },
+                                "FaceComparisonRequest": {
+                                    "ImageFileProcessingRequest": {
+                                        "ImageIllumination": "Visible",
+                                        "DataUnitSize": 622536
+                                    },
+                                    "RequestState": 0
+                                },
+                                "PageProcessingRequests": [
+                                    {
+                                        "DataUnitProcessingRequests": [
+                                            {
+                                                "ImageIllumination": "Visible",
+                                                "DataUnitSize": 236548
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "ProcessingHints": {
+                                    "IsToSkipDoubleCheck": false,
+                                    "PersonalInfoRedactions": [],
+                                    "ProofOfAddressRelevantFields": []
+                                },
+                                "IsSessionIdFromRequest": true,
+                                "IsToForceUsingInternalStorage": false
+                            },
+                            "ProcessingResult": {
+                                "DocumentData2": {
+                                    "Address": {
+                                        "DataSource": 2,
+                                        "LanguageCode": "eng",
+                                        "Value": "Số Nhà 126A/1, Ấp Thới Mỹ 2, Vĩnh Thới, Lai Vung, Đồng Tháp"
+                                    },
+                                    "Birthplace": {
+                                        "DataSource": 0,
+                                        "LanguageCode": "vie",
+                                        "Value": "Vĩnh Thới, Lai Vung, Đồng Tháp"
+                                    },
+                                    "DateOfBirth": {
+                                        "DataSource": 2,
+                                        "Value": "2007-09-19T00:00:00"
+                                    },
+                                    "DateOfExpiry": {
+                                        "DataSource": 0,
+                                        "Value": "2032-09-19T00:00:00"
+                                    },
+                                    "DateOfIssue": {
+                                        "DataSource": 2,
+                                        "Value": "2022-07-14T00:00:00"
+                                    },
+                                    "DocumentNumber": {
+                                        "DataSource": 2,
+                                        "LanguageCode": "eng",
+                                        "Value": "087307010649"
+                                    },
+                                    "ExtendedData": {
+                                        "CalculatedAge": 17
+                                    },
+                                    "FullName": {
+                                        "DataSource": 2,
+                                        "LanguageCode": "vie",
+                                        "Value": "Trần Thị Duyên"
+                                    },
+                                    "Gender": {
+                                        "DataSource": 2,
+                                        "LanguageCode": "eng",
+                                        "Value": "F"
+                                    },
+                                    "Nationality": {
+                                        "DataSource": 0,
+                                        "LanguageCode": "vie",
+                                        "Value": "VNM"
+                                    },
+                                    "VerifiedAddress": {
+                                        "Address": "Cầu Thới Mỹ, Vĩnh Thới, Lai Vung, Đồng Tháp, Vietnam",
+                                        "AdministrativeAreaLevel1": "Đồng Tháp",
+                                        "AdministrativeAreaLevel2": "Lai Vung",
+                                        "BorderInDispute": "Vĩnh Thới",
+                                        "Country": "Vietnam",
+                                        "Route": "Cầu Thới Mỹ"
+                                    }
+                                },
+                                "IsDocumentExpired": false,
+                                "ProcessedDocumentFeatures": "Barcode, ImageUnderVisibleIllumination, Mrz",
+                                "DocumentTypeDescriptor": {
+                                    "CountryIso3": "VNM",
+                                    "CountryIso3166Alpha3": "VNM",
+                                    "DocumentType": "ID Card",
+                                    "DocumentVersion": "V4",
+                                    "HasQrCode": false,
+                                    "State": "",
+                                    "YearOfIssue": "2021"
+                                },
+                                "ForgeryTests": [
+                                    {
+                                        "ForgeryLocation": 0,
+                                        "ForgerySubtype": "Validation - VIZ Date of Birth",
+                                        "ForgeryType": "Data Integrity",
+                                        "TestResult": "Authentic"
+                                    },
+                                    {
+                                        "ForgeryLocation": 0,
+                                        "ForgerySubtype": "Data Comparison - Barcode/VIZ - Document Number",
+                                        "ForgeryType": "Data Integrity",
+                                        "TestResult": "Authentic"
+                                    },
+                                    {
+                                        "ForgeryLocation": 0,
+                                        "ForgerySubtype": "Data Comparison - Barcode/VIZ - Date of Birth",
+                                        "ForgeryType": "Data Integrity",
+                                        "TestResult": "Authentic"
+                                    },
+                                    {
+                                        "ForgeryLocation": 0,
+                                        "ForgerySubtype": "Photo Replacement - Sharp Edge",
+                                        "ForgeryType": "Digital",
+                                        "TestResult": "Authentic"
+                                    },
+                                    {
+                                        "ForgeryLocation": 0,
+                                        "ForgerySubtype": "Public Appearance",
+                                        "ForgeryType": "Visible",
+                                        "TestResult": "Authentic"
+                                    },
+                                    {
+                                        "ForgeryLocation": 0,
+                                        "ForgerySubtype": "Text Replacement",
+                                        "ForgeryType": "Digital",
+                                        "TestResult": "Authentic"
+                                    },
+                                    {
+                                        "ForgeryLocation": 0,
+                                        "ForgerySubtype": "Partial Facial Replacement",
+                                        "ForgeryType": "Visible",
+                                        "TestResult": "Authentic"
+                                    },
+                                    {
+                                        "ForgeryLocation": 0,
+                                        "ForgerySubtype": "Photo Replacement - Edge Profile",
+                                        "ForgeryType": "Digital",
+                                        "TestResult": "Authentic"
+                                    },
+                                    {
+                                        "ForgeryLocation": 0,
+                                        "ForgerySubtype": "Check Sum - Document Number",
+                                        "ForgeryType": "Data Integrity",
+                                        "TestResult": "Authentic"
+                                    },
+                                    {
+                                        "ForgeryLocation": 0,
+                                        "ForgerySubtype": "Altered by Photoshop",
+                                        "ForgeryType": "Digital",
+                                        "TestResult": "Authentic"
+                                    },
+                                    {
+                                        "ForgeryLocation": 0,
+                                        "ForgerySubtype": "Virtual Camera Injection (MetaData)",
+                                        "ForgeryType": "Digital",
+                                        "TestResult": "Authentic"
+                                    },
+                                    {
+                                        "ForgeryLocation": 0,
+                                        "ForgerySubtype": "Text Deepfake",
+                                        "ForgeryType": "Digital",
+                                        "TestResult": "Authentic"
+                                    },
+                                    {
+                                        "ForgeryLocation": 0,
+                                        "ForgerySubtype": "Photo Replacement - Blended Image",
+                                        "ForgeryType": "Digital",
+                                        "TestResult": "Authentic"
+                                    },
+                                    {
+                                        "ForgeryLocation": 0,
+                                        "ForgerySubtype": "Synthetic Pattern",
+                                        "ForgeryType": "Digital",
+                                        "TestResult": "Authentic"
+                                    },
+                                    {
+                                        "ForgeryLocation": 0,
+                                        "ForgerySubtype": "Unexpected Fonts",
+                                        "ForgeryType": "Structure",
+                                        "TestResult": "Authentic"
+                                    },
+                                    {
+                                        "ForgeryLocation": 0,
+                                        "ForgerySubtype": "Unexpected Patch",
+                                        "ForgeryType": "Structure",
+                                        "TestResult": "Authentic"
+                                    },
+                                    {
+                                        "ForgeryLocation": 0,
+                                        "ForgerySubtype": "Finger Covering",
+                                        "ForgeryType": "Structure",
+                                        "TestResult": "Authentic"
+                                    }
+                                ],
+                                "IsDataExtracted": true,
+                                "OverallQuality": "Acceptable",
+                                "PageProcessingResults": [
+                                    {
+                                        "BarcodesProcessingReport": {
+                                            "BarcodeProcessingResults": [
+                                                {
+                                                    "ProcessingStatus": 0
+                                                }
+                                            ]
+                                        },
+                                        "CompletionStatus": "Ok",
+                                        "DocumentReplay": 0,
+                                        "DocumentReplay2": 0,
+                                        "DurationInMilliseconds": 5938,
+                                        "IsExpectedSecondSide": true,
+                                        "IsPrimaryPhotoDetected": true,
+                                        "IsSignature": false,
+                                        "IsSubPhotoDetected": false,
+                                        "ProcessedImages": [
+                                            {
+                                                "IsColored": true,
+                                                "IsValidSize": true,
+                                                "Quality": {
+                                                    "IsAcceptableBlurViz": true,
+                                                    "IsAcceptableBright": true,
+                                                    "IsAcceptableDark": true,
+                                                    "IsAcceptableDpi": true,
+                                                    "IsAcceptableEntropy": true,
+                                                    "IsAcceptableFaceNotFound": true,
+                                                    "IsAcceptableImageIncomplete": true,
+                                                    "IsAcceptableJpegCompression": true,
+                                                    "IsAcceptableLayout": true,
+                                                    "IsAcceptableObliquity": true,
+                                                    "IsAcceptableQuantization": true,
+                                                    "IsAcceptableReflectionViz": true,
+                                                    "IsAcceptableSize": true,
+                                                    "IsAcceptableTextConfidenceViz": true,
+                                                    "IsGenerallyAcceptable": true
+                                                },
+                                                "QualityBeforeAdjustment": {
+                                                    "IsAcceptableBlurViz": true,
+                                                    "IsAcceptableBright": true,
+                                                    "IsAcceptableDark": true,
+                                                    "IsAcceptableDpi": true,
+                                                    "IsAcceptableEntropy": true,
+                                                    "IsAcceptableFaceNotFound": true,
+                                                    "IsAcceptableImageIncomplete": true,
+                                                    "IsAcceptableJpegCompression": true,
+                                                    "IsAcceptableLayout": true,
+                                                    "IsAcceptableObliquity": true,
+                                                    "IsAcceptableQuantization": true,
+                                                    "IsAcceptableReflectionViz": true,
+                                                    "IsAcceptableSize": true,
+                                                    "IsAcceptableTextConfidenceViz": true,
+                                                    "IsGenerallyAcceptable": true
+                                                },
+                                                "UnexpectedImageCorners": false,
+                                                "Compression": 94,
+                                                "CroppedHeight": 611,
+                                                "CroppedWidth": 953,
+                                                "Dpi": 280,
+                                                "ImageFileType": "jpg",
+                                                "ImageType": "Visible",
+                                                "OriginalHeight": 668,
+                                                "OriginalWidth": 1052,
+                                                "EquipmentMaker": "",
+                                                "EquipmentModel": "Ba camera mt sau",
+                                                "FileName": "Page0.Front.VIS.jpg",
+                                                "ImageCreationDateTime": "2025-08-14T23:57:24",
+                                                "Latitude": "",
+                                                "Longitude": "",
+                                                "SoftwareUsed": "AU10TIX WebSDK"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "SdrCompletionStatus": "Ok"
+                            },
+                            "ProcessingStartTime": "2025-08-14T16:58:09.73",
+                            "RequestAcceptanceWarnings": [],
+                            "RiskManagementReport": {
+                                "EffectiveConclusion": {
+                                    "PrimaryProcessingResult": 40,
+                                    "Reasons": {
+                                        "RiskManagementRemarks": [
+                                            830
+                                        ]
+                                    }
+                                },
+                                "OriginalPrimaryProcessingResult": 0
+                            },
+                            "SdrVersion": "2508.100.0.8"
+                        },
+                        {
+                            "IsPageIgnored": false,
+                            "PageIndex": 1,
+                            "AgeVerificationReport": {
+                                "AgeCalculation": 17,
+                                "AgeEstimation": 24,
+                                "AgeEstimationCompletionStatus": 0,
+                                "ProcessedSupplementaryImageIndex": 0
+                            },
+                            "CompletionStatus": "Ok",
+                            "CompletionTime": "2025-08-14T16:58:09.73",
+                            "DocumentAuthenticity": "Authentic",
+                            "DocumentId": "A69161685C884682864C0E8900EE95AF",
+                            "DocumentScope": "IdentityDocuments",
+                            "DocumentSidesCode": 2,
+                            "DocumentStatusReport2": {
+                                "PrimaryProcessingResult": 40,
+                                "ProcessingResultRemarks": [
+                                    0
+                                ]
+                            },
+                            "InternalData": {
+                                "Data12": "H4sIAAAAAAAEAMWVMU/DMBCF/4qVCaQiwdqttBRFolCakgHEcHGvjaljW84ZNUL8d66pgCFIiKYpW2Sf/em9e+c8vUVj61foqxsrgZQ1Uf+i97mWhIwqh1E/GuYo1yIJhTgTIyAUdikulac8+iqe7yp5F0RsCFdeUcXbcyxphmXQFPXP33stgFcbp3zVFTEFrRb1PiMns8d/0GllKNCQuA1Fhv4YyGs06EEfxdM0/vY0LsuAxxB457Z1oLdk6AxoC6eRlXFsGoyEfJAUPB4+md0OxDRkWkkxcA7Bg5HNfqWqVJneX9gcNyRm6DRI3Aa/qUStFNXx3A8w0IQeFyKrxDS3ZMvcuoNDUn4fAidsCAXPEhv/grJu1skECbbNOD04s3ZuhOiWsP5hjtraFouhhrJUS7UrExMwygW9O9NR3u7ZRD7/C6ultKQylCNxrqdAHI7DEx4MbhwngGPHCNn8c7R/EOruD4wtQDenv/31Y2V4QQztK3r+/APh+QOxKkrlUAgAAA==",
+                                "Data8": "H4sIAAAAAAAEAM2TQUvEMBCF/8qQcwW99ra2KgVX123xoHjIptM2bJqUZAIbxP9ut3UFWUQPi+Y6783wMfPm+ZVdG9uiDbdGcJJGs/QiOdRKv6EwIEvZI1eynnQ4g+X6CXJOCKaBS2mpY58d1WwfVQ6FJmytpDDKFTpao/OKWHqesMwYW0s9znAs1V6pL6VCr6wR6BzWuRG+R00ftrfkl7xZh2ILpe9H3MMMuPP9Bm3csDeo0XIVN+T9sPdxtU8Bjw/127Be7QZpQ3zAFe4IcsSh4Vs8xpOtpCkSf821KCBT3DnZyNkGS67l4NXcE90eH/x4eQo/UP7bOsugqUOSAlacCG1MbFMEF9r0XB0/SEnWC/IWTwj28g6lhYAeewYAAA==",
+                                "Data9": "H4sIAAAAAAAEADMxAACk0SrcAgAAAA=="
+                            },
+                            "OptionalData": {
+                                "DocumentInBlockList": "False"
+                            },
+                            "PassiveFaceLivenessDetectionReport": {
+                                "CompletionStatus": 0,
+                                "DetectionAttempts": [
+                                    {
+                                        "AttemptNumber": 1,
+                                        "Liveness": true,
+                                        "Probability": 0.988396943,
+                                        "Score": 10
+                                    }
+                                ],
+                                "LivenessDetected": true
+                            },
+                            "ProcessingDetails": {
+                                "ApiResponseProfile": 0,
+                                "ServiceLevelAgeVerification": 0,
+                                "ServiceLevelIdentityDocument": 0,
+                                "ToleranceToRisk": 0
+                            },
+                            "ProcessingRequest": {
+                                "CreationTime": "2025-08-14T16:58:02.5",
+                                "DocumentId": "A69161685C884682864C0E8900EE95AF",
+                                "DocumentProcessingParameters": {
+                                    "ImageSource": "UncertifiedScanner",
+                                    "IsFromCertifiedScanner": false,
+                                    "IsToCheckAuthenticity": true
+                                },
+                                "FaceComparisonRequest": {
+                                    "ImageFileProcessingRequest": {
+                                        "ImageIllumination": "Visible",
+                                        "DataUnitSize": 622536
+                                    },
+                                    "RequestState": 0
+                                },
+                                "PageProcessingRequests": [
+                                    {
+                                        "DataUnitProcessingRequests": [
+                                            {
+                                                "ImageIllumination": "Visible",
+                                                "DataUnitSize": 230179
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "ProcessingHints": {
+                                    "IsToSkipDoubleCheck": false,
+                                    "PersonalInfoRedactions": [],
+                                    "ProofOfAddressRelevantFields": []
+                                },
+                                "IsSessionIdFromRequest": true,
+                                "IsToForceUsingInternalStorage": false
+                            },
+                            "ProcessingResult": {
+                                "DocumentData2": {
+                                    "DateOfBirth": {
+                                        "DataSource": 1,
+                                        "Value": "2007-09-19T00:00:00"
+                                    },
+                                    "DateOfExpiry": {
+                                        "DataSource": 1,
+                                        "Value": "2032-09-19T00:00:00"
+                                    },
+                                    "DateOfIssue": {
+                                        "DataSource": 0,
+                                        "Value": "2022-07-14T00:00:00"
+                                    },
+                                    "DocumentNumber": {
+                                        "DataSource": 1,
+                                        "LanguageCode": "eng",
+                                        "Value": "087307010649"
+                                    },
+                                    "ExtendedData": {
+                                        "CalculatedAge": 17
+                                    },
+                                    "FirstName": {
+                                        "DataSource": 1,
+                                        "LanguageCode": "eng",
+                                        "Value": "THI DUYEN"
+                                    },
+                                    "Gender": {
+                                        "DataSource": 1,
+                                        "LanguageCode": "eng",
+                                        "Value": "F"
+                                    },
+                                    "LastName": {
+                                        "DataSource": 1,
+                                        "LanguageCode": "eng",
+                                        "Value": "TRAN"
+                                    },
+                                    "Mrz": {
+                                        "DataSource": 1,
+                                        "LanguageCode": "eng",
+                                        "Value": "IDVNM3070106494087307010649<<5|0709196F3209192VNM<<<<<<<<<<<6|TRAN<<THI<DUYEN<<<<<<<<<<<<<<<"
+                                    },
+                                    "Nationality": {
+                                        "DataSource": 1,
+                                        "LanguageCode": "eng",
+                                        "Value": "VNM"
+                                    },
+                                    "OptionalData": {
+                                        "DataSource": 1,
+                                        "LanguageCode": "eng",
+                                        "Value": "307010649"
+                                    }
+                                },
+                                "IsDocumentExpired": false,
+                                "ProcessedDocumentFeatures": "ImageUnderVisibleIllumination, Mrz",
+                                "DocumentTypeDescriptor": {
+                                    "CountryIso3": "VNM",
+                                    "CountryIso3166Alpha3": "VNM",
+                                    "DocumentType": "ID Card",
+                                    "DocumentVersion": "V4",
+                                    "HasQrCode": false,
+                                    "State": ""
+                                },
+                                "ForgeryTests": [
+                                    {
+                                        "ForgeryLocation": 1,
+                                        "ForgerySubtype": "Check Sum - Date of Birth",
+                                        "ForgeryType": "Data Integrity",
+                                        "TestResult": "Authentic"
+                                    },
+                                    {
+                                        "ForgeryLocation": 1,
+                                        "ForgerySubtype": "Check Sum - Date of Expiry",
+                                        "ForgeryType": "Data Integrity",
+                                        "TestResult": "Authentic"
+                                    },
+                                    {
+                                        "ForgeryLocation": 1,
+                                        "ForgerySubtype": "Validation - VIZ Date of Issue",
+                                        "ForgeryType": "Data Integrity",
+                                        "TestResult": "Authentic"
+                                    },
+                                    {
+                                        "ForgeryLocation": 1,
+                                        "ForgerySubtype": "Complete MRZ",
+                                        "ForgeryType": "Structure",
+                                        "TestResult": "Authentic"
+                                    },
+                                    {
+                                        "ForgeryLocation": 1,
+                                        "ForgerySubtype": "Public Appearance",
+                                        "ForgeryType": "Visible",
+                                        "TestResult": "Authentic"
+                                    },
+                                    {
+                                        "ForgeryLocation": 1,
+                                        "ForgerySubtype": "Text Replacement",
+                                        "ForgeryType": "Digital",
+                                        "TestResult": "Authentic"
+                                    },
+                                    {
+                                        "ForgeryLocation": 1,
+                                        "ForgerySubtype": "Altered by Photoshop",
+                                        "ForgeryType": "Digital",
+                                        "TestResult": "Authentic"
+                                    },
+                                    {
+                                        "ForgeryLocation": 1,
+                                        "ForgerySubtype": "Virtual Camera Injection (MetaData)",
+                                        "ForgeryType": "Digital",
+                                        "TestResult": "Authentic"
+                                    },
+                                    {
+                                        "ForgeryLocation": 1,
+                                        "ForgerySubtype": "Unexpected Patch",
+                                        "ForgeryType": "Structure",
+                                        "TestResult": "Authentic"
+                                    },
+                                    {
+                                        "ForgeryLocation": 1,
+                                        "ForgerySubtype": "Finger Covering",
+                                        "ForgeryType": "Structure",
+                                        "TestResult": "Authentic"
+                                    }
+                                ],
+                                "IsDataExtracted": true,
+                                "OverallQuality": "Acceptable",
+                                "PageProcessingResults": [
+                                    {
+                                        "CompletionStatus": "Ok",
+                                        "DurationInMilliseconds": 3531,
+                                        "IsExpectedSecondSide": true,
+                                        "IsSignature": false,
+                                        "IsSubPhotoDetected": false,
+                                        "ProcessedImages": [
+                                            {
+                                                "IsColored": true,
+                                                "IsValidSize": true,
+                                                "Quality": {
+                                                    "IsAcceptableBlurMrz": true,
+                                                    "IsAcceptableBlurViz": true,
+                                                    "IsAcceptableBright": true,
+                                                    "IsAcceptableDark": true,
+                                                    "IsAcceptableDpi": true,
+                                                    "IsAcceptableEntropy": true,
+                                                    "IsAcceptableFaceNotFound": true,
+                                                    "IsAcceptableImageIncomplete": true,
+                                                    "IsAcceptableJpegCompression": true,
+                                                    "IsAcceptableLayout": true,
+                                                    "IsAcceptableMrz": true,
+                                                    "IsAcceptableObliquity": true,
+                                                    "IsAcceptableQuantization": true,
+                                                    "IsAcceptableReflectionMrz": true,
+                                                    "IsAcceptableReflectionViz": true,
+                                                    "IsAcceptableSize": true,
+                                                    "IsAcceptableTextConfidenceMrz": true,
+                                                    "IsGenerallyAcceptable": true
+                                                },
+                                                "QualityBeforeAdjustment": {
+                                                    "IsAcceptableBlurMrz": true,
+                                                    "IsAcceptableBlurViz": true,
+                                                    "IsAcceptableBright": true,
+                                                    "IsAcceptableDark": true,
+                                                    "IsAcceptableDpi": true,
+                                                    "IsAcceptableEntropy": true,
+                                                    "IsAcceptableFaceNotFound": true,
+                                                    "IsAcceptableImageIncomplete": true,
+                                                    "IsAcceptableJpegCompression": true,
+                                                    "IsAcceptableLayout": true,
+                                                    "IsAcceptableMrz": true,
+                                                    "IsAcceptableObliquity": true,
+                                                    "IsAcceptableQuantization": true,
+                                                    "IsAcceptableReflectionMrz": true,
+                                                    "IsAcceptableReflectionViz": true,
+                                                    "IsAcceptableSize": true,
+                                                    "IsAcceptableTextConfidenceMrz": true,
+                                                    "IsGenerallyAcceptable": true
+                                                },
+                                                "UnexpectedImageCorners": false,
+                                                "Compression": 94,
+                                                "CroppedHeight": 576,
+                                                "CroppedWidth": 933,
+                                                "Dpi": 275,
+                                                "ImageFileType": "jpg",
+                                                "ImageType": "Visible",
+                                                "OriginalHeight": 638,
+                                                "OriginalWidth": 1013,
+                                                "EquipmentMaker": "",
+                                                "EquipmentModel": "Ba camera mt sau",
+                                                "FileName": "Page1.Back.VIS.jpg",
+                                                "ImageCreationDateTime": "2025-08-14T23:57:35",
+                                                "Latitude": "",
+                                                "Longitude": "",
+                                                "SoftwareUsed": "AU10TIX WebSDK"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "SdrCompletionStatus": "Ok"
+                            },
+                            "ProcessingStartTime": "2025-08-14T16:58:09.73",
+                            "RequestAcceptanceWarnings": [],
+                            "RiskManagementReport": {
+                                "EffectiveConclusion": {
+                                    "PrimaryProcessingResult": 40,
+                                    "Reasons": {
+                                        "RiskManagementRemarks": [
+                                            830
+                                        ]
+                                    }
+                                },
+                                "OriginalPrimaryProcessingResult": 0
+                            },
+                            "SdrVersion": "2508.100.0.8"
+                        }
+                    ],
+                    "PassiveFaceLivenessDetectionReport": {
+                        "CompletionStatus": 0,
+                        "DetectionAttempts": [
+                            {
+                                "AttemptNumber": 1,
+                                "Liveness": true,
+                                "Probability": 0.988396943,
+                                "Score": 10
+                            }
+                        ],
+                        "LivenessDetected": true
+                    },
+                    "PersonalInfoValidationReport": {},
+                    "PhotoProcessingReports": [
+                        {
+                            "EstimatedGender": "",
+                            "ImageTypeCode": 6
+                        },
+                        {
+                            "EstimatedAge": 24,
+                            "EstimatedGender": "Female",
+                            "ImageTypeCode": 5
+                        }
+                    ],
+                    "ProcessedSupplementaryImages": [
+                        {}
+                    ],
+                    "ProcessingDetails": {
+                        "ApiResponseProfile": 0,
+                        "ServiceLevelAgeVerification": 0,
+                        "ServiceLevelIdentityDocument": 0,
+                        "ToleranceToRisk": 0
+                    },
+                    "ProcessingRequest": {
+                        "CreationTime": "2025-08-14T16:58:02.5",
+                        "DocumentId": "A69161685C884682864C0E8900EE95AF",
+                        "DocumentProcessingParameters": {
+                            "ImageSource": "UncertifiedScanner",
+                            "IsFromCertifiedScanner": false,
+                            "IsToCheckAuthenticity": true
+                        },
+                        "FaceComparisonRequest": {
+                            "ImageFileProcessingRequest": {
+                                "ImageIllumination": "Visible",
+                                "DataUnitSize": 622536
+                            },
+                            "RequestState": 0
+                        },
+                        "PageProcessingRequests": [
+                            {
+                                "DataUnitProcessingRequests": [
+                                    {
+                                        "ImageIllumination": "Visible",
+                                        "DataUnitSize": 236548
+                                    }
+                                ]
+                            },
+                            {
+                                "DataUnitProcessingRequests": [
+                                    {
+                                        "ImageIllumination": "Visible",
+                                        "DataUnitSize": 230179
+                                    }
+                                ]
+                            }
+                        ],
+                        "ProcessingHints": {
+                            "IsToSkipDoubleCheck": false,
+                            "PersonalInfoRedactions": [],
+                            "ProofOfAddressRelevantFields": []
+                        },
+                        "SessionId": "A69161685C884682864C0E8900EE95AF",
+                        "IsSessionIdFromRequest": true,
+                        "IsToForceUsingInternalStorage": false
+                    },
+                    "ProcessingResult": {
+                        "DocumentData2": {
+                            "Address": {
+                                "DataSource": 2,
+                                "LanguageCode": "eng",
+                                "Value": "Số Nhà 126A/1, Ấp Thới Mỹ 2, Vĩnh Thới, Lai Vung, Đồng Tháp"
+                            },
+                            "Birthplace": {
+                                "DataSource": 0,
+                                "LanguageCode": "vie",
+                                "Value": "Vĩnh Thới, Lai Vung, Đồng Tháp"
+                            },
+                            "DateOfBirth": {
+                                "DataSource": 2,
+                                "Value": "2007-09-19T00:00:00"
+                            },
+                            "DateOfExpiry": {
+                                "DataSource": 1,
+                                "Value": "2032-09-19T00:00:00"
+                            },
+                            "DateOfIssue": {
+                                "DataSource": 2,
+                                "Value": "2022-07-14T00:00:00"
+                            },
+                            "DocumentNumber": {
+                                "DataSource": 2,
+                                "LanguageCode": "eng",
+                                "Value": "087307010649"
+                            },
+                            "ExtendedData": {
+                                "CalculatedAge": 17
+                            },
+                            "FullName": {
+                                "DataSource": 2,
+                                "LanguageCode": "vie",
+                                "Value": "Trần Thị Duyên"
+                            },
+                            "Gender": {
+                                "DataSource": 2,
+                                "LanguageCode": "eng",
+                                "Value": "F"
+                            },
+                            "Mrz": {
+                                "DataSource": 1,
+                                "LanguageCode": "eng",
+                                "Value": "IDVNM3070106494087307010649<<5|0709196F3209192VNM<<<<<<<<<<<6|TRAN<<THI<DUYEN<<<<<<<<<<<<<<<"
+                            },
+                            "Nationality": {
+                                "DataSource": 1,
+                                "LanguageCode": "eng",
+                                "Value": "VNM"
+                            },
+                            "OptionalData": {
+                                "DataSource": 1,
+                                "LanguageCode": "eng",
+                                "Value": "307010649"
+                            },
+                            "VerifiedAddress": {
+                                "Address": "Cầu Thới Mỹ, Vĩnh Thới, Lai Vung, Đồng Tháp, Vietnam",
+                                "AdministrativeAreaLevel1": "Đồng Tháp",
+                                "AdministrativeAreaLevel2": "Lai Vung",
+                                "BorderInDispute": "Vĩnh Thới",
+                                "Country": "Vietnam",
+                                "Route": "Cầu Thới Mỹ"
+                            }
+                        },
+                        "IsDocumentExpired": false,
+                        "ProcessedDocumentFeatures": "Barcode, ImageUnderVisibleIllumination, Mrz",
+                        "DocumentTypeDescriptor": {
+                            "CountryIso3": "VNM",
+                            "CountryIso3166Alpha3": "VNM",
+                            "DocumentType": "ID Card",
+                            "DocumentVersion": "V4",
+                            "HasQrCode": false,
+                            "IssuanceFormat": 4,
+                            "State": ""
+                        },
+                        "ForgeryTests": [
+                            {
+                                "ForgeryLocation": 1,
+                                "ForgerySubtype": "Check Sum - Date of Birth",
+                                "ForgeryType": "Data Integrity",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 1,
+                                "ForgerySubtype": "Check Sum - Date of Expiry",
+                                "ForgeryType": "Data Integrity",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 0,
+                                "ForgerySubtype": "Check Sum - Document Number",
+                                "ForgeryType": "Data Integrity",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 0,
+                                "ForgerySubtype": "Data Comparison - Barcode/VIZ - Date of Birth",
+                                "ForgeryType": "Data Integrity",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 0,
+                                "ForgerySubtype": "Data Comparison - Barcode/VIZ - Document Number",
+                                "ForgeryType": "Data Integrity",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 4,
+                                "ForgerySubtype": "Data Comparison - Date of Birth",
+                                "ForgeryType": "Data Integrity",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 4,
+                                "ForgerySubtype": "Data Comparison - Expiry Date",
+                                "ForgeryType": "Data Integrity",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 4,
+                                "ForgerySubtype": "Data Comparison - Full Name",
+                                "ForgeryType": "Data Integrity",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 4,
+                                "ForgerySubtype": "Data Comparison - Nationality",
+                                "ForgeryType": "Data Integrity",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 2,
+                                "ForgerySubtype": "Selfie Age Verification",
+                                "ForgeryType": "Data Integrity",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 2,
+                                "ForgerySubtype": "Validation - Photo",
+                                "ForgeryType": "Data Integrity",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 0,
+                                "ForgerySubtype": "Validation - VIZ Date of Birth",
+                                "ForgeryType": "Data Integrity",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 1,
+                                "ForgerySubtype": "Validation - VIZ Date of Issue",
+                                "ForgeryType": "Data Integrity",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 2,
+                                "ForgerySubtype": "Altered by Photoshop",
+                                "ForgeryType": "Digital",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 0,
+                                "ForgerySubtype": "Altered by Photoshop",
+                                "ForgeryType": "Digital",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 1,
+                                "ForgerySubtype": "Altered by Photoshop",
+                                "ForgeryType": "Digital",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 2,
+                                "ForgerySubtype": "Nested Photo Injection Detection",
+                                "ForgeryType": "Digital",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 0,
+                                "ForgerySubtype": "Photo Replacement - Blended Image",
+                                "ForgeryType": "Digital",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 0,
+                                "ForgerySubtype": "Photo Replacement - Edge Profile",
+                                "ForgeryType": "Digital",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 0,
+                                "ForgerySubtype": "Photo Replacement - Sharp Edge",
+                                "ForgeryType": "Digital",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 0,
+                                "ForgerySubtype": "Synthetic Pattern",
+                                "ForgeryType": "Digital",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 2,
+                                "ForgerySubtype": "Synthetic Selfie Background ",
+                                "ForgeryType": "Digital",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 0,
+                                "ForgerySubtype": "Text Deepfake",
+                                "ForgeryType": "Digital",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 0,
+                                "ForgerySubtype": "Text Replacement",
+                                "ForgeryType": "Digital",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 1,
+                                "ForgerySubtype": "Text Replacement",
+                                "ForgeryType": "Digital",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 2,
+                                "ForgerySubtype": "Virtual Camera Injection (Imagery)",
+                                "ForgeryType": "Digital",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 2,
+                                "ForgerySubtype": "Virtual Camera Injection (MetaData)",
+                                "ForgeryType": "Digital",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 0,
+                                "ForgerySubtype": "Virtual Camera Injection (MetaData)",
+                                "ForgeryType": "Digital",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 1,
+                                "ForgerySubtype": "Virtual Camera Injection (MetaData)",
+                                "ForgeryType": "Digital",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 1,
+                                "ForgerySubtype": "Complete MRZ",
+                                "ForgeryType": "Structure",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 0,
+                                "ForgerySubtype": "Finger Covering",
+                                "ForgeryType": "Structure",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 1,
+                                "ForgerySubtype": "Finger Covering",
+                                "ForgeryType": "Structure",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 0,
+                                "ForgerySubtype": "Unexpected Fonts",
+                                "ForgeryType": "Structure",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 0,
+                                "ForgerySubtype": "Unexpected Patch",
+                                "ForgeryType": "Structure",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 1,
+                                "ForgerySubtype": "Unexpected Patch",
+                                "ForgeryType": "Structure",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 0,
+                                "ForgerySubtype": "Partial Facial Replacement",
+                                "ForgeryType": "Visible",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 0,
+                                "ForgerySubtype": "Public Appearance",
+                                "ForgeryType": "Visible",
+                                "TestResult": "Authentic"
+                            },
+                            {
+                                "ForgeryLocation": 1,
+                                "ForgerySubtype": "Public Appearance",
+                                "ForgeryType": "Visible",
+                                "TestResult": "Authentic"
+                            }
+                        ],
+                        "IsDataExtracted": true,
+                        "OverallQuality": "Acceptable",
+                        "PageProcessingResults": [
+                            {
+                                "BarcodesProcessingReport": {
+                                    "BarcodeProcessingResults": [
+                                        {
+                                            "ProcessingStatus": 0
+                                        }
+                                    ]
+                                },
+                                "CompletionStatus": "Ok",
+                                "DocumentReplay": 0,
+                                "DocumentReplay2": 0,
+                                "DurationInMilliseconds": 5938,
+                                "IsExpectedSecondSide": true,
+                                "IsPrimaryPhotoDetected": true,
+                                "IsSignature": false,
+                                "IsSubPhotoDetected": false,
+                                "ProcessedImages": [
+                                    {
+                                        "IsColored": true,
+                                        "IsValidSize": true,
+                                        "Quality": {
+                                            "IsAcceptableBlurViz": true,
+                                            "IsAcceptableBright": true,
+                                            "IsAcceptableDark": true,
+                                            "IsAcceptableDpi": true,
+                                            "IsAcceptableEntropy": true,
+                                            "IsAcceptableFaceNotFound": true,
+                                            "IsAcceptableImageIncomplete": true,
+                                            "IsAcceptableJpegCompression": true,
+                                            "IsAcceptableLayout": true,
+                                            "IsAcceptableObliquity": true,
+                                            "IsAcceptableQuantization": true,
+                                            "IsAcceptableReflectionViz": true,
+                                            "IsAcceptableSize": true,
+                                            "IsAcceptableTextConfidenceViz": true,
+                                            "IsGenerallyAcceptable": true
+                                        },
+                                        "QualityBeforeAdjustment": {
+                                            "IsAcceptableBlurViz": true,
+                                            "IsAcceptableBright": true,
+                                            "IsAcceptableDark": true,
+                                            "IsAcceptableDpi": true,
+                                            "IsAcceptableEntropy": true,
+                                            "IsAcceptableFaceNotFound": true,
+                                            "IsAcceptableImageIncomplete": true,
+                                            "IsAcceptableJpegCompression": true,
+                                            "IsAcceptableLayout": true,
+                                            "IsAcceptableObliquity": true,
+                                            "IsAcceptableQuantization": true,
+                                            "IsAcceptableReflectionViz": true,
+                                            "IsAcceptableSize": true,
+                                            "IsAcceptableTextConfidenceViz": true,
+                                            "IsGenerallyAcceptable": true
+                                        },
+                                        "UnexpectedImageCorners": false,
+                                        "Compression": 94,
+                                        "CroppedHeight": 611,
+                                        "CroppedWidth": 953,
+                                        "Dpi": 280,
+                                        "ImageFileType": "jpg",
+                                        "ImageType": "Visible",
+                                        "OriginalHeight": 668,
+                                        "OriginalWidth": 1052,
+                                        "EquipmentMaker": "",
+                                        "EquipmentModel": "Ba camera mt sau",
+                                        "FileName": "Page0.Front.VIS.jpg",
+                                        "ImageCreationDateTime": "2025-08-14T23:57:24",
+                                        "Latitude": "",
+                                        "Longitude": "",
+                                        "SoftwareUsed": "AU10TIX WebSDK"
+                                    }
+                                ]
+                            },
+                            {
+                                "CompletionStatus": "Ok",
+                                "DurationInMilliseconds": 3531,
+                                "IsExpectedSecondSide": true,
+                                "IsSignature": false,
+                                "IsSubPhotoDetected": false,
+                                "ProcessedImages": [
+                                    {
+                                        "IsColored": true,
+                                        "IsValidSize": true,
+                                        "Quality": {
+                                            "IsAcceptableBlurMrz": true,
+                                            "IsAcceptableBlurViz": true,
+                                            "IsAcceptableBright": true,
+                                            "IsAcceptableDark": true,
+                                            "IsAcceptableDpi": true,
+                                            "IsAcceptableEntropy": true,
+                                            "IsAcceptableFaceNotFound": true,
+                                            "IsAcceptableImageIncomplete": true,
+                                            "IsAcceptableJpegCompression": true,
+                                            "IsAcceptableLayout": true,
+                                            "IsAcceptableMrz": true,
+                                            "IsAcceptableObliquity": true,
+                                            "IsAcceptableQuantization": true,
+                                            "IsAcceptableReflectionMrz": true,
+                                            "IsAcceptableReflectionViz": true,
+                                            "IsAcceptableSize": true,
+                                            "IsAcceptableTextConfidenceMrz": true,
+                                            "IsGenerallyAcceptable": true
+                                        },
+                                        "QualityBeforeAdjustment": {
+                                            "IsAcceptableBlurMrz": true,
+                                            "IsAcceptableBlurViz": true,
+                                            "IsAcceptableBright": true,
+                                            "IsAcceptableDark": true,
+                                            "IsAcceptableDpi": true,
+                                            "IsAcceptableEntropy": true,
+                                            "IsAcceptableFaceNotFound": true,
+                                            "IsAcceptableImageIncomplete": true,
+                                            "IsAcceptableJpegCompression": true,
+                                            "IsAcceptableLayout": true,
+                                            "IsAcceptableMrz": true,
+                                            "IsAcceptableObliquity": true,
+                                            "IsAcceptableQuantization": true,
+                                            "IsAcceptableReflectionMrz": true,
+                                            "IsAcceptableReflectionViz": true,
+                                            "IsAcceptableSize": true,
+                                            "IsAcceptableTextConfidenceMrz": true,
+                                            "IsGenerallyAcceptable": true
+                                        },
+                                        "UnexpectedImageCorners": false,
+                                        "Compression": 94,
+                                        "CroppedHeight": 576,
+                                        "CroppedWidth": 933,
+                                        "Dpi": 275,
+                                        "ImageFileType": "jpg",
+                                        "ImageType": "Visible",
+                                        "OriginalHeight": 638,
+                                        "OriginalWidth": 1013,
+                                        "EquipmentMaker": "",
+                                        "EquipmentModel": "Ba camera mt sau",
+                                        "FileName": "Page1.Back.VIS.jpg",
+                                        "ImageCreationDateTime": "2025-08-14T23:57:35",
+                                        "Latitude": "",
+                                        "Longitude": "",
+                                        "SoftwareUsed": "AU10TIX WebSDK"
+                                    }
+                                ]
+                            }
+                        ],
+                        "SdrCompletionStatus": "Ok"
+                    },
+                    "ProcessingStartTime": "2025-08-14T16:58:02.67",
+                    "RequestAcceptanceWarnings": [],
+                    "RiskManagementReport": {
+                        "EffectiveConclusion": {
+                            "PrimaryProcessingResult": 40,
+                            "Reasons": {
+                                "RiskManagementRemarks": [
+                                    830
+                                ]
+                            }
+                        },
+                        "OriginalPrimaryProcessingResult": 0
+                    },
+                    "SdrVersion": "2508.100.0.8"
                 },
-                "CompletionStatus": "Ok",
-                "DurationInMilliseconds": 4719,
-                "IsExpectedSecondSide": true,
-                "IsSignature": false,
-                "IsSubPhotoDetected": false,
-                "ProcessedImages": [
-                  {
-                    "IsColored": true,
-                    "IsValidSize": true,
-                    "Quality": {
-                      "IsAcceptableBlurViz": true,
-                      "IsAcceptableBright": true,
-                      "IsAcceptableDark": true,
-                      "IsAcceptableDpi": true,
-                      "IsAcceptableEntropy": true,
-                      "IsAcceptableFaceNotFound": true,
-                      "IsAcceptableImageIncomplete": true,
-                      "IsAcceptableJpegCompression": true,
-                      "IsAcceptableLayout": true,
-                      "IsAcceptableObliquity": true,
-                      "IsAcceptableQuantization": true,
-                      "IsAcceptableReflectionViz": true,
-                      "IsAcceptableSize": true,
-                      "IsGenerallyAcceptable": true
-                    },
-                    "QualityBeforeAdjustment": {
-                      "IsAcceptableBlurViz": true,
-                      "IsAcceptableBright": true,
-                      "IsAcceptableDark": true,
-                      "IsAcceptableDpi": true,
-                      "IsAcceptableEntropy": true,
-                      "IsAcceptableFaceNotFound": true,
-                      "IsAcceptableImageIncomplete": true,
-                      "IsAcceptableJpegCompression": true,
-                      "IsAcceptableLayout": true,
-                      "IsAcceptableObliquity": true,
-                      "IsAcceptableQuantization": true,
-                      "IsAcceptableReflectionViz": true,
-                      "IsAcceptableSize": true,
-                      "IsGenerallyAcceptable": true
-                    },
-                    "UnexpectedImageCorners": false,
-                    "Compression": 94,
-                    "CroppedHeight": 625,
-                    "CroppedWidth": 964,
-                    "Dpi": 292,
-                    "ImageFileType": "jpg",
-                    "ImageType": "Visible",
-                    "OriginalHeight": 678,
-                    "OriginalWidth": 1049,
-                    "EquipmentMaker": "",
-                    "EquipmentModel": "Back Camera",
-                    "FileName": "Page1.Back.VIS.jpg",
-                    "ImageCreationDateTime": "2025-07-07T19:59:12",
-                    "Latitude": "",
-                    "Longitude": "",
-                    "SoftwareUsed": "AU10TIX WebSDK"
-                  }
-                ]
-              }
+                "ProcessingReportType": 0,
+                "RequestId": "A69161685C884682864C0E8900EE95AF",
+                "RequestRejectionReason": null,
+                "WebhookInfo": null
+            },
+            "primaryResult": "FAILED",
+            "completionStatus": "COMPLETED"
+        },
+        "deepfake": {
+            "processingStartTime": "2025-08-14T16:58:02.614Z",
+            "completionTime": "2025-08-14T16:58:02.828Z",
+            "payload": {
+                "probability": 0.9989587,
+                "quality": 0.9625656,
+                "primaryResult": 1,
+                "threshold": 0.2
+            },
+            "primaryResult": "PASSED"
+        },
+        "liveness": {
+            "processingStartTime": "2025-08-14T16:58:02.614Z",
+            "completionTime": "2025-08-14T16:58:02.828Z",
+            "payload": {
+                "probability": 0.98839694,
+                "quality": 0.9625656,
+                "primaryResult": 1,
+                "threshold": 0.5
+            },
+            "primaryResult": "PASSED"
+        }
+    },
+    "processingStartTime": "2025-08-14T16:57:13.912Z",
+    "completionTime": "2025-08-14T16:58:11.581Z",
+    "expiredAt": "2025-08-15T16:57:13.913Z",
+    "assets": [
+        {
+            "type": "page0",
+            "assetUrl": "https://mediasaprejp.blob.core.windows.net/ms-1135/A69161685C884682864C0E8900EE95AF/cdr/A69161685C884682864C0E8900EE95AF_page0.jpeg?sv=2024-05-04&spr=https&st=2025-08-14T16%3A58%3A23Z&se=2025-08-14T17%3A09%3A23Z&sr=b&sp=r&sig=wXX5CQdS%2FlGlH2fZr0SX5C41ASCHfyIUPFabcCRZkBU%3D",
+            "mimeType": "image/jpeg",
+            "assetId": "256394607",
+            "createdAt": "2025-08-14T16:57:36.463Z",
+            "status": "safe",
+            "deleted": false,
+            "attachments": [
+                {
+                    "attachmentId": "307541361",
+                    "type": "thumbnail",
+                    "mimeType": "image/jpeg",
+                    "sasTokenUri": "https://mediasaprejp.blob.core.windows.net/ms-1135/A69161685C884682864C0E8900EE95AF/cdr/A69161685C884682864C0E8900EE95AF_page0_thumbnail.jpeg?sv=2024-05-04&spr=https&st=2025-08-14T16%3A58%3A23Z&se=2025-08-14T17%3A09%3A23Z&sr=b&sp=r&sig=viCS%2BjDUsZMDb36H6pz5RkzJSsydbHZHZyaBRRwM2ZE%3D",
+                    "status": "safe"
+                },
+                {
+                    "attachmentId": "307541362",
+                    "type": "fullHD",
+                    "mimeType": "image/jpeg",
+                    "sasTokenUri": "https://mediasaprejp.blob.core.windows.net/ms-1135/A69161685C884682864C0E8900EE95AF/cdr/A69161685C884682864C0E8900EE95AF_page0_fullHD.jpeg?sv=2024-05-04&spr=https&st=2025-08-14T16%3A58%3A23Z&se=2025-08-14T17%3A09%3A23Z&sr=b&sp=r&sig=%2B%2BVBoOB9yt5fMAWjfGA2hUQ8prIh384Y4jtE83JCuEI%3D",
+                    "status": "safe"
+                }
             ],
-            "SdrCompletionStatus": "Ok"
-          },
-          "ProcessingStartTime": "2025-07-07T11:59:39.64",
-          "RequestAcceptanceWarnings": [],
-          "SdrVersion": "2506.200.0.9"
-        },
-        "ProcessingReportType": 0,
-        "RequestId": "39B4F0F2EA0D44609BF9393C9F1E9904",
-        "RequestRejectionReason": null,
-        "WebhookInfo": null
-      },
-      "primaryResult": "PASSED",
-      "completionStatus": "COMPLETED"
-    },
-    "deepfake": {
-      "processingStartTime": "2025-07-07T11:59:39.310Z",
-      "completionTime": "2025-07-07T11:59:39.663Z",
-      "payload": {
-        "probability": 0.94344336,
-        "quality": 0.7277575,
-        "primaryResult": 1,
-        "threshold": 0.2
-      },
-      "primaryResult": "PASSED"
-    },
-    "liveness": {
-      "processingStartTime": "2025-07-07T11:59:39.310Z",
-      "completionTime": "2025-07-07T11:59:39.663Z",
-      "payload": {
-        "probability": 0.9739646,
-        "quality": 0.7277575,
-        "primaryResult": 1,
-        "threshold": 0.5
-      },
-      "primaryResult": "PASSED"
-    }
-  },
-  "processingStartTime": "2025-07-07T11:58:46.010Z",
-  "completionTime": "2025-07-07T11:59:49.383Z",
-  "expiredAt": "2025-07-08T11:58:46.011Z",
-  "assets": [
-    {
-      "type": "page0",
-      "assetUrl": "https://mediasaprejp.blob.core.windows.net/ms-1135/39B4F0F2EA0D44609BF9393C9F1E9904/cdr/39B4F0F2EA0D44609BF9393C9F1E9904_page0.jpeg?sv=2024-05-04&spr=https&st=2025-07-07T12%3A03%3A12Z&se=2025-07-07T12%3A14%3A12Z&sr=b&sp=r&sig=O%2Fp6bKASYSSU%2BwO%2BZQF9TEQpqvq2%2FIOEpihTEPwvo1o%3D",
-      "mimeType": "image/jpeg",
-      "assetId": "234619359",
-      "createdAt": "2025-07-07T11:59:15.427Z",
-      "status": "safe",
-      "deleted": false,
-      "attachments": [
-        {
-          "attachmentId": "282124968",
-          "type": "thumbnail",
-          "mimeType": "image/jpeg",
-          "sasTokenUri": "https://mediasaprejp.blob.core.windows.net/ms-1135/39B4F0F2EA0D44609BF9393C9F1E9904/cdr/39B4F0F2EA0D44609BF9393C9F1E9904_page0_thumbnail.jpeg?sv=2024-05-04&spr=https&st=2025-07-07T12%3A03%3A12Z&se=2025-07-07T12%3A14%3A12Z&sr=b&sp=r&sig=DxR17JK7FKeH3ceVNCdbvlDc01GKWATo4m0giNy%2Fw2o%3D",
-          "status": "safe"
+            "blobSize": 151199,
+            "updatedAt": "2025-08-14T16:57:37.707Z",
+            "uploadDate": "2025-08-14T16:57:36.000Z",
+            "processedBy": "cdr"
         },
         {
-          "attachmentId": "282124969",
-          "type": "fullHD",
-          "mimeType": "image/jpeg",
-          "sasTokenUri": "https://mediasaprejp.blob.core.windows.net/ms-1135/39B4F0F2EA0D44609BF9393C9F1E9904/cdr/39B4F0F2EA0D44609BF9393C9F1E9904_page0_fullHD.jpeg?sv=2024-05-04&spr=https&st=2025-07-07T12%3A03%3A12Z&se=2025-07-07T12%3A14%3A12Z&sr=b&sp=r&sig=tqExpeDGzhWgDshpFEUVyBo901edvbYDJSwUrBGyD4o%3D",
-          "status": "safe"
+            "type": "page1",
+            "assetUrl": "https://mediasaprejp.blob.core.windows.net/ms-1135/A69161685C884682864C0E8900EE95AF/cdr/A69161685C884682864C0E8900EE95AF_page1.jpeg?sv=2024-05-04&spr=https&st=2025-08-14T16%3A58%3A23Z&se=2025-08-14T17%3A09%3A23Z&sr=b&sp=r&sig=f7G9%2F6NuMJUudURZw8I6vjJ1DUTS3oiiY3S3QEc%2FmqA%3D",
+            "mimeType": "image/jpeg",
+            "assetId": "256394648",
+            "createdAt": "2025-08-14T16:57:45.100Z",
+            "status": "safe",
+            "deleted": false,
+            "attachments": [
+                {
+                    "attachmentId": "307541409",
+                    "type": "thumbnail",
+                    "mimeType": "image/jpeg",
+                    "sasTokenUri": "https://mediasaprejp.blob.core.windows.net/ms-1135/A69161685C884682864C0E8900EE95AF/cdr/A69161685C884682864C0E8900EE95AF_page1_thumbnail.jpeg?sv=2024-05-04&spr=https&st=2025-08-14T16%3A58%3A23Z&se=2025-08-14T17%3A09%3A23Z&sr=b&sp=r&sig=Omo%2BGSnE%2BdcHL4eYbpVmJPXVue%2FA1vU6ReexXYDncwU%3D",
+                    "status": "safe"
+                },
+                {
+                    "attachmentId": "307541410",
+                    "type": "fullHD",
+                    "mimeType": "image/jpeg",
+                    "sasTokenUri": "https://mediasaprejp.blob.core.windows.net/ms-1135/A69161685C884682864C0E8900EE95AF/cdr/A69161685C884682864C0E8900EE95AF_page1_fullHD.jpeg?sv=2024-05-04&spr=https&st=2025-08-14T16%3A58%3A23Z&se=2025-08-14T17%3A09%3A23Z&sr=b&sp=r&sig=UwM%2FTn8Z8nNxKoCnYMW4HZirs%2FEaR6mZdnmAD4MbJFU%3D",
+                    "status": "safe"
+                }
+            ],
+            "blobSize": 147639,
+            "updatedAt": "2025-08-14T16:57:46.083Z",
+            "uploadDate": "2025-08-14T16:57:45.000Z",
+            "processedBy": "cdr"
+        },
+        {
+            "type": "photo",
+            "assetUrl": "https://mediasaprejp.blob.core.windows.net/ms-1135/A69161685C884682864C0E8900EE95AF/cdr/A69161685C884682864C0E8900EE95AF_photo.jpeg?sv=2024-05-04&spr=https&st=2025-08-14T16%3A58%3A23Z&se=2025-08-14T17%3A09%3A23Z&sr=b&sp=r&sig=iNWKl7%2BW%2FOSBlGHdU7Uftk79eiqC1Zo19CB59481b7U%3D",
+            "mimeType": "image/jpeg",
+            "assetId": "256394711",
+            "createdAt": "2025-08-14T16:57:58.167Z",
+            "status": "safe",
+            "deleted": false,
+            "attachments": [
+                {
+                    "attachmentId": "307541479",
+                    "type": "thumbnail",
+                    "mimeType": "image/jpeg",
+                    "sasTokenUri": "https://mediasaprejp.blob.core.windows.net/ms-1135/A69161685C884682864C0E8900EE95AF/cdr/A69161685C884682864C0E8900EE95AF_photo_thumbnail.jpeg?sv=2024-05-04&spr=https&st=2025-08-14T16%3A58%3A23Z&se=2025-08-14T17%3A09%3A23Z&sr=b&sp=r&sig=LLCsiBRHIg%2FUIpZ%2FJg3P%2FIw2FKPpUolEMPT97Y69CdM%3D",
+                    "status": "safe"
+                },
+                {
+                    "attachmentId": "307541480",
+                    "type": "fullHD",
+                    "mimeType": "image/jpeg",
+                    "sasTokenUri": "https://mediasaprejp.blob.core.windows.net/ms-1135/A69161685C884682864C0E8900EE95AF/cdr/A69161685C884682864C0E8900EE95AF_photo_fullHD.jpeg?sv=2024-05-04&spr=https&st=2025-08-14T16%3A58%3A23Z&se=2025-08-14T17%3A09%3A23Z&sr=b&sp=r&sig=nrYEKWQjzr0nqiGVGC1CgNNhUd2I6Ot%2F12zmEzMw9KY%3D",
+                    "status": "safe"
+                }
+            ],
+            "blobSize": 360906,
+            "updatedAt": "2025-08-14T16:57:59.347Z",
+            "uploadDate": "2025-08-14T16:57:58.000Z",
+            "processedBy": "cdr"
+        },
+        {
+            "type": "page0",
+            "assetUrl": "https://mediasaprejp.blob.core.windows.net/ms-1135/A69161685C884682864C0E8900EE95AF/output/A69161685C884682864C0E8900EE95AF_page0.jpeg?sv=2024-05-04&spr=https&st=2025-08-14T16%3A58%3A23Z&se=2025-08-14T17%3A09%3A23Z&sr=b&sp=r&sig=unQJgrY3X3lFGD7a7yMAe4PtOSgHB5s9RIJ3tkQXwlw%3D",
+            "mimeType": "image/jpeg",
+            "assetId": "256394769",
+            "createdAt": "2025-08-14T16:58:10.537Z",
+            "status": "safe",
+            "deleted": false,
+            "attachments": [
+                {
+                    "attachmentId": "307541557",
+                    "type": "thumbnail",
+                    "mimeType": "image/jpeg",
+                    "sasTokenUri": "https://mediasaprejp.blob.core.windows.net/ms-1135/A69161685C884682864C0E8900EE95AF/output/A69161685C884682864C0E8900EE95AF_page0_thumbnail.jpeg?sv=2024-05-04&spr=https&st=2025-08-14T16%3A58%3A23Z&se=2025-08-14T17%3A09%3A23Z&sr=b&sp=r&sig=cx%2Fa7lbk0rUv%2BGwrAIUPP%2ByyFhoiQYBVGdbmJ846NIw%3D",
+                    "status": "safe"
+                },
+                {
+                    "attachmentId": "307541558",
+                    "type": "fullHD",
+                    "mimeType": "image/jpeg",
+                    "sasTokenUri": "https://mediasaprejp.blob.core.windows.net/ms-1135/A69161685C884682864C0E8900EE95AF/output/A69161685C884682864C0E8900EE95AF_page0_fullHD.jpeg?sv=2024-05-04&spr=https&st=2025-08-14T16%3A58%3A23Z&se=2025-08-14T17%3A09%3A23Z&sr=b&sp=r&sig=DnMQbTV86mR7%2B57i6FRuvC%2FX1hnVOdcJysJ0mu7O8Rg%3D",
+                    "status": "safe"
+                }
+            ],
+            "blobSize": 394624,
+            "updatedAt": "2025-08-14T16:58:11.713Z",
+            "uploadDate": "2025-08-14T16:58:10.000Z",
+            "processedBy": "bos"
+        },
+        {
+            "type": "page1",
+            "assetUrl": "https://mediasaprejp.blob.core.windows.net/ms-1135/A69161685C884682864C0E8900EE95AF/output/A69161685C884682864C0E8900EE95AF_page1.jpeg?sv=2024-05-04&spr=https&st=2025-08-14T16%3A58%3A23Z&se=2025-08-14T17%3A09%3A23Z&sr=b&sp=r&sig=2OrxWfl9k2nkcx6l8FYOC9wO7P59FtaauzFV5fRBHng%3D",
+            "mimeType": "image/jpeg",
+            "assetId": "256394770",
+            "createdAt": "2025-08-14T16:58:10.537Z",
+            "status": "safe",
+            "deleted": false,
+            "attachments": [
+                {
+                    "attachmentId": "307541559",
+                    "type": "thumbnail",
+                    "mimeType": "image/jpeg",
+                    "sasTokenUri": "https://mediasaprejp.blob.core.windows.net/ms-1135/A69161685C884682864C0E8900EE95AF/output/A69161685C884682864C0E8900EE95AF_page1_thumbnail.jpeg?sv=2024-05-04&spr=https&st=2025-08-14T16%3A58%3A23Z&se=2025-08-14T17%3A09%3A23Z&sr=b&sp=r&sig=4fi5yscyhr1ydQwv0eJ4lC8%2BsFXY3SVtlZHT8WVjmRg%3D",
+                    "status": "safe"
+                },
+                {
+                    "attachmentId": "307541560",
+                    "type": "fullHD",
+                    "mimeType": "image/jpeg",
+                    "sasTokenUri": "https://mediasaprejp.blob.core.windows.net/ms-1135/A69161685C884682864C0E8900EE95AF/output/A69161685C884682864C0E8900EE95AF_page1_fullHD.jpeg?sv=2024-05-04&spr=https&st=2025-08-14T16%3A58%3A23Z&se=2025-08-14T17%3A09%3A23Z&sr=b&sp=r&sig=Q6NmlLMSgGbtIxREg1BIZd5vTKMxS%2Fw%2BLAXh4bCoeR4%3D",
+                    "status": "safe"
+                }
+            ],
+            "blobSize": 421289,
+            "updatedAt": "2025-08-14T16:58:11.713Z",
+            "uploadDate": "2025-08-14T16:58:10.000Z",
+            "processedBy": "bos"
+        },
+        {
+            "type": "photo",
+            "assetUrl": "https://mediasaprejp.blob.core.windows.net/ms-1135/A69161685C884682864C0E8900EE95AF/output/A69161685C884682864C0E8900EE95AF_photo.jpeg?sv=2024-05-04&spr=https&st=2025-08-14T16%3A58%3A23Z&se=2025-08-14T17%3A09%3A23Z&sr=b&sp=r&sig=ZaAkbW3agf8l2gHLZ3qSC2ccUQ4fRLT5VeKvrxBi2Fg%3D",
+            "mimeType": "image/jpeg",
+            "assetId": "256394771",
+            "createdAt": "2025-08-14T16:58:10.537Z",
+            "status": "safe",
+            "deleted": false,
+            "attachments": [
+                {
+                    "attachmentId": "307541561",
+                    "type": "thumbnail",
+                    "mimeType": "image/jpeg",
+                    "sasTokenUri": "https://mediasaprejp.blob.core.windows.net/ms-1135/A69161685C884682864C0E8900EE95AF/output/A69161685C884682864C0E8900EE95AF_photo_thumbnail.jpeg?sv=2024-05-04&spr=https&st=2025-08-14T16%3A58%3A23Z&se=2025-08-14T17%3A09%3A23Z&sr=b&sp=r&sig=qwPiHk4irijP2%2Btv17BhjsTiJG05IHqSyr3d4dQln90%3D",
+                    "status": "safe"
+                },
+                {
+                    "attachmentId": "307541562",
+                    "type": "fullHD",
+                    "mimeType": "image/jpeg",
+                    "sasTokenUri": "https://mediasaprejp.blob.core.windows.net/ms-1135/A69161685C884682864C0E8900EE95AF/output/A69161685C884682864C0E8900EE95AF_photo_fullHD.jpeg?sv=2024-05-04&spr=https&st=2025-08-14T16%3A58%3A23Z&se=2025-08-14T17%3A09%3A23Z&sr=b&sp=r&sig=LrmFK1DJjG%2BAL0N8uL%2BHUxBAiQqQ035CKqiMflWbIPg%3D",
+                    "status": "safe"
+                }
+            ],
+            "blobSize": 57266,
+            "updatedAt": "2025-08-14T16:58:11.713Z",
+            "uploadDate": "2025-08-14T16:58:10.000Z",
+            "processedBy": "bos"
+        },
+        {
+            "type": "croppedPhoto",
+            "assetUrl": "https://mediasaprejp.blob.core.windows.net/ms-1135/A69161685C884682864C0E8900EE95AF/output/A69161685C884682864C0E8900EE95AF_croppedPhoto.jpeg?sv=2024-05-04&spr=https&st=2025-08-14T16%3A58%3A23Z&se=2025-08-14T17%3A09%3A23Z&sr=b&sp=r&sig=tab6P0AzQrR4bi3a5p0E2SFhMsXpyriBWdVr5UiDfzo%3D",
+            "mimeType": "image/jpeg",
+            "assetId": "256394772",
+            "createdAt": "2025-08-14T16:58:10.537Z",
+            "status": "safe",
+            "deleted": false,
+            "attachments": [
+                {
+                    "attachmentId": "307541563",
+                    "type": "thumbnail",
+                    "mimeType": "image/jpeg",
+                    "sasTokenUri": "https://mediasaprejp.blob.core.windows.net/ms-1135/A69161685C884682864C0E8900EE95AF/output/A69161685C884682864C0E8900EE95AF_croppedPhoto_thumbnail.jpeg?sv=2024-05-04&spr=https&st=2025-08-14T16%3A58%3A23Z&se=2025-08-14T17%3A09%3A23Z&sr=b&sp=r&sig=IasxxWzC1psGES2fD%2BURy6TQ1TLDJFTODtkI04QbkIQ%3D",
+                    "status": "safe"
+                },
+                {
+                    "attachmentId": "307541564",
+                    "type": "fullHD",
+                    "mimeType": "image/jpeg",
+                    "sasTokenUri": "https://mediasaprejp.blob.core.windows.net/ms-1135/A69161685C884682864C0E8900EE95AF/output/A69161685C884682864C0E8900EE95AF_croppedPhoto_fullHD.jpeg?sv=2024-05-04&spr=https&st=2025-08-14T16%3A58%3A23Z&se=2025-08-14T17%3A09%3A23Z&sr=b&sp=r&sig=Ip1Ip2hC5uCjv8eJe3u92oUNa22WJMF1IPo0woeqlRo%3D",
+                    "status": "safe"
+                }
+            ],
+            "blobSize": 40241,
+            "updatedAt": "2025-08-14T16:58:11.713Z",
+            "uploadDate": "2025-08-14T16:58:10.000Z",
+            "processedBy": "bos"
         }
-      ],
-      "blobSize": 141090,
-      "updatedAt": "2025-07-07T11:59:16.353Z",
-      "uploadDate": "2025-07-07T11:59:15.000Z",
-      "processedBy": "cdr"
-    },
-    {
-      "type": "page1",
-      "assetUrl": "https://mediasaprejp.blob.core.windows.net/ms-1135/39B4F0F2EA0D44609BF9393C9F1E9904/cdr/39B4F0F2EA0D44609BF9393C9F1E9904_page1.jpeg?sv=2024-05-04&spr=https&st=2025-07-07T12%3A03%3A12Z&se=2025-07-07T12%3A14%3A12Z&sr=b&sp=r&sig=CJCTGkUjgyE%2Fd9oaXKMhceUrL53Tk%2BNga2dzGpYhCTw%3D",
-      "mimeType": "image/jpeg",
-      "assetId": "234619410",
-      "createdAt": "2025-07-07T11:59:21.033Z",
-      "status": "safe",
-      "deleted": false,
-      "attachments": [
-        {
-          "attachmentId": "282125034",
-          "type": "thumbnail",
-          "mimeType": "image/jpeg",
-          "sasTokenUri": "https://mediasaprejp.blob.core.windows.net/ms-1135/39B4F0F2EA0D44609BF9393C9F1E9904/cdr/39B4F0F2EA0D44609BF9393C9F1E9904_page1_thumbnail.jpeg?sv=2024-05-04&spr=https&st=2025-07-07T12%3A03%3A12Z&se=2025-07-07T12%3A14%3A12Z&sr=b&sp=r&sig=SBY44UrLhnlZmS2BtKEo%2B%2FHLhd%2BlSJbqJYWzT4YhMo4%3D",
-          "status": "safe"
-        },
-        {
-          "attachmentId": "282125035",
-          "type": "fullHD",
-          "mimeType": "image/jpeg",
-          "sasTokenUri": "https://mediasaprejp.blob.core.windows.net/ms-1135/39B4F0F2EA0D44609BF9393C9F1E9904/cdr/39B4F0F2EA0D44609BF9393C9F1E9904_page1_fullHD.jpeg?sv=2024-05-04&spr=https&st=2025-07-07T12%3A03%3A12Z&se=2025-07-07T12%3A14%3A12Z&sr=b&sp=r&sig=hJdBZVrBPqt1c%2F6%2Fs2aZGi3tNZDYMOynfeCF9KvM4tU%3D",
-          "status": "safe"
-        }
-      ],
-      "blobSize": 156101,
-      "updatedAt": "2025-07-07T11:59:22.093Z",
-      "uploadDate": "2025-07-07T11:59:21.000Z",
-      "processedBy": "cdr"
-    },
-    {
-      "type": "photo",
-      "assetUrl": "https://mediasaprejp.blob.core.windows.net/ms-1135/39B4F0F2EA0D44609BF9393C9F1E9904/cdr/39B4F0F2EA0D44609BF9393C9F1E9904_photo.jpeg?sv=2024-05-04&spr=https&st=2025-07-07T12%3A03%3A12Z&se=2025-07-07T12%3A14%3A12Z&sr=b&sp=r&sig=9bpiG9ej8QWKxHPso3hDk1L%2F3u%2BGEqxSuvBjYYYjybY%3D",
-      "mimeType": "image/jpeg",
-      "assetId": "234619549",
-      "createdAt": "2025-07-07T11:59:36.243Z",
-      "status": "safe",
-      "deleted": false,
-      "attachments": [
-        {
-          "attachmentId": "282125182",
-          "type": "thumbnail",
-          "mimeType": "image/jpeg",
-          "sasTokenUri": "https://mediasaprejp.blob.core.windows.net/ms-1135/39B4F0F2EA0D44609BF9393C9F1E9904/cdr/39B4F0F2EA0D44609BF9393C9F1E9904_photo_thumbnail.jpeg?sv=2024-05-04&spr=https&st=2025-07-07T12%3A03%3A12Z&se=2025-07-07T12%3A14%3A12Z&sr=b&sp=r&sig=%2BVrCtw4FP6ly9dMgWvezpA0XVFoau01bhYZlMBPgIIo%3D",
-          "status": "safe"
-        },
-        {
-          "attachmentId": "282125183",
-          "type": "fullHD",
-          "mimeType": "image/jpeg",
-          "sasTokenUri": "https://mediasaprejp.blob.core.windows.net/ms-1135/39B4F0F2EA0D44609BF9393C9F1E9904/cdr/39B4F0F2EA0D44609BF9393C9F1E9904_photo_fullHD.jpeg?sv=2024-05-04&spr=https&st=2025-07-07T12%3A03%3A12Z&se=2025-07-07T12%3A14%3A12Z&sr=b&sp=r&sig=4rHjqghwpsGHBwgxfxcpZqZ03beuKjbZDoLGSvRJBg0%3D",
-          "status": "safe"
-        }
-      ],
-      "blobSize": 366272,
-      "updatedAt": "2025-07-07T11:59:37.377Z",
-      "uploadDate": "2025-07-07T11:59:36.000Z",
-      "processedBy": "cdr"
-    },
-    {
-      "type": "page1",
-      "assetUrl": "https://mediasaprejp.blob.core.windows.net/ms-1135/39B4F0F2EA0D44609BF9393C9F1E9904/output/39B4F0F2EA0D44609BF9393C9F1E9904_page1.jpeg?sv=2024-05-04&spr=https&st=2025-07-07T12%3A03%3A12Z&se=2025-07-07T12%3A14%3A12Z&sr=b&sp=r&sig=I%2BtktsCvFLjMaQlCkoynIdivjVrfJskQ1RkcUxmRka8%3D",
-      "mimeType": "image/jpeg",
-      "assetId": "234619645",
-      "createdAt": "2025-07-07T11:59:47.680Z",
-      "status": "safe",
-      "deleted": false,
-      "attachments": [
-        {
-          "attachmentId": "282125304",
-          "type": "thumbnail",
-          "mimeType": "image/jpeg",
-          "sasTokenUri": "https://mediasaprejp.blob.core.windows.net/ms-1135/39B4F0F2EA0D44609BF9393C9F1E9904/output/39B4F0F2EA0D44609BF9393C9F1E9904_page1_thumbnail.jpeg?sv=2024-05-04&spr=https&st=2025-07-07T12%3A03%3A12Z&se=2025-07-07T12%3A14%3A12Z&sr=b&sp=r&sig=KWMTBneTiVZe5CAkDoZrluGSdDt0jA8wO21Hn%2BnGwhY%3D",
-          "status": "safe"
-        },
-        {
-          "attachmentId": "282125305",
-          "type": "fullHD",
-          "mimeType": "image/jpeg",
-          "sasTokenUri": "https://mediasaprejp.blob.core.windows.net/ms-1135/39B4F0F2EA0D44609BF9393C9F1E9904/output/39B4F0F2EA0D44609BF9393C9F1E9904_page1_fullHD.jpeg?sv=2024-05-04&spr=https&st=2025-07-07T12%3A03%3A12Z&se=2025-07-07T12%3A14%3A12Z&sr=b&sp=r&sig=oSRNPc1Vrlai4Dag10gAaiGOwy77FKkh5%2FS3kaO0r%2Bc%3D",
-          "status": "safe"
-        }
-      ],
-      "blobSize": 405318,
-      "updatedAt": "2025-07-07T11:59:48.757Z",
-      "uploadDate": "2025-07-07T11:59:47.000Z",
-      "processedBy": "bos"
-    },
-    {
-      "type": "page0",
-      "assetUrl": "https://mediasaprejp.blob.core.windows.net/ms-1135/39B4F0F2EA0D44609BF9393C9F1E9904/output/39B4F0F2EA0D44609BF9393C9F1E9904_page0.jpeg?sv=2024-05-04&spr=https&st=2025-07-07T12%3A03%3A12Z&se=2025-07-07T12%3A14%3A12Z&sr=b&sp=r&sig=MxD8dyOARXmpha%2FA4jubj%2BvpWI2pGcwLlswWtH1K68U%3D",
-      "mimeType": "image/jpeg",
-      "assetId": "234619646",
-      "createdAt": "2025-07-07T11:59:47.680Z",
-      "status": "safe",
-      "deleted": false,
-      "attachments": [
-        {
-          "attachmentId": "282125306",
-          "type": "thumbnail",
-          "mimeType": "image/jpeg",
-          "sasTokenUri": "https://mediasaprejp.blob.core.windows.net/ms-1135/39B4F0F2EA0D44609BF9393C9F1E9904/output/39B4F0F2EA0D44609BF9393C9F1E9904_page0_thumbnail.jpeg?sv=2024-05-04&spr=https&st=2025-07-07T12%3A03%3A12Z&se=2025-07-07T12%3A14%3A12Z&sr=b&sp=r&sig=zNgd5lddnRYg%2FUTl6txXHEubgSDUyxTCJp8hSnZvGd8%3D",
-          "status": "safe"
-        },
-        {
-          "attachmentId": "282125307",
-          "type": "fullHD",
-          "mimeType": "image/jpeg",
-          "sasTokenUri": "https://mediasaprejp.blob.core.windows.net/ms-1135/39B4F0F2EA0D44609BF9393C9F1E9904/output/39B4F0F2EA0D44609BF9393C9F1E9904_page0_fullHD.jpeg?sv=2024-05-04&spr=https&st=2025-07-07T12%3A03%3A12Z&se=2025-07-07T12%3A14%3A12Z&sr=b&sp=r&sig=ob1UBUbTPF%2FXjcb1TS63siyFh%2B7dHDCvFhVFHUi5ulc%3D",
-          "status": "safe"
-        }
-      ],
-      "blobSize": 396222,
-      "updatedAt": "2025-07-07T11:59:48.757Z",
-      "uploadDate": "2025-07-07T11:59:48.000Z",
-      "processedBy": "bos"
-    },
-    {
-      "type": "photo",
-      "assetUrl": "https://mediasaprejp.blob.core.windows.net/ms-1135/39B4F0F2EA0D44609BF9393C9F1E9904/output/39B4F0F2EA0D44609BF9393C9F1E9904_photo.jpeg?sv=2024-05-04&spr=https&st=2025-07-07T12%3A03%3A12Z&se=2025-07-07T12%3A14%3A12Z&sr=b&sp=r&sig=iv2NwvH69ksyX6qKifzwwE6ny61GczwGV4tbV4taV1U%3D",
-      "mimeType": "image/jpeg",
-      "assetId": "234619647",
-      "createdAt": "2025-07-07T11:59:47.680Z",
-      "status": "safe",
-      "deleted": false,
-      "attachments": [
-        {
-          "attachmentId": "282125308",
-          "type": "thumbnail",
-          "mimeType": "image/jpeg",
-          "sasTokenUri": "https://mediasaprejp.blob.core.windows.net/ms-1135/39B4F0F2EA0D44609BF9393C9F1E9904/output/39B4F0F2EA0D44609BF9393C9F1E9904_photo_thumbnail.jpeg?sv=2024-05-04&spr=https&st=2025-07-07T12%3A03%3A12Z&se=2025-07-07T12%3A14%3A12Z&sr=b&sp=r&sig=kxofCSZraEUWTqW5OU8r8LOl1OcoFH3PGLb3E1%2BL42E%3D",
-          "status": "safe"
-        },
-        {
-          "attachmentId": "282125309",
-          "type": "fullHD",
-          "mimeType": "image/jpeg",
-          "sasTokenUri": "https://mediasaprejp.blob.core.windows.net/ms-1135/39B4F0F2EA0D44609BF9393C9F1E9904/output/39B4F0F2EA0D44609BF9393C9F1E9904_photo_fullHD.jpeg?sv=2024-05-04&spr=https&st=2025-07-07T12%3A03%3A12Z&se=2025-07-07T12%3A14%3A12Z&sr=b&sp=r&sig=J%2BE0DiSdNKOoeVgK3USdvAox7y0pXkecK9toqp27uco%3D",
-          "status": "safe"
-        }
-      ],
-      "blobSize": 52872,
-      "updatedAt": "2025-07-07T11:59:48.757Z",
-      "uploadDate": "2025-07-07T11:59:48.000Z",
-      "processedBy": "bos"
-    },
-    {
-      "type": "croppedPhoto",
-      "assetUrl": "https://mediasaprejp.blob.core.windows.net/ms-1135/39B4F0F2EA0D44609BF9393C9F1E9904/output/39B4F0F2EA0D44609BF9393C9F1E9904_croppedPhoto.jpeg?sv=2024-05-04&spr=https&st=2025-07-07T12%3A03%3A12Z&se=2025-07-07T12%3A14%3A12Z&sr=b&sp=r&sig=0QnLwzxK83qTEF9%2BWPakBumLYDdam3auH7C7tE%2F%2FQiM%3D",
-      "mimeType": "image/jpeg",
-      "assetId": "234619648",
-      "createdAt": "2025-07-07T11:59:47.680Z",
-      "status": "safe",
-      "deleted": false,
-      "attachments": [
-        {
-          "attachmentId": "282125310",
-          "type": "thumbnail",
-          "mimeType": "image/jpeg",
-          "sasTokenUri": "https://mediasaprejp.blob.core.windows.net/ms-1135/39B4F0F2EA0D44609BF9393C9F1E9904/output/39B4F0F2EA0D44609BF9393C9F1E9904_croppedPhoto_thumbnail.jpeg?sv=2024-05-04&spr=https&st=2025-07-07T12%3A03%3A12Z&se=2025-07-07T12%3A14%3A12Z&sr=b&sp=r&sig=xo4q7XI9kfVB9UxvcrPK17Qn3FmGjePjkHmANeHDNBc%3D",
-          "status": "safe"
-        },
-        {
-          "attachmentId": "282125311",
-          "type": "fullHD",
-          "mimeType": "image/jpeg",
-          "sasTokenUri": "https://mediasaprejp.blob.core.windows.net/ms-1135/39B4F0F2EA0D44609BF9393C9F1E9904/output/39B4F0F2EA0D44609BF9393C9F1E9904_croppedPhoto_fullHD.jpeg?sv=2024-05-04&spr=https&st=2025-07-07T12%3A03%3A12Z&se=2025-07-07T12%3A14%3A12Z&sr=b&sp=r&sig=Y5V%2FLhriyrbYoit1ERpAjyJSb8az4Obgj1Ik5gllSIo%3D",
-          "status": "safe"
-        }
-      ],
-      "blobSize": 37222,
-      "updatedAt": "2025-07-07T11:59:48.757Z",
-      "uploadDate": "2025-07-07T11:59:48.000Z",
-      "processedBy": "bos"
-    }
-  ]
+    ]
 }

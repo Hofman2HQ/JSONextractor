@@ -19,7 +19,7 @@ const DocumentationPage = ({ onBack, onBackToMain }) => {
     try {
       return remarksMap[code] || `Unknown remark code: ${code}`;
     } catch (error) {
-      console.warn('Error getting remark description:', error);
+  if (process.env.NODE_ENV !== 'production') console.warn('Error getting remark description:', error);
       return `Error retrieving description for code: ${code}`;
     }
   };
@@ -32,9 +32,11 @@ const DocumentationPage = ({ onBack, onBackToMain }) => {
           <button className="btn btn-outline-secondary me-2" onClick={() => onBackToMain && onBackToMain()}>
             <i className="bi bi-house"></i> Back to Main Page
           </button>
-          <button className="btn btn-outline-primary" onClick={handleBack}>
-            <i className="bi bi-arrow-left"></i> Back to Results
-          </button>
+          {onBack && (
+            <button className="btn btn-outline-primary" onClick={handleBack}>
+              <i className="bi bi-arrow-left"></i> Back to Results
+            </button>
+          )}
         </div>
       </div>
 

@@ -1,9 +1,15 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, Suspense } from 'react';
 import FileUpload from './components/FileUpload.js';
 import ResultsDisplay from './components/ResultsDisplay.js';
-import DocumentationPage from './components/DocumentationPage.js';
 import GetRequestForm from './components/GetRequestForm.js';
 import DoubleCheckTabs from './components/DoubleCheckTabs.js';
+
+// Lazy load heavy components to reduce initial bundle size
+const DocumentationPage = React.lazy(() => import('./components/DocumentationPage.js'));
+const InstructionsModal = React.lazy(() => import('./components/InstructionsModal.js'));
+import secureMeDemo from '../SecureMe.json';
+// Updated demo Workflow JSON (user-supplied latest version)
+import workflowDemo from '../Workflow.json';
 import './App.css';
 import { processJsonData } from './logic/extractor.js';
 
@@ -13,6 +19,7 @@ function App() {
   const [error, setError] = useState(null);
   const [showDocumentation, setShowDocumentation] = useState(false);
   const [documentationType, setDocumentationType] = useState(null);
+  const [showInstructions, setShowInstructions] = useState(false);
   const tooltipInstances = useRef([]);
 
   useEffect(() => {
@@ -48,8 +55,6 @@ function App() {
       setError('No data received');
       return;
     }
-    // Debug log: show the received data
-    console.log('Received data:', data);
     // Always process the data before displaying
     const processed = processJsonData(data);
     // If remark 400 is present and idvResultData exists, process both datasets
@@ -61,8 +66,6 @@ function App() {
       const bosProcessed = processJsonData(data, { forceResultKey: 'idvResultData' });
       finalProcessed = { doubleCheck: processed, bos: bosProcessed };
     }
-    // Debug log: show the processed data
-    console.log('Processed data:', finalProcessed);
     setProcessedData(finalProcessed);
     setError(null);
     setShowDocumentation(false); // Reset documentation view when new data is received
@@ -92,6 +95,11 @@ function App() {
     setDocumentationType(null);
   };
 
+  const handleBackToMain = () => {
+    setShowDocumentation(false);
+    setDocumentationType(null);
+  };
+
   const handleTabChange = (tab) => {
     if (!tab) return;
     setActiveTab(tab);
@@ -100,10 +108,49 @@ function App() {
     setShowDocumentation(false); // Reset documentation view when switching tabs
   };
 
+  const handleLoadDemoJson = (type) => {
+    if (type === 'secure') {
+      handleDataReceived(secureMeDemo);
+    } else if (type === 'workflow') {
+      handleDataReceived(workflowDemo);
+    }
+  };
+
   return (
     <div className="container mt-4">
-      <h1 className="text-center mb-4">JSON Reader</h1>
-      
+      <h1 className="text-center mb-2">JSON Reader</h1>
+      <p className="text-center text-muted mb-3">All processing happens locally and no information is saved.</p>
+      <div className="d-flex justify-content-end mb-3 gap-2">
+        <div className="btn-group">
+          <button
+            type="button"
+            className="btn btn-outline-secondary btn-sm dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Demo JSONs
+          </button>
+          <ul className="dropdown-menu">
+            <li><button className="dropdown-item" onClick={() => handleLoadDemoJson('secure')}>Secure Me</button></li>
+            <li><button className="dropdown-item" onClick={() => handleLoadDemoJson('workflow')}>Workflow</button></li>
+          </ul>
+        </div>
+        <button
+          className="btn btn-outline-primary btn-sm"
+          onClick={() => handleShowDocumentation('processing')}
+        >
+          <i className="bi bi-book me-1"></i> Documentation
+        </button>
+        <button
+          className="btn btn-outline-info btn-sm"
+          onClick={() => setShowInstructions(true)}
+        >
+          <i className="bi bi-info-circle me-1"></i> Instructions
+        </button>
+      </div>
+      <Suspense fallback={<div className="text-center"><div className="spinner-border" role="status"><span className="visually-hidden">Loading...</span></div></div>}>
+        <InstructionsModal show={showInstructions} onClose={() => setShowInstructions(false)} />
+      </Suspense>
       <ul className="nav nav-tabs mb-4">
         <li className="nav-item">
           <button
@@ -141,15 +188,20 @@ function App() {
         </div>
       )}
 
-      {processedData && (
+      {showDocumentation ? (
         <div className="mt-4">
-          {showDocumentation ? (
+          <Suspense fallback={<div className="text-center"><div className="spinner-border" role="status"><span className="visually-hidden">Loading documentation...</span></div></div>}>
             <DocumentationPage
               type={documentationType}
-              onBack={handleBackToResults}
+              onBack={processedData ? handleBackToResults : undefined}
+              onBackToMain={handleBackToMain}
             />
-          ) : (
-            processedData.doubleCheck && processedData.bos ? (
+          </Suspense>
+        </div>
+      ) : (
+        processedData && (
+          <div className="mt-4">
+            {processedData.doubleCheck && processedData.bos ? (
               <DoubleCheckTabs
                 doubleCheck={processedData.doubleCheck}
                 bos={processedData.bos}
@@ -160,9 +212,9 @@ function App() {
                 data={processedData}
                 onShowDocumentation={handleShowDocumentation}
               />
-            )
-          )}
-        </div>
+            )}
+          </div>
+        )
       )}
     </div>
   );

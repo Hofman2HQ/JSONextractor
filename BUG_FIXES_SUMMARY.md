@@ -349,4 +349,21 @@ The application now provides consistent, accurate results for both file upload a
 
 ### 3. **Single-Source Extraction for Remarks**
 - **Problem:** Processing and Risk Manager remarks were sometimes aggregated from multiple locations (e.g., all DSR2s) if remark 140 was present, leading to inconsistent or duplicated results.
-- **Fix:** The extraction logic was refactored so that both processing and risk manager remarks are always taken from a single, consistent location (the main node and its new structure locations), regardless of the presence of remark 140. This ensures clarity and consistency in the displayed results. 
+- **Fix:** The extraction logic was refactored so that both processing and risk manager remarks are always taken from a single, consistent location (the main node and its new structure locations), regardless of the presence of remark 140. This ensures clarity and consistency in the displayed results.
+
+## Known issues discovered during automated review
+
+- Several `console.log` and debug statements remain in both source and bundled files. They clutter logs and may leak sensitive info if production tokens are used. Files with logs: `src/App.js`, `src/components/GetRequestForm.js`, `src/components/ResultsDisplay.js`, `public/bundle.js`, `public/dist/bundle.js`.
+- Missing `favicon.ico` causes a 404 request on load — add an icon to `public/` to remove noise from server logs.
+- `ResultsDisplay.js` previously referenced `dataSourceMap` which would throw if not defined; a lightweight `dataSourceMap` mapping has been added to the component to avoid runtime errors.
+- Committed built assets (`public/bundle.js`, `public/dist/*`) may be out of sync with source; consider adding them to `.gitignore` and building in CI to avoid drift.
+- Production bundle size warnings were reported during `npm run build` — consider code-splitting and auditing dependencies.
+
+Recommended immediate fixes:
+
+1. Replace or remove any remaining `console.log` debug prints in source files or wrap them in a development-only guard.
+2. Add `public/favicon.ico` and link it in `public/index.html`.
+3. Remove committed build artifacts from source control or ensure they're rebuilt as part of your CI process.
+4. Investigate large bundle warnings and implement code-splitting where appropriate.
+
+If you'd like, I can (a) remove remaining debug logs, (b) add a small placeholder favicon, and (c) remove committed bundle files from the repo — tell me which of these to proceed with.

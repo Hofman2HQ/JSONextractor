@@ -1,5 +1,6 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -8,8 +9,20 @@ export default {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'public/dist'),
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     clean: true,
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
+    },
   },
   module: {
     rules: [
@@ -29,6 +42,13 @@ export default {
       }
     ]
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'public/index.html',
+      inject: 'body',
+      scriptLoading: 'defer'
+    }),
+  ],
   resolve: {
     extensions: ['.js', '.jsx', '.css'],
     fallback: {

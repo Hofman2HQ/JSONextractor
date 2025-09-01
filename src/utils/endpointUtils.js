@@ -29,7 +29,7 @@ function parseJwt(token) {
     }).join(''));
     return JSON.parse(jsonPayload);
   } catch (e) {
-    console.error('Error parsing JWT:', e);
+  if (process.env.NODE_ENV !== 'production') console.error('Error parsing JWT:', e);
     return null;
   }
 }

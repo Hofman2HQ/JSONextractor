@@ -32,7 +32,15 @@ const PORT = process.env.PORT || 3001;
 // Middleware
 app.use(cors());
 app.use(bodyParser.json({ limit: '10mb' })); // Add limit to prevent large payload attacks
-app.use(express.static(path.join(__dirname, 'public')));
+
+// Serve built assets first (bundled JS/CSS in public/dist) then fallback to raw public assets (favicon, etc.)
+const distPath = path.join(__dirname, 'public', 'dist');
+const publicPath = path.join(__dirname, 'public');
+
+if (fs.existsSync(distPath)) {
+  app.use(express.static(distPath));
+}
+app.use(express.static(publicPath));
 
 // Authentication middleware
 const authenticateToken = (req, res, next) => {
@@ -137,10 +145,16 @@ app.use((error, req, res, next) => {
   });
 });
 
-// Serve index.html for all other routes
+// Serve the built index.html (with injected bundle script tags) for all other routes.
 app.get('*', (req, res) => {
+  const builtIndex = path.join(distPath, 'index.html');
+  const sourceIndex = path.join(publicPath, 'index.html');
   try {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    if (fs.existsSync(builtIndex)) {
+      return res.sendFile(builtIndex);
+    }
+    // Fallback to source template (useful before first build) - will not have scripts injected
+    res.sendFile(sourceIndex);
   } catch (error) {
     console.error('Error serving index.html:', error);
     res.status(500).send('Error loading application');

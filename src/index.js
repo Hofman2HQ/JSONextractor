@@ -14,7 +14,7 @@ try {
   window.RISK_REMARKS = RISK_REMARKS;
   window.PRIMARY_PROCESSING_RESULTS = PRIMARY_PROCESSING_RESULTS;
 } catch (error) {
-  console.warn('Failed to inject global variables:', error);
+  if (process.env.NODE_ENV !== 'production') console.warn('Failed to inject global variables:', error);
   // Fallback to empty objects if injection fails
   window.PROCESSING_REMARKS = window.PROCESSING_REMARKS || {};
   window.RISK_REMARKS = window.RISK_REMARKS || {};

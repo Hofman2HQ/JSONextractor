@@ -6,31 +6,27 @@ export const PROCESSING_CATEGORIES = {
   },
   'Document Quality': {
     description: 'Issues related to document image quality and clarity',
-    codes: [120]
+    codes: [120, 121, 122, 123, 124]
   },
   'Document Processing': {
     description: 'Results from document processing and recognition',
-    codes: [130, 140, 160, 180]
+    codes: [130, 140, 160, 180, 500]
   },
   'Document Validation': {
     description: 'Results from document validation and verification',
-    codes: [100, 200, 220, 230, 250, 260, 280, 300, 920]
+    codes: [100, 200, 220, 230, 250, 260, 280, 300]
   },
   'DoubleCheck': {
-    description: 'DoubleCheck and related processing',
-    codes: [320, 340, 360, 380, 400, 420, 440, 460, 480, 500, 520, 540, 550, 560, 580, 600, 620, 640, 720, 740]
+    description: 'DoubleCheck and manual inspection related processing',
+    codes: [320, 340, 360, 380, 400, 420, 440, 460, 480, 520, 540, 550, 560, 580, 600, 620, 640, 720, 740, 840, 860, 880]
   },
   'Processing Issues': {
     description: 'General processing and technical issues',
-    codes: [700, 760, 780, 800, 820]
-  },
-  'Manual Inspection': {
-    description: 'Results from manual inspection processes',
-    codes: [840, 860, 880]
+    codes: [700, 760, 780, 800, 820, 960]
   },
   'Face Comparison': {
     description: 'Results from face comparison and detection',
-    codes: [1440]
+    codes: [900, 920, 930, 940, 1440]
   },
   'Digital Signature': {
     description: 'Results from digital signature verification',
@@ -60,7 +56,7 @@ export const RISK_CATEGORIES = [
   {
     name: 'Document Quality',
     description: 'Issues with document quality and integrity',
-    codes: [20, 30, 40, 60, 700, 720, 730, 740, 960, 1140, 1150, 1160, 1170, 1270, 1280, 1340]
+    codes: [20, 30, 40, 60, 700, 720, 730, 740, 1140, 1150, 1160, 1170, 1270, 1280, 1340]
   },
   {
     name: 'Missing Fields',
@@ -85,12 +81,12 @@ export const RISK_CATEGORIES = [
   {
     name: 'Proof of Address',
     description: 'Proof of address and related rules',
-    codes: [780, 970, 980, 990]
+    codes: [780, 960, 970, 980, 990]
   },
   {
     name: 'Age/Photo',
     description: 'Age, photo, and biometric checks',
-    codes: [820, 830, 1090, 1100, 840, 850]
+    codes: [820, 830]
   },
   {
     name: 'Attack Info',
