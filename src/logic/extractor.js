@@ -283,13 +283,7 @@ export const processJsonData = (data, options = {}) => {
     const hasRemark140 = (data) => {
       // Check in DocumentStatusReport2.ProcessingResultRemarks
       if (data.DocumentStatusReport2 && Array.isArray(data.DocumentStatusReport2.ProcessingResultRemarks)) {
-        if (data.DocumentStatusReport2.ProcessingResultRemarks.includes(140)) return true;
-      }
-      // Check in RiskManagementReport.EffectiveConclusion.Reasons.ProcessingResultRemarks
-      if (data.RiskManagementReport && data.RiskManagementReport.EffectiveConclusion && 
-          data.RiskManagementReport.EffectiveConclusion.Reasons && 
-          Array.isArray(data.RiskManagementReport.EffectiveConclusion.Reasons.ProcessingResultRemarks)) {
-        if (data.RiskManagementReport.EffectiveConclusion.Reasons.ProcessingResultRemarks.includes(140)) return true;
+        if (data.DocumentStatusReport2.ProcessingResultRemarks.includes(140)) return true; // No merit in checking in Policy manager
       }
       // Check in root-level ProcessingResultRemarks
       if (Array.isArray(data.ProcessingResultRemarks)) {
@@ -300,8 +294,8 @@ export const processJsonData = (data, options = {}) => {
         for (const page of data.PageAsSeparateDocumentProcessingReports) {
           if (page.RiskManagementReport && page.RiskManagementReport.EffectiveConclusion && 
               page.RiskManagementReport.EffectiveConclusion.Reasons && 
-              Array.isArray(page.RiskManagementReport.EffectiveConclusion.Reasons.ProcessingResultRemarks)) {
-            if (page.RiskManagementReport.EffectiveConclusion.Reasons.ProcessingResultRemarks.includes(140)) return true;
+              Array.isArray(page.RiskManagementReport.EffectiveConclusion.Reasons.RiskManagementRemarks)) {
+            if (page.RiskManagementReport.EffectiveConclusion.Reasons.RiskManagementRemarks.includes(140)) return true;
           }
         }
       }
@@ -513,9 +507,9 @@ export const processJsonData = (data, options = {}) => {
     }
     // --- End workflow-specific extraction ---
 
-    // For Secure me: extract from DocumentStatusReport2 if present
-    let processedDocTypeDesc = false;
-    let processedRiskManagement = false;
+  // For Secure me: extract from DocumentStatusReport2 if present
+  let processedDocTypeDesc = false;
+  let processedRiskManagement = false; // when true, skip generic aggregation to avoid duplication
     if (resultData.DocumentStatusReport2) {
       const dsr2 = resultData.DocumentStatusReport2;
       // Primary Result
@@ -549,32 +543,22 @@ export const processJsonData = (data, options = {}) => {
         }));
       }
       processed.remarks.processing = processingRemarks;
-      // Risk Management Remarks (DocumentStatusReport2)
-      // Support both legacy "RiskManagerRemarks" and newer "RiskManagementRemarks".
-      let riskManagementRemarks = [];
-      if (Array.isArray(dsr2.RiskManagerRemarks)) {
-        riskManagementRemarks = riskManagementRemarks.concat(
-          dsr2.RiskManagerRemarks.map((code, idx) => ({
-            code: Number(code),
-            message: RISK_REMARKS[Number(code)] || `Unknown risk remark (${code})`,
-            path: aliasRiskRemarkPath(`${extractionRootPath}.DocumentStatusReport2.RiskManagerRemarks[${idx}]`),
-            originalPath: `${extractionRootPath}.DocumentStatusReport2.RiskManagerRemarks[${idx}]`,
-            category: getRiskRemarkCategory(Number(code))
-          }))
-        );
+      // Risk Management Remarks authoritative Secure me source (only ProcessingResultRemarks under Reasons)
+      if (
+        resultData.RiskManagementReport &&
+        resultData.RiskManagementReport.EffectiveConclusion &&
+        resultData.RiskManagementReport.EffectiveConclusion.Reasons &&
+        Array.isArray(resultData.RiskManagementReport.EffectiveConclusion.Reasons.ProcessingResultRemarks)
+      ) {
+        processed.remarks.riskManagement = resultData.RiskManagementReport.EffectiveConclusion.Reasons.ProcessingResultRemarks.map((code, idx) => ({
+          code: Number(code),
+          message: PROCESSING_REMARKS[Number(code)] || `Unknown processing remark (${code})`,
+          path: `${extractionRootPath}.RiskManagementReport.EffectiveConclusion.Reasons.ProcessingResultRemarks[${idx}]`,
+          originalPath: `${extractionRootPath}.RiskManagementReport.EffectiveConclusion.Reasons.ProcessingResultRemarks[${idx}]`,
+          category: getRiskRemarkCategory(Number(code))
+        }));
+        processedRiskManagement = true;
       }
-      if (Array.isArray(dsr2.RiskManagementRemarks)) {
-        riskManagementRemarks = riskManagementRemarks.concat(
-          dsr2.RiskManagementRemarks.map((code, idx) => ({
-            code: Number(code),
-            message: RISK_REMARKS[Number(code)] || `Unknown risk remark (${code})`,
-            path: aliasRiskRemarkPath(`${extractionRootPath}.DocumentStatusReport2.RiskManagementRemarks[${idx}]`),
-            originalPath: `${extractionRootPath}.DocumentStatusReport2.RiskManagementRemarks[${idx}]`,
-            category: getRiskRemarkCategory(Number(code))
-          }))
-        );
-      }
-      processed.remarks.riskManagement = riskManagementRemarks;
       // DocumentData2 extraction for Secure me
       if (resultData.ProcessingResult && resultData.ProcessingResult.DocumentData2) {
         const docData2 = resultData.ProcessingResult.DocumentData2;
@@ -600,26 +584,10 @@ export const processJsonData = (data, options = {}) => {
         if (docTypeDesc.DocumentVersion) processed.metadata.documentTypeDescriptorVersion = docTypeDesc.DocumentVersion;
         processedDocTypeDesc = true;
       }
-      processedRiskManagement = true;
       // RiskManagementReport extraction will be handled below if present
       // Return will be after the next block
     }
-    // For Secure me: Extract Risk Management Remarks ONLY from RiskManagementReport.EffectiveConclusion.Reasons.ProcessingResultRemarks
-    if (resultData.RiskManagementReport && 
-        resultData.RiskManagementReport.EffectiveConclusion &&
-        resultData.RiskManagementReport.EffectiveConclusion.Reasons &&
-        Array.isArray(resultData.RiskManagementReport.EffectiveConclusion.Reasons.ProcessingResultRemarks)) {
-      const rmProcessingResultRemarks = resultData.RiskManagementReport.EffectiveConclusion.Reasons.ProcessingResultRemarks.map((code, idx) => ({
-        code: Number(code),
-        message: PROCESSING_REMARKS[Number(code)] || `Unknown processing remark (${code})`,
-        path: `${extractionRootPath}.RiskManagementReport.EffectiveConclusion.Reasons.ProcessingResultRemarks[${idx}]`,
-        originalPath: `${extractionRootPath}.RiskManagementReport.EffectiveConclusion.Reasons.ProcessingResultRemarks[${idx}]`,
-        category: getRiskRemarkCategory(Number(code))
-      }));
-      if (!processed.remarks.riskManagement) processed.remarks.riskManagement = [];
-      processed.remarks.riskManagement = processed.remarks.riskManagement.concat(rmProcessingResultRemarks);
-      processedRiskManagement = true;
-    }
+  // Removed redundant RiskManagementRemarks extraction; only ProcessingResultRemarks path is used.
     // Always extract DocumentTypeDescriptor for Secure me
     if (!processedDocTypeDesc && resultData.ProcessingResult && resultData.ProcessingResult.DocumentTypeDescriptor) {
       const docTypeDesc = resultData.ProcessingResult.DocumentTypeDescriptor;
@@ -630,9 +598,12 @@ export const processJsonData = (data, options = {}) => {
     
     // If we handled Secure me, return processed
     // Check if remark 140 is present - if so, don't return early to allow DocumentData2 extraction
-    if ((resultData.DocumentStatusReport2 || processedRiskManagement || processedDocTypeDesc) && !hasRemark140(resultData)) {
-      return processed;
-    }
+    // Early return if we have handled Secure me structure (DocumentStatusReport2 present, or risk management or doc type descriptor already processed)
+    // and remark 140 ("The pages of the multi-page document do not match") is NOT present.
+    // If remark 140 is present, we continue to allow DocumentData2 extraction from multiple pages.
+        if ((resultData.DocumentStatusReport2 || processedRiskManagement || processedDocTypeDesc) && !hasRemark140(resultData)) {
+          return processed;
+        }
 
     // Only use remarks from the main node (resultData and its new structure locations)
     let riskRemarksList = [];
@@ -725,7 +696,7 @@ export const processJsonData = (data, options = {}) => {
     }
 
     // Completion Status
-    let completionStatus = findNestedValue(resultData, ['CompletionStatus', 'completionStatus']);
+    let completionStatus = findNestedValue(resultData, ['CompletionStatus', 'CompletionStatus']);
     if (!completionStatus && resultData.CompletionStatus !== undefined) {
       completionStatus = { value: resultData.CompletionStatus, path: 'CompletionStatus' };
     }
