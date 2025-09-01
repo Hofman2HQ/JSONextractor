@@ -10,7 +10,7 @@ export const PROCESSING_CATEGORIES = {
   },
   'Document Processing': {
     description: 'Results from document processing and recognition',
-    codes: [130, 140, 160, 180]
+    codes: [130, 140, 160, 180, 500]
   },
   'Document Validation': {
     description: 'Results from document validation and verification',
@@ -18,7 +18,7 @@ export const PROCESSING_CATEGORIES = {
   },
   'DoubleCheck': {
     description: 'DoubleCheck and manual inspection related processing',
-    codes: [320, 340, 360, 380, 400, 420, 440, 460, 480, 500, 520, 540, 550, 560, 580, 600, 620, 640, 720, 740, 840, 860, 880]
+    codes: [320, 340, 360, 380, 400, 420, 440, 460, 480, 520, 540, 550, 560, 580, 600, 620, 640, 720, 740, 840, 860, 880]
   },
   'Processing Issues': {
     description: 'General processing and technical issues',
