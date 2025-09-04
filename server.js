@@ -4,6 +4,9 @@ import bodyParser from 'body-parser';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
+import helmet from 'helmet';
+import compression from 'compression';
+import rateLimit from 'express-rate-limit';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -28,10 +31,48 @@ try {
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+let currentServer = null;
+const sockets = new Set();
 
 // Middleware
-app.use(cors());
+// Security headers
+app.use(helmet());
+// Content Security Policy (allow app + jsDelivr CDNs)
+app.use(
+  helmet.contentSecurityPolicy({
+    useDefaults: true,
+    directives: {
+      "default-src": ["'self'"],
+      "script-src": ["'self'", "https://cdn.jsdelivr.net"],
+      "style-src": ["'self'", "'unsafe-inline'", "https://cdn.jsdelivr.net"],
+      "font-src": ["'self'", "https://cdn.jsdelivr.net", "data:"],
+      "img-src": ["'self'", "data:", "blob:"],
+      "connect-src": [
+        "'self'",
+        "https://*.au10tixservices.com",
+        "https://*.au10tixservicesstaging.com"
+      ]
+    }
+  })
+);
+// Compression for static and API responses
+app.use(compression());
+
+// CORS (lock down unless explicitly allowed)
+const allowedOrigins = process.env.CORS_ORIGINS ? process.env.CORS_ORIGINS.split(',').map(s => s.trim()) : false;
+app.use(cors({ origin: allowedOrigins }));
+
+// Body parsing with limit
 app.use(bodyParser.json({ limit: '10mb' })); // Add limit to prevent large payload attacks
+
+// Basic rate limiting for API routes
+const apiLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 100,
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+app.use('/api', apiLimiter);
 
 // Serve built assets first (bundled JS/CSS in public/dist) then fallback to raw public assets (favicon, etc.)
 const distPath = path.join(__dirname, 'public', 'dist');
@@ -161,18 +202,81 @@ app.get('*', (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-  console.log(`Health check available at http://localhost:${PORT}/api/health`);
-});
+// Start server with optional auto-port fallback when in-use
+function startServer(port) {
+  const server = app.listen(port, () => {
+    const actualPort = server.address().port;
+    console.log(`Server is running on port ${actualPort}`);
+    console.log(`Health check available at http://localhost:${actualPort}/api/health`);
+  });
+  currentServer = server;
+  server.on('connection', (socket) => {
+    sockets.add(socket);
+    socket.on('close', () => sockets.delete(socket));
+  });
+  server.on('error', (err) => {
+    if (err && err.code === 'EADDRINUSE') {
+      console.error(`Port ${port} is already in use.`);
+      if (process.env.AUTO_PORT === 'true') {
+        console.log('AUTO_PORT is enabled. Trying an available port...');
+        const fallback = app.listen(0, () => {
+          const actualPort = fallback.address().port;
+          console.log(`Server is running on port ${actualPort}`);
+          console.log(`Health check available at http://localhost:${actualPort}/api/health`);
+        });
+        currentServer = fallback;
+        fallback.on('connection', (socket) => {
+          sockets.add(socket);
+          socket.on('close', () => sockets.delete(socket));
+        });
+        fallback.on('error', (e2) => {
+          console.error('Failed to bind to a dynamic port:', e2);
+          process.exit(1);
+        });
+      } else {
+        console.error('Set PORT to a free port or set AUTO_PORT=true to auto-select a free port.');
+        process.exit(1);
+      }
+    } else {
+      console.error('Server error:', err);
+      process.exit(1);
+    }
+  });
+}
 
-// Graceful shutdown
-process.on('SIGTERM', () => {
-  console.log('SIGTERM received, shutting down gracefully');
-  process.exit(0);
-});
+startServer(PORT);
 
-process.on('SIGINT', () => {
-  console.log('SIGINT received, shutting down gracefully');
-  process.exit(0);
+// Graceful shutdown: close server and active sockets on termination signals
+function gracefulShutdown(signal) {
+  try {
+    console.log(`${signal} received, shutting down gracefully`);
+    if (currentServer) {
+      // Stop accepting new connections
+      currentServer.close((err) => {
+        if (err) {
+          console.error('Error during server close:', err);
+        }
+        // Destroy any open sockets
+        sockets.forEach((s) => {
+          try { s.destroy(); } catch {}
+        });
+        process.exit(0);
+      });
+      // Safety timeout
+      setTimeout(() => {
+        console.warn('Force exiting after timeout');
+        sockets.forEach((s) => { try { s.destroy(); } catch {} });
+        process.exit(0);
+      }, 5000).unref();
+    } else {
+      process.exit(0);
+    }
+  } catch (e) {
+    console.error('Error during graceful shutdown:', e);
+    process.exit(1);
+  }
+}
+
+['SIGINT', 'SIGTERM', 'SIGBREAK'].forEach((sig) => {
+  try { process.on(sig, () => gracefulShutdown(sig)); } catch {}
 });

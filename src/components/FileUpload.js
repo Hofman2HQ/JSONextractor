@@ -37,8 +37,11 @@ const FileUpload = React.memo(({ onFileUpload, onError }) => {
       return;
     }
     
-    if (file.type !== 'application/json') {
-      if (onError) onError('Please upload a JSON file');
+    // Some browsers provide generic MIME types for drag/drop; allow .json extension as fallback
+    const isJsonMime = file.type === 'application/json' || file.type === 'text/json';
+    const isJsonExt = typeof file.name === 'string' && file.name.toLowerCase().endsWith('.json');
+    if (!isJsonMime && !isJsonExt) {
+      if (onError) onError('Please upload a JSON file (.json)');
       return;
     }
     

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useCallback } from 'react';
 import { getProcessingRemarkCategory, getRiskRemarkCategory } from './documentationCategories.js';
 
 // Lightweight mapping for data source display in the DocumentData2 table.
@@ -10,16 +10,63 @@ const dataSourceMap = {
   root: 'Root'
 };
 
-const InfoTooltip = React.memo(({ path, additionalInfo, category }) => (
-  <span 
-    className="ms-2" 
-    data-bs-toggle="tooltip" 
-    data-bs-placement="top" 
-    title={`JSON Path: ${path || 'N/A'}${additionalInfo ? `\n\n${additionalInfo}` : ''}${category ? `\n\nCategory: ${category}` : ''}`}
-  >
-    <i className="bi bi-info-circle"></i>
-  </span>
-));
+const InfoTooltip = React.memo(({ path, additionalInfo, category }) => {
+  const ref = useRef(null);
+  const titleText = `JSON Path: ${path || 'N/A'}${additionalInfo ? `\n\n${additionalInfo}` : ''}${category ? `\n\nCategory: ${category}` : ''}`;
+
+  const copyToClipboard = useCallback(async () => {
+    if (!path) return;
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(path);
+      } else {
+        const ta = document.createElement('textarea');
+        ta.value = path;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      }
+      // Show a quick "Copied!" feedback using Bootstrap Tooltip if available
+      const el = ref.current;
+      if (el && window.bootstrap && window.bootstrap.Tooltip) {
+        let instance = window.bootstrap.Tooltip.getInstance(el);
+        if (!instance) {
+          instance = new window.bootstrap.Tooltip(el);
+        }
+        const original = el.getAttribute('data-bs-original-title') || el.getAttribute('title') || titleText;
+        el.setAttribute('data-bs-original-title', 'Copied!');
+        el.setAttribute('title', 'Copied!');
+        instance.show();
+        setTimeout(() => {
+          instance.hide();
+          el.setAttribute('data-bs-original-title', original);
+          el.setAttribute('title', original);
+        }, 900);
+      }
+    } catch (err) {
+      if (process.env.NODE_ENV !== 'production') console.warn('Clipboard copy failed:', err);
+    }
+  }, [path, titleText]);
+
+  return (
+    <span
+      ref={ref}
+      className="ms-2"
+      data-bs-toggle="tooltip"
+      data-bs-placement="top"
+      title={titleText}
+      role="button"
+      onClick={copyToClipboard}
+      aria-label={path ? `Copy JSON path ${path}` : 'Info'}
+    >
+      <i className="bi bi-info-circle"></i>
+    </span>
+  );
+});
 
 const ResultCard = React.memo(({ title, value, path, className = '', additionalInfo = '', category = '' }) => (
   <div className={`card mb-3 ${className}`}>

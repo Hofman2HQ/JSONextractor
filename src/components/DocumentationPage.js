@@ -1,11 +1,12 @@
 import React from 'react';
 import { PROCESSING_CATEGORIES, RISK_CATEGORIES, getRiskRemarkCategory } from './documentationCategories.js';
+import { PROCESSING_REMARKS, RISK_REMARKS, PRIMARY_PROCESSING_RESULTS } from '../logic/extractor.js';
 
 const DocumentationPage = ({ onBack, onBackToMain }) => {
-  // Safely access global variables with fallbacks
-  const processingRemarks = window.PROCESSING_REMARKS || {};
-  const riskRemarks = window.RISK_REMARKS || {};
-  const primaryProcessingResults = window.PRIMARY_PROCESSING_RESULTS || {};
+  // Use statically imported mappings (no globals)
+  const processingRemarks = PROCESSING_REMARKS || {};
+  const riskRemarks = RISK_REMARKS || {};
+  const primaryProcessingResults = PRIMARY_PROCESSING_RESULTS || {};
 
   const categories = PROCESSING_CATEGORIES;
 

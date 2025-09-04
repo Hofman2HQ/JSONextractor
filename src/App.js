@@ -48,7 +48,7 @@ function App() {
       });
       tooltipInstances.current = [];
     };
-  }, [processedData]); // Re-initialize tooltips when processed data changes
+  }, [processedData, activeTab, showDocumentation]); // Re-init on data, tab, or docs view changes
 
   const handleDataReceived = (data) => {
     if (!data) {

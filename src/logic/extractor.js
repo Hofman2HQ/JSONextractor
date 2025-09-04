@@ -521,9 +521,14 @@ export const processJsonData = (data, options = {}) => {
         }
         processed.paths.primaryResult = extractionRootPath + '.DocumentStatusReport2.PrimaryProcessingResult';
       }
-      // If RiskManagementReport.EffectiveConclusion.PrimaryProcessingResult exists, prefer it (more domain-specific)
-      if (resultData.RiskManagementReport && resultData.RiskManagementReport.EffectiveConclusion &&
-          resultData.RiskManagementReport.EffectiveConclusion.PrimaryProcessingResult !== undefined) {
+      // Prefer DocumentStatusReport2.PrimaryProcessingResult as the canonical source.
+      // Only fall back to RiskManagementReport.EffectiveConclusion.PrimaryProcessingResult if DSR2 is not present.
+      if (
+        processed.paths.primaryResult == null &&
+        resultData.RiskManagementReport &&
+        resultData.RiskManagementReport.EffectiveConclusion &&
+        resultData.RiskManagementReport.EffectiveConclusion.PrimaryProcessingResult !== undefined
+      ) {
         const rmPrim = resultData.RiskManagementReport.EffectiveConclusion.PrimaryProcessingResult;
         if (typeof rmPrim === 'number' && PRIMARY_PROCESSING_RESULTS[rmPrim]) {
           processed.summary.primaryResult = `${rmPrim} - ${PRIMARY_PROCESSING_RESULTS[rmPrim]}`;
