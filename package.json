@@ -14,9 +14,12 @@
     "watch": "webpack --mode development --watch"
   },
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.2",
+    "compression": "^1.7.4",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.19.2",
+    "express-rate-limit": "^6.10.0",
+    "helmet": "^7.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -34,5 +37,9 @@
     "style-loader": "^3.3.3",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
+  }
+  ,
+  "engines": {
+    "node": ">=16.0.0"
   }
 }

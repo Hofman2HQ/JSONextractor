@@ -56,8 +56,8 @@ export default {
       "path": false
     }
   },
-  devtool: 'source-map',
+  devtool: process.env.NODE_ENV === 'production' ? 'hidden-source-map' : 'source-map',
   stats: {
     errorDetails: true
   }
-}; 
+};
