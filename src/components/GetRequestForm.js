@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react';
+import { motion } from 'framer-motion';
 import { processJsonData } from '../logic/extractor.js';
 
 const GetRequestForm = ({ onDataReceived, onError }) => {
@@ -181,7 +182,13 @@ const GetRequestForm = ({ onDataReceived, onError }) => {
 
   if (!tokenInfo) {
     return (
-      <form onSubmit={handleTokenSubmit} className="p-4 border rounded">
+      <motion.form
+        onSubmit={handleTokenSubmit}
+        className="p-4 glass-card"
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.25 }}
+      >
         <div className="mb-3">
           <label htmlFor="token" className="form-label">Authorization Token</label>
           <div className="input-group">
@@ -195,7 +202,7 @@ const GetRequestForm = ({ onDataReceived, onError }) => {
               placeholder="Enter your JWT token"
             />
             <button 
-              className="btn btn-outline-secondary" 
+              className="btn btn-ghost" 
               type="button"
               onClick={handleTogglePassword}
             >
@@ -206,7 +213,7 @@ const GetRequestForm = ({ onDataReceived, onError }) => {
         </div>
         <button 
           type="submit" 
-          className="btn btn-primary"
+          className="btn btn-primary-soft"
           disabled={loading}
         >
           {loading ? (
@@ -218,13 +225,13 @@ const GetRequestForm = ({ onDataReceived, onError }) => {
             'Parse Token'
           )}
         </button>
-      </form>
+      </motion.form>
     );
   }
 
   return (
     <div>
-      <div className="card mb-4">
+      <div className="card glass-card mb-4">
         <div className="card-body">
           <h5 className="card-title mb-3">Token Information</h5>
           <div className="row">
@@ -262,7 +269,13 @@ const GetRequestForm = ({ onDataReceived, onError }) => {
         </div>
       </div>
 
-      <form onSubmit={handleRequestSubmit} className="p-4 border rounded">
+      <motion.form
+        onSubmit={handleRequestSubmit}
+        className="p-4 glass-card"
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.25 }}
+      >
         <div className="mb-3">
           <label htmlFor="requestId" className="form-label">Request ID</label>
           <input
@@ -278,7 +291,7 @@ const GetRequestForm = ({ onDataReceived, onError }) => {
         <div className="d-flex gap-2">
           <button 
             type="submit" 
-            className="btn btn-primary"
+            className="btn btn-primary-soft"
             disabled={loading}
           >
             {loading ? (
@@ -292,13 +305,13 @@ const GetRequestForm = ({ onDataReceived, onError }) => {
           </button>
           <button 
             type="button" 
-            className="btn btn-outline-secondary"
+            className="btn btn-ghost"
             onClick={handleChangeToken}
           >
             Change Token
           </button>
         </div>
-      </form>
+      </motion.form>
     </div>
   );
 };

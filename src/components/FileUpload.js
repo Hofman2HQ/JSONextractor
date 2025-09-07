@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react';
+import { motion } from 'framer-motion';
 import config from '../../config.json';
 
 const FileUpload = React.memo(({ onFileUpload, onError }) => {
@@ -80,12 +81,15 @@ const FileUpload = React.memo(({ onFileUpload, onError }) => {
   }, []);
 
   return (
-    <div 
-      className={`upload-area p-5 text-center border rounded ${dragActive ? 'border-primary' : 'border-secondary'}`}
+    <motion.div
+      className={`upload-area-modern ${dragActive ? 'active' : ''}`}
       onDragEnter={handleDrag}
       onDragLeave={handleDrag}
       onDragOver={handleDrag}
       onDrop={handleDrop}
+      initial={{ opacity: 0, y: 8 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.35 }}
     >
       <input
         type="file"
@@ -94,21 +98,26 @@ const FileUpload = React.memo(({ onFileUpload, onError }) => {
         className="d-none"
         id="fileInput"
       />
-      <label htmlFor="fileInput" className="mb-0">
-        <div className="upload-icon mb-3">
+      <label htmlFor="fileInput" className="mb-0 d-block">
+        <motion.div
+          className="upload-icon mb-3"
+          animate={{ scale: dragActive ? 1.06 : 1 }}
+          transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+        >
           <i className="bi bi-cloud-upload fs-1"></i>
-        </div>
-        <h4>Drag and drop your JSON file here</h4>
-        <p className="text-muted">or</p>
+        </motion.div>
+        <h4 className="mb-1">Drag and drop your JSON file here</h4>
+        <p className="text-muted mb-3">or</p>
         <button 
-          className="btn btn-primary"
+          className="btn btn-primary-soft"
           type="button"
           onClick={handleBrowseClick}
         >
           Browse Files
         </button>
       </label>
-    </div>
+      {dragActive && <div className="drop-indicator" />}
+    </motion.div>
   );
 });
 
