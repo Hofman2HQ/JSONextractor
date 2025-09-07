@@ -1,4 +1,5 @@
 import React, { useState, useRef, useCallback } from 'react';
+import { motion } from 'framer-motion';
 import { getProcessingRemarkCategory, getRiskRemarkCategory } from './documentationCategories.js';
 
 // Lightweight mapping for data source display in the DocumentData2 table.
@@ -69,7 +70,13 @@ const InfoTooltip = React.memo(({ path, additionalInfo, category }) => {
 });
 
 const ResultCard = React.memo(({ title, value, path, className = '', additionalInfo = '', category = '' }) => (
-  <div className={`card mb-3 ${className}`}>
+  <motion.div
+    className={`card glass-card elevate mb-3 ${className}`}
+    initial={{ opacity: 0, y: 8 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.2 }}
+    transition={{ duration: 0.25 }}
+  >
     <div className="card-body">
       <h5 className="card-title d-flex align-items-center">
         {title || 'Unknown Field'}
@@ -77,7 +84,7 @@ const ResultCard = React.memo(({ title, value, path, className = '', additionalI
       </h5>
       <p className="card-text">{value || 'No value available'}</p>
     </div>
-  </div>
+  </motion.div>
 ));
 
 const RemarksList = ({ remarks, title, type, category, onShowDocumentation }) => {
@@ -442,7 +449,7 @@ const ResultsDisplay = ({ data, onShowDocumentation }) => {
       {/* Documentation Button */}
       <div className="d-flex justify-content-end mb-2">
         <button
-          className="btn btn-outline-primary btn-sm"
+          className="btn btn-ghost btn-sm"
           onClick={() => onShowDocumentation ? onShowDocumentation('processing') : null}
           title="View Documentation"
         >
@@ -461,8 +468,8 @@ const ResultsDisplay = ({ data, onShowDocumentation }) => {
         </div>
       )}
       {/* Summary Section */}
-      <div className="summary-section mb-4">
-        <h3>Summary</h3>
+      <motion.div className="summary-section mb-4" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
+        <h3 className="section-title">Summary</h3>
         <div className="row">
           <div className="col-md-6">
             <ResultCard
@@ -489,11 +496,11 @@ const ResultsDisplay = ({ data, onShowDocumentation }) => {
             className="border-danger"
           />
         )}
-      </div>
+      </motion.div>
 
       {/* Remarks Section */}
-      <div className="remarks-section">
-        <h3>Remarks</h3>
+      <motion.div className="remarks-section" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
+        <h3 className="section-title">Remarks</h3>
         <div className="row">
           <div className="col-md-6">
             <RemarksList
@@ -512,12 +519,12 @@ const ResultsDisplay = ({ data, onShowDocumentation }) => {
             />
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Metadata Section */}
       <div className="metadata-section mt-4">
-        <h3>Metadata</h3>
-        <div className="card">
+        <h3 className="section-title">Metadata</h3>
+        <div className="card glass-card">
           <div className="card-body">
             {renderMetadata()}
           </div>
